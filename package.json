@@ -4,10 +4,15 @@
   "homepage": "https://rikurauhala.github.io/0b.is",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@fontsource/roboto": "^4.5.8",
+    "@mui/icons-material": "^5.11.0",
+    "@mui/material": "^5.11.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "typeface-roboto": "^1.1.13"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.5",
