@@ -1,10 +1,11 @@
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
+import { useState } from 'react';
+
 import Container from '@mui/material/Container';
+import CssBaseline from '@mui/material/CssBaseline';
 import Grid from '@mui/material/Grid';
-import FormControl from '@mui/material/FormControl';
-import InputLabel from '@mui/material/InputLabel';
-import OutlinedInput from '@mui/material/OutlinedInput';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+
+import UserInput from './components/UserInput';
 
 const darkTheme = createTheme({
   palette: {
@@ -12,32 +13,33 @@ const darkTheme = createTheme({
   }
 });
 
-const App = (): JSX.Element => (
-  <ThemeProvider theme={darkTheme}>
-    <CssBaseline />
-    <Container maxWidth='lg'>
-      <Grid container spacing={1} justifyContent="center" alignItems="center" >
-        <Grid item>
-          <FormControl fullWidth sx={{ m: 2 }}>
-            <InputLabel>Decimal</InputLabel>
-            <OutlinedInput
-              id="outlined-adornment-decimal"
-              label="Decimal"
+const App = (): JSX.Element => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [input, setInput] = useState('');
+
+  const setInputState = (input: string): void => {
+    setInput(input);
+  };
+
+  return (
+    <ThemeProvider theme={darkTheme}>
+      <CssBaseline />
+      <Container maxWidth='lg'>
+        <Grid container spacing={1} justifyContent="center">
+          <Grid item>
+            <UserInput
+              setUserInput={setInputState}
             />
-          </FormControl>
-        </Grid>
-        <Grid item>
-          <FormControl disabled fullWidth sx={{ m: 2 }}>
-            <InputLabel>Binary</InputLabel>
-            <OutlinedInput
-              id="outlined-adornment-amount"
-              label="Binary"
+          </Grid>
+          <Grid item>
+            <UserInput
+              setUserInput={setInputState}
             />
-          </FormControl>
+          </Grid>
         </Grid>
-      </Grid>
-    </Container>
-  </ThemeProvider>
-);
+      </Container>
+    </ThemeProvider>
+  );
+};
 
 export default App;
