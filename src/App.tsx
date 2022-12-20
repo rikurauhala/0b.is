@@ -3,15 +3,10 @@ import { useState } from 'react';
 import Container from '@mui/material/Container';
 import CssBaseline from '@mui/material/CssBaseline';
 import Grid from '@mui/material/Grid';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { ThemeProvider } from '@mui/material/styles';
 
 import UserInput from './components/UserInput';
-
-const darkTheme = createTheme({
-  palette: {
-    mode: 'dark',
-  }
-});
+import darkTheme from './themes/themes';
 
 const App = (): JSX.Element => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
