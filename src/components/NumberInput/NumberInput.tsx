@@ -3,10 +3,10 @@ import { useRef } from 'react';
 import InputBase from '@mui/material/InputBase';
 import Paper from '@mui/material/Paper';
 
-import { UserInputProps, Ref } from '../../types/types';
+import { NumberInputProps, Ref } from '../../types/types';
 
-const UserInput = ({ setUserInput }: UserInputProps) => {
-  const userInput = useRef<Ref>({ value: '' });
+const NumberInput = ({ setNumberInput }: NumberInputProps) => {
+  const numberInput = useRef<Ref>({ value: '' });
 
   const style = {
     alignItems: 'center',
@@ -19,8 +19,8 @@ const UserInput = ({ setUserInput }: UserInputProps) => {
   return (
     <Paper component='form' style={style}>
       <InputBase
-        inputRef={userInput}
-        onChange={event => setUserInput(event.target.value)}
+        inputRef={numberInput}
+        onChange={event => setNumberInput(event.target.value)}
         onKeyPress={event => event.key === 'Enter' && event.preventDefault()}
         placeholder='Binary'
         sx={{ color: '#fff', flex: 1, ml: 1 }}
@@ -29,4 +29,4 @@ const UserInput = ({ setUserInput }: UserInputProps) => {
   );
 };
 
-export default UserInput;
+export default NumberInput;

@@ -5,7 +5,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Grid from '@mui/material/Grid';
 import { ThemeProvider } from '@mui/material/styles';
 
-import UserInput from './components/UserInput';
+import NumberInput from './components/NumberInput';
 import darkTheme from './themes/themes';
 
 const App = (): JSX.Element => {
@@ -22,13 +22,13 @@ const App = (): JSX.Element => {
       <Container maxWidth='lg'>
         <Grid container spacing={1} justifyContent="center">
           <Grid item>
-            <UserInput
-              setUserInput={setInputState}
+            <NumberInput
+              setNumberInput={setInputState}
             />
           </Grid>
           <Grid item>
-            <UserInput
-              setUserInput={setInputState}
+            <NumberInput
+              setNumberInput={setInputState}
             />
           </Grid>
         </Grid>
