@@ -8,7 +8,7 @@ import { ThemeProvider } from '@mui/material/styles';
 import NumberInput from './components/NumberInput';
 import NumberOutput from './components/NumberOutput';
 
-import darkTheme from './themes/themes';
+import { darkTheme } from './themes/themes';
 
 const App = (): JSX.Element => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
