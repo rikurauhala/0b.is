@@ -11,7 +11,6 @@ import NumberOutput from './components/NumberOutput';
 import { darkTheme } from './themes/themes';
 
 const App = (): JSX.Element => {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [input, setInput] = useState('');
 
   const setInputState = (input: string): void => {
@@ -29,7 +28,9 @@ const App = (): JSX.Element => {
             />
           </Grid>
           <Grid item style={{ width: '50%' }}>
-            <NumberOutput />
+            <NumberOutput
+              input={input}
+            />
           </Grid>
         </Grid>
       </Container>

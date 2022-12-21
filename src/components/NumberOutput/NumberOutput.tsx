@@ -1,7 +1,7 @@
 import { Typography } from '@mui/material';
 import Paper from '@mui/material/Paper';
 
-const NumberOutput = () => {
+const NumberOutput = ({ input }: { input: string }) => {
   const style = {
     alignItems: 'center',
     display: 'flex',
@@ -12,7 +12,13 @@ const NumberOutput = () => {
 
   return (
     <Paper component='form' style={style}>
-      <Typography style={{ marginLeft: '10px' }}>Decimal</Typography>
+      <Typography style={{ marginLeft: '10px' }}>
+        {
+          input.length > 0
+            ? input
+            : 'Decimal'
+        }
+      </Typography>
     </Paper>
   );
 };

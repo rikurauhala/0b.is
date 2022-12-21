@@ -23,7 +23,7 @@ const NumberInput = ({ setNumberInput }: NumberInputProps) => {
         onChange={event => setNumberInput(event.target.value)}
         onKeyPress={event => event.key === 'Enter' && event.preventDefault()}
         placeholder='Binary'
-        sx={{ color: '#fff', flex: 1, ml: 1 }}
+        sx={{ flex: 1, ml: 1 }}
       />
     </Paper>
   );
