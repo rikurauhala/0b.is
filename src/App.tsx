@@ -6,6 +6,8 @@ import Grid from '@mui/material/Grid';
 import { ThemeProvider } from '@mui/material/styles';
 
 import NumberInput from './components/NumberInput';
+import NumberOutput from './components/NumberOutput';
+
 import darkTheme from './themes/themes';
 
 const App = (): JSX.Element => {
@@ -21,15 +23,13 @@ const App = (): JSX.Element => {
       <CssBaseline />
       <Container maxWidth='lg'>
         <Grid container spacing={1} justifyContent="center">
-          <Grid item>
+          <Grid item style={{ width: '50%' }}>
             <NumberInput
               setNumberInput={setInputState}
             />
           </Grid>
-          <Grid item>
-            <NumberInput
-              setNumberInput={setInputState}
-            />
+          <Grid item style={{ width: '50%' }}>
+            <NumberOutput />
           </Grid>
         </Grid>
       </Container>
