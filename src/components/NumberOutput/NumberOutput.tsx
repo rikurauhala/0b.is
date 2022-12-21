@@ -2,6 +2,7 @@ import { Typography } from '@mui/material';
 import Paper from '@mui/material/Paper';
 
 import { binaryToDecimal } from '../../utils/converter';
+import { validateBinary } from '../../utils/validator';
 
 const NumberOutput = ({ input }: { input: string }) => {
   const style = {
@@ -12,6 +13,7 @@ const NumberOutput = ({ input }: { input: string }) => {
     padding: '2px 4px'
   };
 
+  const valid = validateBinary(input);
   const decimal = binaryToDecimal(input);
 
   return (
@@ -19,7 +21,9 @@ const NumberOutput = ({ input }: { input: string }) => {
       <Typography style={{ marginLeft: '10px' }}>
         {
           input.length > 0
-            ? decimal
+            ? valid
+              ? decimal
+              : 'Not a valid binary number!'
             : 'Decimal'
         }
       </Typography>
