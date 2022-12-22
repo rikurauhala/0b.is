@@ -1,3 +1,3 @@
-# 0b.is
+0b.is | Number conversion made simple
 
-To be written.
+![Continuous Integration](https://github.com/rikurauhala/minitex/workflows/CI/badge.svg)
