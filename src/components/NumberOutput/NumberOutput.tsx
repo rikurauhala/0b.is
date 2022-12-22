@@ -17,7 +17,7 @@ const NumberOutput = ({ input }: { input: string }) => {
   const decimal = binaryToDecimal(input);
 
   return (
-    <Paper component='form' style={style}>
+    <Paper component='form' style={style} className='output'>
       <Typography style={{ marginLeft: '10px' }}>
         {
           input.length > 0
