@@ -22,12 +22,13 @@ const App = (): JSX.Element => {
       <CssBaseline />
       <Container maxWidth='lg'>
         <Grid container spacing={1} justifyContent="center">
-          <Grid item style={{ width: '50%' }}>
+          <Grid item xs={12} md={6}>
             <NumberInput
+              input={input}
               setNumberInput={setInputState}
             />
           </Grid>
-          <Grid item style={{ width: '50%' }}>
+          <Grid item xs={12} md={6}>
             <NumberOutput
               input={input}
             />

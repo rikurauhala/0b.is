@@ -19,7 +19,7 @@ describe('<NumberOutput />', () => {
       '123': 'Not a valid binary number!',
     };
 
-    for (const [input, expectedOutput] of Object.entries(inputs))  {
+    for (const [input, expectedOutput] of Object.entries(inputs)) {
       const { container } = render(
         <NumberOutput input={input} />
       );
