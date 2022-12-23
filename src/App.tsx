@@ -28,14 +28,14 @@ const App = (): JSX.Element => {
       <CssBaseline />
       <MenuBar darkMode={darkMode} handleThemeChange={handleThemeChange} />
       <Container maxWidth='lg'>
-        <Grid container spacing={1} justifyContent="center">
-          <Grid item xs={12} md={6}>
+        <Grid container justifyContent='center'>
+          <Grid item xs={12}>
             <NumberInput
               input={input}
               setNumberInput={setInputState}
             />
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12}>
             <NumberOutput
               input={input}
             />
