@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import Container from '@mui/material/Container';
 import CssBaseline from '@mui/material/CssBaseline';
-import Grid from '@mui/material/Grid';
+import Stack from '@mui/material/Stack';
 import { ThemeProvider } from '@mui/material/styles';
 
 import MenuBar from './components/MenuBar';
@@ -27,20 +27,16 @@ const App = (): JSX.Element => {
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <CssBaseline />
       <MenuBar darkMode={darkMode} handleThemeChange={handleThemeChange} />
-      <Container maxWidth='lg'>
-        <Grid container justifyContent='center'>
-          <Grid item xs={12}>
-            <NumberInput
-              input={input}
-              setNumberInput={setInputState}
-            />
-          </Grid>
-          <Grid item xs={12}>
-            <NumberOutput
-              input={input}
-            />
-          </Grid>
-        </Grid>
+      <Container maxWidth='sm'>
+        <Stack justifyContent='center' minHeight='50vh'>
+          <NumberInput
+            input={input}
+            setNumberInput={setInputState}
+          />
+          <NumberOutput
+            input={input}
+          />
+        </Stack>
       </Container>
     </ThemeProvider>
   );

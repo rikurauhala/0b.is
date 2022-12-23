@@ -14,7 +14,7 @@ const NumberInput = ({ input, setNumberInput }: NumberInputProps): JSX.Element =
   const style = {
     alignItems: 'center',
     display: 'flex',
-    height: '60px',
+    height: '100px',
     margin: '30px 5px 0px 5px',
     padding: '2px 4px'
   };

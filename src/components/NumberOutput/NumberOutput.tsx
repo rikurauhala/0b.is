@@ -10,7 +10,7 @@ const NumberOutput = ({ input }: { input: string }): JSX.Element => {
   const style = {
     alignItems: 'center',
     display: 'flex',
-    height: '60px',
+    height: '100px',
     margin: '30px 5px 0px 5px',
     padding: '2px 4px'
   };
@@ -29,8 +29,8 @@ const NumberOutput = ({ input }: { input: string }): JSX.Element => {
             : 'Decimal'
         }
       </Typography>
-      { input.length > 0 && valid &&
-        <CopyButton output={decimal.toString()} />
+      {
+        input.length > 0 && valid && <CopyButton output={decimal.toString()} />
       }
     </Paper>
   );
