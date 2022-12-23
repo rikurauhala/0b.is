@@ -9,19 +9,24 @@ import MenuBar from './components/MenuBar';
 import NumberInput from './components/NumberInput';
 import NumberOutput from './components/NumberOutput';
 
-import { darkTheme } from './themes/themes';
+import { lightTheme, darkTheme } from './themes/themes';
 
 const App = (): JSX.Element => {
   const [input, setInput] = useState('');
+  const [darkMode, setDarkMode] = useState(true);
+
+  const handleThemeChange = () => {
+    setDarkMode(!darkMode);
+  };
 
   const setInputState = (input: string): void => {
     setInput(input);
   };
 
   return (
-    <ThemeProvider theme={darkTheme}>
+    <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <CssBaseline />
-      <MenuBar />
+      <MenuBar darkMode={darkMode} handleThemeChange={handleThemeChange} />
       <Container maxWidth='lg'>
         <Grid container spacing={1} justifyContent="center">
           <Grid item xs={12} md={6}>
