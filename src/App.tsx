@@ -5,6 +5,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Grid from '@mui/material/Grid';
 import { ThemeProvider } from '@mui/material/styles';
 
+import MenuBar from './components/MenuBar';
 import NumberInput from './components/NumberInput';
 import NumberOutput from './components/NumberOutput';
 
@@ -20,6 +21,7 @@ const App = (): JSX.Element => {
   return (
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
+      <MenuBar />
       <Container maxWidth='lg'>
         <Grid container spacing={1} justifyContent="center">
           <Grid item xs={12} md={6}>
