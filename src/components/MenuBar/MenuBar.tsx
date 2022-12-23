@@ -7,6 +7,7 @@ import Typography from '@mui/material/Typography';
 
 import CodeIcon from '@mui/icons-material/Code';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
+import HelpIcon from '@mui/icons-material/Help';
 import LightModeIcon from '@mui/icons-material/LightMode';
 
 import { MenuBarProps } from '../../types/types';
@@ -32,6 +33,17 @@ const MenuBar = ({ darkMode, handleThemeChange }: MenuBarProps): JSX.Element => 
                   ? <LightModeIcon />
                   : <DarkModeIcon />
               }
+            </Tooltip>
+          </IconButton>
+          <IconButton
+            color='inherit'
+            edge='end'
+            href='https://github.com/rikurauhala/0b.is/wiki/User-Manual'
+            size='large'
+            target='_blank'
+          >
+            <Tooltip title='User manual'>
+              <HelpIcon />
             </Tooltip>
           </IconButton>
         </Toolbar>
