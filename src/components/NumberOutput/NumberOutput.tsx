@@ -10,7 +10,7 @@ const NumberOutput = ({ input }: { input: string }): JSX.Element => {
   const style = {
     alignItems: 'center',
     display: 'flex',
-    height: '100px',
+    height: '80px',
     margin: '30px 5px 0px 5px',
     padding: '2px 4px'
   };
