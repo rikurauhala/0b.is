@@ -14,42 +14,58 @@ import { MenuBarProps } from '../../types/types';
 
 const MenuBar = ({ darkMode, handleThemeChange }: MenuBarProps): JSX.Element => {
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box>
       <AppBar position='static'>
         <Toolbar>
-          <CodeIcon sx={{ mr: 2 }}/>
-          <Typography variant='h6' component='div' sx={{ flexGrow: 1 }}>
-            0b.is
-          </Typography>
-          <IconButton
-            color='inherit'
-            edge='end'
-            onClick={handleThemeChange}
-            size='large'
-          >
-            <Tooltip title={darkMode ? 'Use light theme' : 'Use dark theme'}>
-              {
-                darkMode
-                  ? <LightModeIcon />
-                  : <DarkModeIcon />
-              }
-            </Tooltip>
-          </IconButton>
-          <IconButton
-            color='inherit'
-            edge='end'
-            href='https://github.com/rikurauhala/0b.is/wiki/User-Manual'
-            size='large'
-            target='_blank'
-          >
-            <Tooltip title='User manual'>
-              <HelpIcon />
-            </Tooltip>
-          </IconButton>
+          <LogoPlaceholder />
+          <PageTitle />
+          <ModeToggleButton darkMode={darkMode} handleThemeChange={handleThemeChange} />
+          <UserManualButton />
         </Toolbar>
       </AppBar>
     </Box>
   );
 };
+
+const LogoPlaceholder = (): JSX.Element => (
+  <CodeIcon sx={{ mr: 2 }}/>
+);
+
+const PageTitle = (): JSX.Element => (
+  <Typography variant='h6' component='div' sx={{ flexGrow: 1 }}>
+    0b.is
+  </Typography>
+);
+
+const ModeToggleButton = ({ darkMode, handleThemeChange }: MenuBarProps): JSX.Element => (
+  <IconButton
+    color='inherit'
+    edge='end'
+    onClick={handleThemeChange}
+    size='large'
+  >
+    <Tooltip title={darkMode ? 'Use light theme' : 'Use dark theme'}>
+      {
+        darkMode
+          ? <LightModeIcon />
+          : <DarkModeIcon />
+      }
+    </Tooltip>
+  </IconButton>
+);
+
+const UserManualButton = (): JSX.Element => (
+  <IconButton
+    color='inherit'
+    edge='end'
+    href='https://github.com/rikurauhala/0b.is/wiki/User-Manual'
+    size='large'
+    target='_blank'
+  >
+    <Tooltip title='User manual'>
+      <HelpIcon />
+    </Tooltip>
+  </IconButton>
+);
 
 export default MenuBar;
