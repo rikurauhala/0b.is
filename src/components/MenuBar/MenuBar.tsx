@@ -43,6 +43,7 @@ const ModeToggleButton = ({ darkMode, handleThemeChange }: MenuBarProps): JSX.El
     edge='end'
     onClick={handleThemeChange}
     size='large'
+    sx={{ mr: 0 }}
   >
     <Tooltip title={darkMode ? 'Use light theme' : 'Use dark theme'}>
       {
