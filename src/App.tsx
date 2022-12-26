@@ -29,7 +29,7 @@ const App = (): JSX.Element => {
       <CssBaseline />
       <MenuBar darkMode={darkMode} handleThemeChange={handleThemeChange} />
       <Container maxWidth='sm'>
-        <Stack justifyContent='center' minHeight='50vh'>
+        <Stack justifyContent='center' marginTop='50px'>
           <ModeSelect />
           <NumberInput
             input={input}
