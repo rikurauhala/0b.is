@@ -8,7 +8,7 @@ import ClearIcon from '@mui/icons-material/Clear';
 
 import { NumberInputProps, Ref } from '../../types/types';
 
-const NumberInput = ({ input, setNumberInput }: NumberInputProps): JSX.Element => {
+const NumberInput = ({ input, handleInputChange }: NumberInputProps): JSX.Element => {
   const numberInput = useRef<Ref>({ value: '' });
 
   const style = {
@@ -23,7 +23,7 @@ const NumberInput = ({ input, setNumberInput }: NumberInputProps): JSX.Element =
     <Paper component='form' style={style}>
       <InputBase
         inputRef={numberInput}
-        onChange={event => setNumberInput(event.target.value)}
+        onChange={event => handleInputChange(event.target.value)}
         onKeyPress={event => event.key === 'Enter' && event.preventDefault()}
         placeholder='Binary'
         sx={{ flex: 1, ml: 1 }}
@@ -33,7 +33,7 @@ const NumberInput = ({ input, setNumberInput }: NumberInputProps): JSX.Element =
         <IconButton
           onClick={() => {
             numberInput.current.value = '';
-            setNumberInput('');
+            handleInputChange('');
           }}
         >
           <ClearIcon />

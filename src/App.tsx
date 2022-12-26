@@ -13,16 +13,23 @@ import NumberOutput from './components/NumberOutput';
 import { lightTheme, darkTheme } from './themes/themes';
 
 const App = (): JSX.Element => {
-  const [input, setInput] = useState('');
-  const [darkMode, setDarkMode] = useState(true);
+  const [input, setInput] = useState<string>('');
+  const [darkMode, setDarkMode] = useState<boolean>(true);
+  const [converterMode, setConverterMode] = useState<string>('BinToDec');
+
+  const handleInputChange = (input: string): void => {
+    setInput(input);
+  };
 
   const handleThemeChange = () => {
     setDarkMode(!darkMode);
   };
 
-  const setInputState = (input: string): void => {
-    setInput(input);
+  const handleConverterModeChange = (mode: string): void => {
+    setConverterMode(mode);
   };
+
+  console.log(converterMode);
 
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
@@ -30,10 +37,13 @@ const App = (): JSX.Element => {
       <MenuBar darkMode={darkMode} handleThemeChange={handleThemeChange} />
       <Container maxWidth='sm'>
         <Stack justifyContent='center' marginTop='50px'>
-          <ModeSelect />
+          <ModeSelect
+            converterMode={converterMode}
+            handleConverterModeChange={handleConverterModeChange}
+          />
           <NumberInput
             input={input}
-            setNumberInput={setInputState}
+            handleInputChange={handleInputChange}
           />
           <NumberOutput
             input={input}

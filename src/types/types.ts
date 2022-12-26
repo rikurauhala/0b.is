@@ -3,9 +3,14 @@ export interface MenuBarProps {
   handleThemeChange: () => void
 }
 
+export interface ModeSelectProps {
+  converterMode: string
+  handleConverterModeChange: (arg0: string) => void
+}
+
 export interface NumberInputProps {
   input: string
-  setNumberInput: (arg0: string) => void
+  handleInputChange: (arg0: string) => void
 }
 
 export interface Ref {

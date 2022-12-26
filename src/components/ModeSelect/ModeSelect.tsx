@@ -1,26 +1,24 @@
-import { useState } from 'react';
-
 import Box from '@mui/material/Box';
 import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 
-const ModeSelect = (): JSX.Element => {
-  const [mode, setMode] = useState('');
+import { ModeSelectProps } from '../../types/types';
 
+const ModeSelect = ({ converterMode, handleConverterModeChange }: ModeSelectProps): JSX.Element => {
   const handleChange = (event: SelectChangeEvent) => {
-    setMode(event.target.value);
+    handleConverterModeChange(event.target.value);
   };
 
   return (
     <Box>
-      <FormControl fullWidth>
+      <FormControl variant='filled' fullWidth>
         <InputLabel>Mode</InputLabel>
         <Select
           label='Mode'
           onChange={handleChange}
-          value={mode}
+          value={converterMode}
         >
           <MenuItem value={'BinToDec'}>Binary to Decimal</MenuItem>
           <MenuItem value={'DecToBin'}>Decimal to Binary</MenuItem>
