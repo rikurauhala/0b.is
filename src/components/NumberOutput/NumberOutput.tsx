@@ -10,12 +10,7 @@ import CopyButton from './CopyButton';
 
 import { NumberOutputProps } from '../../types/types';
 
-const getPlaceholder = (mode: string): string => {
-  const placeholders: { [id: string]: string } = {};
-  placeholders['BinToDec'] = 'Decimal';
-  placeholders['DecToBin'] = 'Binary';
-  return placeholders[mode];
-};
+import { getOutputPlaceholder } from '../../utils/placeholder';
 
 const NumberOutput = ({ input, mode }: NumberOutputProps): JSX.Element => {
   const [error, setError] = useState(false);
@@ -25,7 +20,7 @@ const NumberOutput = ({ input, mode }: NumberOutputProps): JSX.Element => {
   const decimal = binaryToDecimal(input);
 
   useEffect(() => {
-    setMessage(getPlaceholder(mode));
+    setMessage(getOutputPlaceholder(mode));
   }, [mode]);
 
   useEffect(() => {
@@ -38,7 +33,7 @@ const NumberOutput = ({ input, mode }: NumberOutputProps): JSX.Element => {
         setError(true);
       }
     } else {
-      setMessage(getPlaceholder(mode));
+      setMessage(getOutputPlaceholder(mode));
       setError(false);
     }
   }, [input]);

@@ -8,12 +8,7 @@ import ClearIcon from '@mui/icons-material/Clear';
 
 import { NumberInputProps, Ref } from '../../types/types';
 
-const getPlaceholder = (mode: string): string => {
-  const placeholders: { [id: string]: string } = {};
-  placeholders['BinToDec'] = 'Binary';
-  placeholders['DecToBin'] = 'Decimal';
-  return placeholders[mode];
-};
+import { getInputPlaceholder } from '../../utils/placeholder';
 
 const NumberInput = ({ input, mode, handleInputChange }: NumberInputProps): JSX.Element => {
   const numberInput = useRef<Ref>({ value: '' });
@@ -32,7 +27,7 @@ const NumberInput = ({ input, mode, handleInputChange }: NumberInputProps): JSX.
         inputRef={numberInput}
         onChange={event => handleInputChange(event.target.value)}
         onKeyPress={event => event.key === 'Enter' && event.preventDefault()}
-        placeholder={getPlaceholder(mode)}
+        placeholder={getInputPlaceholder(mode)}
         sx={{ flex: 1, ml: 1 }}
       />
       {
