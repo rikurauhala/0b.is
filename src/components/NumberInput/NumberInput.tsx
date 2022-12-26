@@ -15,7 +15,7 @@ const NumberInput = ({ input, setNumberInput }: NumberInputProps): JSX.Element =
     alignItems: 'center',
     display: 'flex',
     height: '80px',
-    margin: '30px 5px 0px 5px',
+    margin: '30px 0px 0px 0px',
     padding: '2px 4px'
   };
 
@@ -28,7 +28,8 @@ const NumberInput = ({ input, setNumberInput }: NumberInputProps): JSX.Element =
         placeholder='Binary'
         sx={{ flex: 1, ml: 1 }}
       />
-      { input.length > 0 &&
+      {
+        input.length > 0 &&
         <IconButton
           onClick={() => {
             numberInput.current.value = '';

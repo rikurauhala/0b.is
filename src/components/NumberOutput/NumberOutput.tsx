@@ -11,7 +11,7 @@ const NumberOutput = ({ input }: { input: string }): JSX.Element => {
     alignItems: 'center',
     display: 'flex',
     height: '80px',
-    margin: '30px 5px 0px 5px',
+    margin: '30px 0px 0px 0px',
     padding: '2px 4px'
   };
 
