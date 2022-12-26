@@ -29,8 +29,6 @@ const App = (): JSX.Element => {
     setConverterMode(mode);
   };
 
-  console.log(converterMode);
-
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <CssBaseline />
@@ -43,10 +41,12 @@ const App = (): JSX.Element => {
           />
           <NumberInput
             input={input}
+            mode={converterMode}
             handleInputChange={handleInputChange}
           />
           <NumberOutput
             input={input}
+            mode={converterMode}
           />
         </Stack>
       </Container>

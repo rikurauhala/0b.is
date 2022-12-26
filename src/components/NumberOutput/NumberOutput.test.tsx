@@ -21,7 +21,7 @@ describe('<NumberOutput />', () => {
 
     for (const [input, expectedOutput] of Object.entries(inputs)) {
       const { container } = render(
-        <NumberOutput input={input} />
+        <NumberOutput input={input} mode='BinToDec' />
       );
       const div = container.querySelector('.output');
       expect(div).toBeDefined();

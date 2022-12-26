@@ -8,11 +8,25 @@ import { validateBinary } from '../../utils/validator';
 
 import CopyButton from './CopyButton';
 
-const NumberOutput = ({ input }: { input: string }): JSX.Element => {
+import { NumberOutputProps } from '../../types/types';
+
+const getPlaceholder = (mode: string): string => {
+  const placeholders: { [id: string]: string } = {};
+  placeholders['BinToDec'] = 'Decimal';
+  placeholders['DecToBin'] = 'Binary';
+  return placeholders[mode];
+};
+
+const NumberOutput = ({ input, mode }: NumberOutputProps): JSX.Element => {
   const [error, setError] = useState(false);
   const [message, setMessage] = useState('');
+
   const valid = validateBinary(input);
   const decimal = binaryToDecimal(input);
+
+  useEffect(() => {
+    setMessage(getPlaceholder(mode));
+  }, [mode]);
 
   useEffect(() => {
     if (input.length > 0) {
@@ -24,7 +38,7 @@ const NumberOutput = ({ input }: { input: string }): JSX.Element => {
         setError(true);
       }
     } else {
-      setMessage('Decimal');
+      setMessage(getPlaceholder(mode));
       setError(false);
     }
   }, [input]);
@@ -32,7 +46,7 @@ const NumberOutput = ({ input }: { input: string }): JSX.Element => {
   const style = {
     alignItems: 'center',
     display: 'flex',
-    height: '80px',
+    height: '70px',
     margin: '30px 0px 0px 0px',
     padding: '2px 4px'
   };

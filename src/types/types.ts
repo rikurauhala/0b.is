@@ -10,7 +10,13 @@ export interface ModeSelectProps {
 
 export interface NumberInputProps {
   input: string
+  mode: string
   handleInputChange: (arg0: string) => void
+}
+
+export interface NumberOutputProps {
+  input: string
+  mode: string
 }
 
 export interface Ref {
