@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react';
+
 import { Typography } from '@mui/material';
 import Paper from '@mui/material/Paper';
 
@@ -7,6 +9,26 @@ import { validateBinary } from '../../utils/validator';
 import CopyButton from './CopyButton';
 
 const NumberOutput = ({ input }: { input: string }): JSX.Element => {
+  const [error, setError] = useState(false);
+  const [message, setMessage] = useState('');
+  const valid = validateBinary(input);
+  const decimal = binaryToDecimal(input);
+
+  useEffect(() => {
+    if (input.length > 0) {
+      if (valid) {
+        setMessage(decimal.toString());
+        setError(false);
+      } else {
+        setMessage('Not a valid binary number!');
+        setError(true);
+      }
+    } else {
+      setMessage('Decimal');
+      setError(false);
+    }
+  }, [input]);
+
   const style = {
     alignItems: 'center',
     display: 'flex',
@@ -15,18 +37,11 @@ const NumberOutput = ({ input }: { input: string }): JSX.Element => {
     padding: '2px 4px'
   };
 
-  const valid = validateBinary(input);
-  const decimal = binaryToDecimal(input);
-
   return (
     <Paper component='form' style={style} className='output'>
-      <Typography style={{ flex: '1', marginLeft: '10px' }}>
+      <Typography color={error ? 'error' : ''} style={{ flex: '1', marginLeft: '10px' }}>
         {
-          input.length > 0
-            ? valid
-              ? decimal
-              : 'Not a valid binary number!'
-            : 'Decimal'
+          message
         }
       </Typography>
       {
