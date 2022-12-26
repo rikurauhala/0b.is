@@ -6,6 +6,7 @@ import Stack from '@mui/material/Stack';
 import { ThemeProvider } from '@mui/material/styles';
 
 import MenuBar from './components/MenuBar';
+import ModeSelect from './components/ModeSelect';
 import NumberInput from './components/NumberInput';
 import NumberOutput from './components/NumberOutput';
 
@@ -29,6 +30,7 @@ const App = (): JSX.Element => {
       <MenuBar darkMode={darkMode} handleThemeChange={handleThemeChange} />
       <Container maxWidth='sm'>
         <Stack justifyContent='center' minHeight='50vh'>
+          <ModeSelect />
           <NumberInput
             input={input}
             setNumberInput={setInputState}
