@@ -8,10 +8,10 @@ The simple number converter
 
 <div align="center">
 
-[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/rikurauhala/0b.is/blob/main/LICENSE)
-[![ci](https://github.com/rikurauhala/0b.is/actions/workflows/main.yml/badge.svg)](https://github.com/rikurauhala/0b.is/actions/workflows/main.yml)
-[![pages-build-deployment](https://github.com/rikurauhala/0b.is/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/rikurauhala/0b.is/actions/workflows/pages/pages-build-deployment)
-[![codecov](https://codecov.io/gh/rikurauhala/0b.is/branch/main/graph/badge.svg?token=DTBS2BLU8A)](https://codecov.io/gh/rikurauhala/0b.is)
+[![License](https://img.shields.io/github/license/rikurauhala/0b.is?color=blue&style=for-the-badge)](https://github.com/rikurauhala/0b.is/blob/main/LICENSE)
+[![CI](https://img.shields.io/github/actions/workflow/status/rikurauhala/0b.is/main.yml?style=for-the-badge)](https://github.com/rikurauhala/0b.is/actions/workflows/main.yml)
+![Codecov](https://img.shields.io/codecov/c/github/rikurauhala/0b.is?style=for-the-badge&token=DTBS2BLU8A)
+[![GitHub issues](https://img.shields.io/github/issues/rikurauhala/0b.is?style=for-the-badge)](https://github.com/rikurauhala/0b.is/issues)
 
 </div>
 
