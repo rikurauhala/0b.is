@@ -10,26 +10,27 @@ import CopyButton from './CopyButton';
 
 import { NumberOutputProps } from '../../types/types';
 
-import { getOutputPlaceholder } from '../../utils/placeholder';
+import { getInputPlaceholder, getOutputPlaceholder } from '../../utils/placeholder';
 
 const NumberOutput = ({ input, mode }: NumberOutputProps): JSX.Element => {
-  const [error, setError] = useState(false);
-  const [message, setMessage] = useState('');
+  const [error, setError] = useState<boolean>(false);
+  const [message, setMessage] = useState<string>('');
 
   const valid = validate(input, mode);
   const number = convert(input, mode);
 
   useEffect(() => {
     setMessage(getOutputPlaceholder(mode));
+    setError(false);
   }, [mode]);
 
   useEffect(() => {
     if (input.length > 0) {
       if (valid) {
-        setMessage(number.toString());
+        setMessage(number);
         setError(false);
       } else {
-        setMessage('Not a valid binary number!');
+        setMessage(`Not a valid ${getInputPlaceholder(mode).toLowerCase()} number!`);
         setError(true);
       }
     } else {
