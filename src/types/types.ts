@@ -19,6 +19,8 @@ export interface NumberOutputProps {
   mode: string
 }
 
+export type NumberType = 'Binary' | 'Decimal';
+
 export interface Ref {
   value: string
 }

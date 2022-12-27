@@ -1,4 +1,4 @@
-type NumberType = 'Binary' | 'Decimal';
+import { NumberType } from '../types/types';
 
 export const getInputPlaceholder = (mode: string): NumberType => {
   const placeholders: { [id: string]: NumberType } = {};
