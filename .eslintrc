@@ -23,7 +23,7 @@
       "error", { "before": true, "after": true }
     ],
     "eqeqeq": "error",
-    "indent": ["error", 2],
+    "indent": ["error", 2, { "SwitchCase": 1 }],
     "linebreak-style": ["error", "unix"],
     "no-case-declarations": "off",
     "no-trailing-spaces": "error",
