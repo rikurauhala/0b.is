@@ -4,7 +4,7 @@ import { Typography } from '@mui/material';
 import Paper from '@mui/material/Paper';
 
 import { binaryToDecimal } from '../../utils/converter';
-import { validateBinary } from '../../utils/validator';
+import validate from '../../utils/validator';
 
 import CopyButton from './CopyButton';
 
@@ -16,7 +16,7 @@ const NumberOutput = ({ input, mode }: NumberOutputProps): JSX.Element => {
   const [error, setError] = useState(false);
   const [message, setMessage] = useState('');
 
-  const valid = validateBinary(input);
+  const valid = validate(input, mode);
   const decimal = binaryToDecimal(input);
 
   useEffect(() => {
