@@ -3,8 +3,8 @@ import { useEffect, useState } from 'react';
 import { Typography } from '@mui/material';
 import Paper from '@mui/material/Paper';
 
-import { binaryToDecimal } from '../../utils/converter';
-import validate from '../../utils/validator';
+import convert from '../../utils/convert';
+import validate from '../../utils/validate';
 
 import CopyButton from './CopyButton';
 
@@ -17,7 +17,7 @@ const NumberOutput = ({ input, mode }: NumberOutputProps): JSX.Element => {
   const [message, setMessage] = useState('');
 
   const valid = validate(input, mode);
-  const decimal = binaryToDecimal(input);
+  const number = convert(input, mode);
 
   useEffect(() => {
     setMessage(getOutputPlaceholder(mode));
@@ -26,7 +26,7 @@ const NumberOutput = ({ input, mode }: NumberOutputProps): JSX.Element => {
   useEffect(() => {
     if (input.length > 0) {
       if (valid) {
-        setMessage(decimal.toString());
+        setMessage(number.toString());
         setError(false);
       } else {
         setMessage('Not a valid binary number!');
@@ -54,7 +54,7 @@ const NumberOutput = ({ input, mode }: NumberOutputProps): JSX.Element => {
         }
       </Typography>
       {
-        input.length > 0 && valid && <CopyButton output={decimal.toString()} />
+        input.length > 0 && valid && <CopyButton output={number} />
       }
     </Paper>
   );
