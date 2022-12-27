@@ -11,6 +11,7 @@ The simple number converter
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/rikurauhala/0b.is/blob/main/LICENSE)
 [![ci](https://github.com/rikurauhala/0b.is/actions/workflows/main.yml/badge.svg)](https://github.com/rikurauhala/0b.is/actions/workflows/main.yml)
 [![pages-build-deployment](https://github.com/rikurauhala/0b.is/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/rikurauhala/0b.is/actions/workflows/pages/pages-build-deployment)
+[![codecov](https://codecov.io/gh/rikurauhala/0b.is/branch/main/graph/badge.svg?token=DTBS2BLU8A)](https://codecov.io/gh/rikurauhala/0b.is)
 
 </div>
 
