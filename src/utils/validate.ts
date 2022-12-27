@@ -4,7 +4,7 @@ const validateBinary = (binary: string): boolean => {
 };
 
 const validateDecimal = (decimal: string): boolean => {
-  const regex = new RegExp('^-?[0-9]*.?[0-9]*$');
+  const regex = new RegExp('^-?[0-9]*\.?[0-9]*$');
   return regex.test(decimal);
 };
 
