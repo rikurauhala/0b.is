@@ -22,6 +22,10 @@ const ModeSelect = ({ converterMode, handleConverterModeChange }: ModeSelectProp
         >
           <MenuItem value={'BinToDec'}>Binary to Decimal</MenuItem>
           <MenuItem value={'DecToBin'}>Decimal to Binary</MenuItem>
+          <MenuItem value={'HexToBin'}>Hexadecimal to Binary</MenuItem>
+          <MenuItem value={'BinToHex'}>Binary to Hexadecimal</MenuItem>
+          <MenuItem value={'HexToDec'}>Hexadecimal to Decimal</MenuItem>
+          <MenuItem value={'DecToHex'}>Decimal to Hexadecimal</MenuItem>
         </Select>
       </FormControl>
     </Box>
