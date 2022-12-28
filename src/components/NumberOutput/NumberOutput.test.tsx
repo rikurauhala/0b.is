@@ -45,6 +45,11 @@ describe('<NumberOutput />', () => {
       '-0': '0',
       '-1': '-1',
       'abc': errorMessage,
+      '1a2': errorMessage,
+      '1.': errorMessage,
+      '-1.': errorMessage,
+      '-1a': errorMessage,
+      ' ': errorMessage,
     };
 
     for (const [input, expectedOutput] of Object.entries(inputs)) {
