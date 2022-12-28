@@ -10,7 +10,7 @@ import CopyButton from './CopyButton';
 
 import { NumberOutputProps } from '../../types/types';
 
-import { getInputPlaceholder, getOutputPlaceholder } from '../../utils/placeholder';
+import { getPlaceholder } from '../../utils/placeholder';
 
 const NumberOutput = ({ input, mode }: NumberOutputProps): JSX.Element => {
   const [error, setError] = useState<boolean>(false);
@@ -20,7 +20,7 @@ const NumberOutput = ({ input, mode }: NumberOutputProps): JSX.Element => {
   const number = convert(input, mode);
 
   useEffect(() => {
-    setMessage(getOutputPlaceholder(mode));
+    setMessage(getPlaceholder(mode)[1]);
     setError(false);
   }, [mode]);
 
@@ -30,11 +30,11 @@ const NumberOutput = ({ input, mode }: NumberOutputProps): JSX.Element => {
         setMessage(number);
         setError(false);
       } else {
-        setMessage(`Not a valid ${getInputPlaceholder(mode).toLowerCase()} number!`);
+        setMessage(`Not a valid ${getPlaceholder(mode)[0].toLowerCase()} number!`);
         setError(true);
       }
     } else {
-      setMessage(getOutputPlaceholder(mode));
+      setMessage(getPlaceholder(mode)[1]);
       setError(false);
     }
   }, [input]);
