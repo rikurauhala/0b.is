@@ -11,11 +11,12 @@ import NumberInput from './components/NumberInput';
 import NumberOutput from './components/NumberOutput';
 
 import { lightTheme, darkTheme } from './themes/themes';
+import { ConverterModeCode } from './types/types';
 
 const App = (): JSX.Element => {
   const [input, setInput] = useState<string>('');
   const [darkMode, setDarkMode] = useState<boolean>(true);
-  const [converterMode, setConverterMode] = useState<string>('BinToDec');
+  const [converterMode, setConverterMode] = useState<ConverterModeCode>('BinToDec');
 
   const handleInputChange = (input: string): void => {
     setInput(input);
@@ -25,7 +26,7 @@ const App = (): JSX.Element => {
     setDarkMode(!darkMode);
   };
 
-  const handleConverterModeChange = (mode: string): void => {
+  const handleConverterModeChange = (mode: ConverterModeCode): void => {
     setConverterMode(mode);
   };
 
