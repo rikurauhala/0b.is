@@ -33,7 +33,9 @@ Quick links:
 
 ## Contributing
 
-To contribute, feel free to open a new issue or pull request. You may also check out the list of [open issues](https://github.com/rikurauhala/0b.is/issues) and suggest a solution.
+To contribute, open a new issue or create a pull request. Please refer to the [contribution](https://github.com/rikurauhala/0b.is/blob/main/CONTRIBUTING.md) guidelines document first!
+
+Feel free to email the [maintainer](https://github.com/rikurauhala) if you have any questions.
 
 ## License
 
