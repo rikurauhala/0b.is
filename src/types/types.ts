@@ -5,7 +5,7 @@ export interface MenuBarProps {
 
 export interface ModeSelectProps {
   converterMode: string
-  handleConverterModeChange: (arg0: string) => void
+  handleConverterModeChange: (arg0: ConvertModeType) => void
 }
 
 export interface NumberInputProps {
@@ -24,3 +24,5 @@ export type NumberType = 'Binary' | 'Decimal';
 export interface Ref {
   value: string
 }
+
+export type ConvertModeType = 'BinToDec' | 'DecToBin' | 'HexToDec'

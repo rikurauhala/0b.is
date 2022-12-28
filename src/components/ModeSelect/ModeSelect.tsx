@@ -4,11 +4,11 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 
-import { ModeSelectProps } from '../../types/types';
+import { ConvertModeType, ModeSelectProps } from '../../types/types';
 
 const ModeSelect = ({ converterMode, handleConverterModeChange }: ModeSelectProps): JSX.Element => {
   const handleChange = (event: SelectChangeEvent) => {
-    handleConverterModeChange(event.target.value);
+    handleConverterModeChange(event.target.value as ConvertModeType);
   };
 
   return (
