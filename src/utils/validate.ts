@@ -16,15 +16,12 @@ const validateHexadecimal = (hexadecimal: string): boolean => {
 const validate = (number: string, mode: string): boolean => {
   switch(mode) {
     case 'BinToDec':
-      return validateBinary(number);
     case 'BinToHex':
       return validateBinary(number);
     case 'DecToBin':
-      return validateDecimal(number);
     case 'DecToHex':
       return validateDecimal(number);
     case 'HexToBin':
-      return validateHexadecimal(number);
     case 'HexToDec':
       return validateHexadecimal(number);
     default:
