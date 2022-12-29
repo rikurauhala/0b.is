@@ -33,13 +33,13 @@ Quick links:
 
 ## Contributing
 
-To contribute, open a new issue or create a pull request. Please refer to the [contribution](https://github.com/rikurauhala/0b.is/blob/main/CONTRIBUTING.md) guidelines document first!
+To contribute, open a new issue or create a pull request. Please refer to the [contribution guidelines](https://github.com/rikurauhala/0b.is/blob/main/CONTRIBUTING.md) first!
 
 Feel free to email the [maintainer](https://github.com/rikurauhala) if you have any questions.
 
 ## License
 
-The license for this project is [MIT](https://github.com/rikurauhala/0b.is/blob/main/LICENSE).
+The license for this project is [MIT](https://github.com/rikurauhala/0b.is/blob/main/LICENSE.md).
 
 ```
 MIT License
