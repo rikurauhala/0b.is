@@ -23,13 +23,14 @@ The simple number converter
 
 ## Documentation
 
-All documentation can be found in the repository [wiki](https://github.com/rikurauhala/0b.is/wiki).
-
-Quick links:
-- [User Manual](https://github.com/rikurauhala/0b.is/wiki/User-Manual)
-- [Changelog](https://github.com/rikurauhala/0b.is/wiki/Changelog)
+- [Changelog](https://github.com/rikurauhala/0b.is/wiki/Changelog) [to be written]
+- [Code of Conduct](https://github.com/rikurauhala/0b.is/blob/main/CODE_OF_CONDUCT.md)
+- [Contributing](https://github.com/rikurauhala/0b.is/blob/main/CONTRIBUTING.md)
+- [License](https://github.com/rikurauhala/0b.is/blob/main/LICENSE.md)
+- [Security policy](https://github.com/rikurauhala/0b.is/blob/main/SECURITY.md)
+- [Software Architecture](https://github.com/rikurauhala/0b.is/wiki/Software-Architecture) [to be written]
 - [Software Requirements Specification](https://github.com/rikurauhala/0b.is/wiki/Software-Requirements-Specification)
-- [Software Architecture](https://github.com/rikurauhala/0b.is/wiki/Software-Architecture)
+- [User Manual](https://github.com/rikurauhala/0b.is/wiki/User-Manual) [to be written]
 
 ## Contributing
 
