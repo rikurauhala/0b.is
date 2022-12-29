@@ -1,3 +1,5 @@
+import { ConverterModeCode } from '../types/types';
+
 const validateBinary = (binary: string): boolean => {
   const regex = new RegExp('^-?[01]+$');
   return regex.test(binary);
@@ -13,7 +15,7 @@ const validateHexadecimal = (hexadecimal: string): boolean => {
   return regex.test(hexadecimal);
 };
 
-const validate = (number: string, mode: string): boolean => {
+const validate = (number: string, mode: ConverterModeCode): boolean => {
   switch(mode) {
     case 'BinToDec':
     case 'BinToHex':
