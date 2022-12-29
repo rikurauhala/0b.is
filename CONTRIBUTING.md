@@ -40,6 +40,44 @@ $ git commit -m "Some changes"
 $ git commit -m "Removed some links"
 ```
 
+## Set up the application locally
+
+If you wish you contribute to the source code itself, here's how to install the application and start developing on your machine. You should be familiar with React, JavaScript/TypeScript and have Node.js installed. I would recommend using Visual Studio Code but any other editor will do just fine if Code is not your thing.
+
+### How to install
+
+```bash
+# Get the source code
+$ git clone git@github.com:rikurauhala/0b.is.git
+
+# Change directory
+$ cd 0b.is
+
+# Install dependencies
+$ npm install
+```
+
+### How to run
+
+After running the application, your default browser should automatically open and the app should be running locally. If not, go to http://localhost:3000 manually.
+
+```bash
+# Run the application
+$ npm start
+```
+
+### How to test
+
+Please make sure to always run the unit tests and the linter before creating a pull request.
+
+```bash
+# Run the unit tests
+$ CI=true npm test
+
+# Check the code style quality
+$ npm run lint
+```
+
 ## Useful resources
 
 Here are some useful resources to help you make your first contribution.
