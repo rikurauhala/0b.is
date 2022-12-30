@@ -3,20 +3,20 @@ import { useState } from 'react';
 import Container from '@mui/material/Container';
 import CssBaseline from '@mui/material/CssBaseline';
 import Stack from '@mui/material/Stack';
+
 import { ThemeProvider } from '@mui/material/styles';
 
 import MenuBar from './components/MenuBar';
-import ModeSelect from './components/ModeSelect';
 import NumberInput from './components/NumberInput';
 import NumberOutput from './components/NumberOutput';
 
 import { lightTheme, darkTheme } from './themes/themes';
-import { ConverterModeCode } from './types/types';
 
 const App = (): JSX.Element => {
-  const [input, setInput] = useState<string>('');
   const [darkMode, setDarkMode] = useState<boolean>(true);
-  const [converterMode, setConverterMode] = useState<ConverterModeCode>('BinToDec');
+  const [input, setInput] = useState<string>('');
+  const [inputSystem, setInputSystem] = useState('Binary');
+  const [outputSystem, setOutputSystem] = useState('Decimal');
 
   const handleInputChange = (input: string): void => {
     setInput(input);
@@ -26,33 +26,36 @@ const App = (): JSX.Element => {
     setDarkMode(!darkMode);
   };
 
-  const handleConverterModeChange = (mode: ConverterModeCode): void => {
-    setConverterMode(mode);
+  const handleInputSystemChange = (input: string): void => {
+    setInputSystem(input);
+  };
+
+  const handleOutputSystemChange = (input: string): void => {
+    setOutputSystem(input);
   };
 
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <CssBaseline />
       <MenuBar darkMode={darkMode} handleThemeChange={handleThemeChange} />
-      <Container maxWidth='sm'>
-        <Stack justifyContent='center' marginTop='50px'>
-          <ModeSelect
-            converterMode={converterMode}
-            handleConverterModeChange={handleConverterModeChange}
-          />
+      <Container maxWidth='md'>
+        <Stack justifyContent='center' marginTop='50px' spacing={3}>
           <NumberInput
-            input={input}
-            mode={converterMode}
+            inputSystem={inputSystem}
             handleInputChange={handleInputChange}
+            handleInputSystemChange={handleInputSystemChange}
           />
           <NumberOutput
             input={input}
-            mode={converterMode}
+            outputSystem={outputSystem}
+            handleOutputSystemChange={handleOutputSystemChange}
           />
         </Stack>
       </Container>
     </ThemeProvider>
   );
 };
+
+
 
 export default App;

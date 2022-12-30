@@ -1,63 +1,37 @@
-import { useEffect, useState } from 'react';
-
-import { Typography } from '@mui/material';
-import Paper from '@mui/material/Paper';
-
-import convert from '../../utils/convert';
-import validate from '../../utils/validate';
-
-import CopyButton from './CopyButton';
+import Box from '@mui/material/Box';
+import FormControl from '@mui/material/FormControl';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import Select, { SelectChangeEvent } from '@mui/material/Select';
+import TextField from '@mui/material/TextField';
 
 import { NumberOutputProps } from '../../types/types';
 
-import { getPlaceholder } from '../../utils/placeholder';
-
-const NumberOutput = ({ input, mode }: NumberOutputProps): JSX.Element => {
-  const [error, setError] = useState<boolean>(false);
-  const [message, setMessage] = useState<string>('');
-
-  const valid = validate(input, mode);
-  const number = convert(input, mode);
-
-  useEffect(() => {
-    setMessage(getPlaceholder(mode)[1]);
-    setError(false);
-  }, [mode]);
-
-  useEffect(() => {
-    if (input.length > 0) {
-      if (valid) {
-        setMessage(number);
-        setError(false);
-      } else {
-        setMessage(`Not a valid ${getPlaceholder(mode)[0].toLowerCase()} number!`);
-        setError(true);
-      }
-    } else {
-      setMessage(getPlaceholder(mode)[1]);
-      setError(false);
-    }
-  }, [input]);
-
-  const style = {
-    alignItems: 'center',
-    display: 'flex',
-    height: '70px',
-    margin: '30px 0px 0px 0px',
-    padding: '2px 4px'
+const NumberOutput = ({ input, outputSystem, handleOutputSystemChange }: NumberOutputProps): JSX.Element => {
+  const handleChange = (event: SelectChangeEvent) => {
+    handleOutputSystemChange(event.target.value);
   };
 
   return (
-    <Paper component='form' style={style} className='output'>
-      <Typography color={error ? 'error' : ''} style={{ flex: '1', marginLeft: '10px' }}>
-        {
-          message
-        }
-      </Typography>
-      {
-        input.length > 0 && valid && <CopyButton output={number} />
-      }
-    </Paper>
+    <Box>
+      <TextField
+        label='Output'
+        sx={{width: '70%'}}
+        value={input}
+      />
+      <FormControl sx={{width: '30%'}}>
+        <InputLabel>To</InputLabel>
+        <Select
+          label='To'
+          onChange={handleChange}
+          value={outputSystem}
+        >
+          <MenuItem value={'Binary'}>Binary</MenuItem>
+          <MenuItem value={'Decimal'}>Decimal</MenuItem>
+          <MenuItem value={'Hexadecimal'}>Hexadecimal</MenuItem>
+        </Select>
+      </FormControl>
+    </Box>
   );
 };
 

@@ -1,47 +1,43 @@
 import { useRef } from 'react';
 
-import IconButton from '@mui/material/IconButton';
-import InputBase from '@mui/material/InputBase';
-import Paper from '@mui/material/Paper';
-
-import ClearIcon from '@mui/icons-material/Clear';
+import Box from '@mui/material/Box';
+import FormControl from '@mui/material/FormControl';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import Select, { SelectChangeEvent } from '@mui/material/Select';
+import TextField from '@mui/material/TextField';
 
 import { NumberInputProps, Ref } from '../../types/types';
 
-import { getPlaceholder } from '../../utils/placeholder';
-
-const NumberInput = ({ input, mode, handleInputChange }: NumberInputProps): JSX.Element => {
+const NumberInput = ({ inputSystem, handleInputChange, handleInputSystemChange }: NumberInputProps): JSX.Element => {
   const numberInput = useRef<Ref>({ value: '' });
 
-  const style = {
-    alignItems: 'center',
-    display: 'flex',
-    height: '70px',
-    margin: '30px 0px 0px 0px',
-    padding: '2px 4px'
+  const handleChange = (event: SelectChangeEvent) => {
+    handleInputSystemChange(event.target.value);
   };
 
   return (
-    <Paper component='form' style={style}>
-      <InputBase
+    <Box>
+      <TextField
         inputRef={numberInput}
+        label='Input'
         onChange={event => handleInputChange(event.target.value)}
         onKeyPress={event => event.key === 'Enter' && event.preventDefault()}
-        placeholder={getPlaceholder(mode)[0]}
-        sx={{ flex: 1, ml: 1 }}
+        sx={{width: '70%'}}
       />
-      {
-        input.length > 0 &&
-        <IconButton
-          onClick={() => {
-            numberInput.current.value = '';
-            handleInputChange('');
-          }}
+      <FormControl sx={{width: '30%'}}>
+        <InputLabel>From</InputLabel>
+        <Select
+          label='From'
+          onChange={handleChange}
+          value={inputSystem}
         >
-          <ClearIcon />
-        </IconButton>
-      }
-    </Paper>
+          <MenuItem value={'Binary'}>Binary</MenuItem>
+          <MenuItem value={'Decimal'}>Decimal</MenuItem>
+          <MenuItem value={'Hexadecimal'}>Hexadecimal</MenuItem>
+        </Select>
+      </FormControl>
+    </Box>
   );
 };
 

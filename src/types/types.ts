@@ -16,14 +16,15 @@ export interface ModeSelectProps {
 }
 
 export interface NumberInputProps {
-  input: string
-  mode: ConverterModeCode
+  inputSystem: string
   handleInputChange: (arg0: string) => void
+  handleInputSystemChange: (arg0: string) => void
 }
 
 export interface NumberOutputProps {
   input: string
-  mode: ConverterModeCode
+  outputSystem: string
+  handleOutputSystemChange: (arg0: string) => void
 }
 
 export type NumberType = 'Binary' | 'Decimal' | 'Hexadecimal';
