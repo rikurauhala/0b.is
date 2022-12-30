@@ -9,7 +9,7 @@ import TextField from '@mui/material/TextField';
 
 import { numeralSystems } from '../../utils/systems';
 
-import { NumberOutputProps } from '../../types/types';
+import { NumberOutputProps, NumeralSystem } from '../../types/types';
 
 import convert from '../../utils/convert';
 import validate from '../../utils/validate';
@@ -38,7 +38,7 @@ const NumberOutput = (props: NumberOutputProps): JSX.Element => {
   }, [input]);
 
   const handleChange = (event: SelectChangeEvent) => {
-    handleOutputSystemChange(event.target.value);
+    handleOutputSystemChange(event.target.value as NumeralSystem);
   };
 
   return (

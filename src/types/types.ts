@@ -5,16 +5,16 @@ export interface MenuBarProps {
 
 export interface NumberInputProps {
   input: string
-  inputSystem: string
+  inputSystem: NumeralSystem
   handleInputChange: (arg0: string) => void
-  handleInputSystemChange: (arg0: string) => void
+  handleInputSystemChange: (arg0: NumeralSystem) => void
 }
 
 export interface NumberOutputProps {
   input: string
-  inputSystem: string
-  outputSystem: string
-  handleOutputSystemChange: (arg0: string) => void
+  inputSystem: NumeralSystem
+  outputSystem: NumeralSystem
+  handleOutputSystemChange: (arg0: NumeralSystem) => void
 }
 
 export type NumeralSystem =

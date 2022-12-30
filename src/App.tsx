@@ -12,11 +12,13 @@ import NumberOutput from './components/NumberOutput';
 
 import { lightTheme, darkTheme } from './themes/themes';
 
+import { NumeralSystem } from './types/types';
+
 const App = (): JSX.Element => {
   const [darkMode, setDarkMode] = useState<boolean>(true);
   const [input, setInput] = useState<string>('');
-  const [inputSystem, setInputSystem] = useState('Binary');
-  const [outputSystem, setOutputSystem] = useState('Decimal');
+  const [inputSystem, setInputSystem] = useState<NumeralSystem>('Binary');
+  const [outputSystem, setOutputSystem] = useState<NumeralSystem>('Decimal');
 
   const handleInputChange = (input: string): void => {
     setInput(input);
@@ -26,11 +28,11 @@ const App = (): JSX.Element => {
     setDarkMode(!darkMode);
   };
 
-  const handleInputSystemChange = (input: string): void => {
+  const handleInputSystemChange = (input: NumeralSystem): void => {
     setInputSystem(input);
   };
 
-  const handleOutputSystemChange = (input: string): void => {
+  const handleOutputSystemChange = (input: NumeralSystem): void => {
     setOutputSystem(input);
   };
 
