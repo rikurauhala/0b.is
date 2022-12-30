@@ -2,10 +2,14 @@ import { useEffect, useRef, useState } from 'react';
 
 import Box from '@mui/material/Box';
 import FormControl from '@mui/material/FormControl';
+import IconButton from '@mui/material/IconButton';
+import InputAdornment from '@mui/material/InputAdornment';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import TextField from '@mui/material/TextField';
+
+import ClearIcon from '@mui/icons-material/Clear';
 
 import { numeralSystems } from '../../utils/systems';
 
@@ -38,6 +42,22 @@ const NumberInput = (props: NumberInputProps): JSX.Element => {
     <Box>
       <TextField
         error={error}
+        InputProps={{
+          endAdornment:
+            <InputAdornment position='end'>
+              {
+                input.length > 0 &&
+                <IconButton
+                  onClick={() => {
+                    numberInput.current.value = '';
+                    handleInputChange('');
+                  }}
+                >
+                  <ClearIcon />
+                </IconButton>
+              }
+            </InputAdornment>,
+        }}
         inputRef={numberInput}
         label='Input'
         onChange={event => handleInputChange(event.target.value)}

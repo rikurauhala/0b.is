@@ -33,7 +33,7 @@ const convert = (number: string, inputSystem: string, outputSystem: string): str
         case 'Hexadecimal':
           return binaryToHexadecimal(number);
         default:
-          return 'Error';
+          return number;
       }
     case 'Decimal':
       switch(outputSystem) {
@@ -42,7 +42,7 @@ const convert = (number: string, inputSystem: string, outputSystem: string): str
         case 'Hexadecimal':
           return binaryToHexadecimal(decimalToBinary(number));
         default:
-          return 'Error';
+          return number;
       }
     case 'Hexadecimal':
       switch(outputSystem) {
@@ -51,10 +51,10 @@ const convert = (number: string, inputSystem: string, outputSystem: string): str
         case 'Decimal':
           return binaryToDecimal(hexadecimalToBinary(number));
         default:
-          return 'Error';
+          return number;
       }
     default:
-      return 'Error';
+      return 'Something went wrong!';
   }
 };
 
