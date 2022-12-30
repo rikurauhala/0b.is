@@ -9,7 +9,9 @@ import TextField from '@mui/material/TextField';
 
 import { NumberInputProps, Ref } from '../../types/types';
 
-const NumberInput = ({ inputSystem, handleInputChange, handleInputSystemChange }: NumberInputProps): JSX.Element => {
+const NumberInput = (props: NumberInputProps): JSX.Element => {
+  const { inputSystem, handleInputChange, handleInputSystemChange } = props;
+
   const numberInput = useRef<Ref>({ value: '' });
 
   const handleChange = (event: SelectChangeEvent) => {

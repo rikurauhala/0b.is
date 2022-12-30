@@ -1,3 +1,5 @@
+/* eslint-disable indent */
+
 const binaryToDecimal = (binary: string): string => {
   const decimal: string = parseInt(binary, 2).toString();
   return decimal;
@@ -14,7 +16,11 @@ const binaryToHexadecimal = (binary: string): string => {
 };
 
 const hexadecimalToBinary = (hexadecimal: string): string => {
-  const binary: string = hexadecimal.split('').map(i => parseInt(i, 16).toString(2).padStart(4, '0')).join('');
+  const binary: string = hexadecimal.split('')
+    .map(i => parseInt(i, 16)
+    .toString(2)
+    .padStart(4, '0'))
+    .join('');
   return binary;
 };
 

@@ -20,6 +20,7 @@
     "eqeqeq": "error",
     "indent": ["error", 2, { "SwitchCase": 1 }],
     "linebreak-style": ["error", "unix"],
+    "max-len": ["error", { "code": 100, "tabWidth": 2 }],
     "no-case-declarations": "off",
     "no-trailing-spaces": "error",
     "no-useless-escape": "off",

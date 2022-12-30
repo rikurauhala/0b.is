@@ -12,8 +12,8 @@ import { NumberOutputProps } from '../../types/types';
 import convert from '../../utils/convert';
 import validate from '../../utils/validate';
 
-const NumberOutput = ({ input, inputSystem, outputSystem, handleOutputSystemChange }: NumberOutputProps): JSX.Element => {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+const NumberOutput = (props: NumberOutputProps): JSX.Element => {
+  const { input, inputSystem, outputSystem, handleOutputSystemChange } = props;
   const [error, setError] = useState<boolean>(false);
   const [message, setMessage] = useState<string>('');
 
@@ -47,6 +47,7 @@ const NumberOutput = ({ input, inputSystem, outputSystem, handleOutputSystemChan
   return (
     <Box>
       <TextField
+        error={error}
         label='Output'
         sx={{ width: '70%' }}
         value={message}
