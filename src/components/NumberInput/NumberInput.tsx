@@ -7,6 +7,8 @@ import MenuItem from '@mui/material/MenuItem';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import TextField from '@mui/material/TextField';
 
+import { numeralSystems } from '../../utils/systems';
+
 import { NumberInputProps, Ref } from '../../types/types';
 
 import validate from '../../utils/validate';
@@ -49,9 +51,11 @@ const NumberInput = (props: NumberInputProps): JSX.Element => {
           onChange={handleChange}
           value={inputSystem}
         >
-          <MenuItem value={'Binary'}>Binary</MenuItem>
-          <MenuItem value={'Decimal'}>Decimal</MenuItem>
-          <MenuItem value={'Hexadecimal'}>Hexadecimal</MenuItem>
+          {
+            numeralSystems.map(system => (
+              <MenuItem key={system} value={system}>{system}</MenuItem>
+            ))
+          }
         </Select>
       </FormControl>
     </Box>

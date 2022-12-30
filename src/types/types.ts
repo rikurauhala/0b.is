@@ -17,7 +17,10 @@ export interface NumberOutputProps {
   handleOutputSystemChange: (arg0: string) => void
 }
 
-export type NumberType = 'Binary' | 'Decimal' | 'Hexadecimal';
+export type NumeralSystem =
+  | 'Binary'
+  | 'Decimal'
+  | 'Hexadecimal';
 
 export interface Ref {
   value: string
