@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 
 import Box from '@mui/material/Box';
 import FormControl from '@mui/material/FormControl';
+import InputAdornment from '@mui/material/InputAdornment';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
@@ -13,6 +14,8 @@ import { NumberOutputProps, NumeralSystem } from '../../types/types';
 
 import convert from '../../utils/convert';
 import validate from '../../utils/validate';
+
+import CopyButton from './CopyButton';
 
 const NumberOutput = (props: NumberOutputProps): JSX.Element => {
   const { input, inputSystem, outputSystem, handleOutputSystemChange } = props;
@@ -45,6 +48,12 @@ const NumberOutput = (props: NumberOutputProps): JSX.Element => {
     <Box>
       <TextField
         InputProps={{
+          endAdornment:
+            <InputAdornment position='end'>
+              {
+                input.length > 0 && valid && <CopyButton output={number} />
+              }
+            </InputAdornment>,
           readOnly: true,
         }}
         label='Output'
