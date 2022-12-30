@@ -41,6 +41,7 @@ const App = (): JSX.Element => {
       <Container maxWidth='md'>
         <Stack justifyContent='center' marginTop='50px' spacing={3}>
           <NumberInput
+            input={input}
             inputSystem={inputSystem}
             handleInputChange={handleInputChange}
             handleInputSystemChange={handleInputSystemChange}

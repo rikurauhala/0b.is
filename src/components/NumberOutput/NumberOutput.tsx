@@ -14,7 +14,6 @@ import validate from '../../utils/validate';
 
 const NumberOutput = (props: NumberOutputProps): JSX.Element => {
   const { input, inputSystem, outputSystem, handleOutputSystemChange } = props;
-  const [error, setError] = useState<boolean>(false);
   const [message, setMessage] = useState<string>('');
 
   const valid = validate(input, inputSystem);
@@ -22,21 +21,17 @@ const NumberOutput = (props: NumberOutputProps): JSX.Element => {
 
   useEffect(() => {
     setMessage(outputSystem);
-    setError(false);
   }, [outputSystem]);
 
   useEffect(() => {
     if (input.length > 0) {
       if (valid) {
         setMessage(number);
-        setError(false);
       } else {
         setMessage(`Not a valid ${inputSystem.toLowerCase()} number!`);
-        setError(true);
       }
     } else {
       setMessage(outputSystem);
-      setError(false);
     }
   }, [input]);
 
@@ -47,7 +42,9 @@ const NumberOutput = (props: NumberOutputProps): JSX.Element => {
   return (
     <Box>
       <TextField
-        error={error}
+        InputProps={{
+          readOnly: true,
+        }}
         label='Output'
         sx={{ width: '70%' }}
         value={message}

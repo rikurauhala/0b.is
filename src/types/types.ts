@@ -4,6 +4,7 @@ export interface MenuBarProps {
 }
 
 export interface NumberInputProps {
+  input: string
   inputSystem: string
   handleInputChange: (arg0: string) => void
   handleInputSystemChange: (arg0: string) => void

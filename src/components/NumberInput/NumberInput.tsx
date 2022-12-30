@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import Box from '@mui/material/Box';
 import FormControl from '@mui/material/FormControl';
@@ -9,8 +9,12 @@ import TextField from '@mui/material/TextField';
 
 import { NumberInputProps, Ref } from '../../types/types';
 
+import validate from '../../utils/validate';
+
 const NumberInput = (props: NumberInputProps): JSX.Element => {
-  const { inputSystem, handleInputChange, handleInputSystemChange } = props;
+  const { input, inputSystem, handleInputChange, handleInputSystemChange } = props;
+
+  const [error, setError] = useState<boolean>(false);
 
   const numberInput = useRef<Ref>({ value: '' });
 
@@ -18,9 +22,20 @@ const NumberInput = (props: NumberInputProps): JSX.Element => {
     handleInputSystemChange(event.target.value);
   };
 
+  const valid = validate(input, inputSystem);
+
+  useEffect(() => {
+    if ((input.length > 0) && !(valid)) {
+      setError(true);
+    } else {
+      setError(false);
+    }
+  }, [input]);
+
   return (
     <Box>
       <TextField
+        error={error}
         inputRef={numberInput}
         label='Input'
         onChange={event => handleInputChange(event.target.value)}
