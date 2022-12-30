@@ -1,18 +1,6 @@
-export type ConverterModeCode = 'BinToDec'
-  | 'BinToHex'
-  | 'DecToBin'
-  | 'DecToHex'
-  | 'HexToBin'
-  | 'HexToDec';
-
 export interface MenuBarProps {
   darkMode: boolean
   handleThemeChange: () => void
-}
-
-export interface ModeSelectProps {
-  converterMode: ConverterModeCode
-  handleConverterModeChange: (arg0: ConverterModeCode) => void
 }
 
 export interface NumberInputProps {
@@ -23,6 +11,7 @@ export interface NumberInputProps {
 
 export interface NumberOutputProps {
   input: string
+  inputSystem: string
   outputSystem: string
   handleOutputSystemChange: (arg0: string) => void
 }

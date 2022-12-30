@@ -23,9 +23,9 @@ const NumberInput = ({ inputSystem, handleInputChange, handleInputSystemChange }
         label='Input'
         onChange={event => handleInputChange(event.target.value)}
         onKeyPress={event => event.key === 'Enter' && event.preventDefault()}
-        sx={{width: '70%'}}
+        sx={{ width: '70%' }}
       />
-      <FormControl sx={{width: '30%'}}>
+      <FormControl sx={{ width: '30%' }}>
         <InputLabel>From</InputLabel>
         <Select
           label='From'

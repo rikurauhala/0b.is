@@ -47,6 +47,7 @@ const App = (): JSX.Element => {
           />
           <NumberOutput
             input={input}
+            inputSystem={inputSystem}
             outputSystem={outputSystem}
             handleOutputSystemChange={handleOutputSystemChange}
           />
@@ -55,7 +56,5 @@ const App = (): JSX.Element => {
     </ThemeProvider>
   );
 };
-
-
 
 export default App;

@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react';
+
 import Box from '@mui/material/Box';
 import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
@@ -7,7 +9,37 @@ import TextField from '@mui/material/TextField';
 
 import { NumberOutputProps } from '../../types/types';
 
-const NumberOutput = ({ input, outputSystem, handleOutputSystemChange }: NumberOutputProps): JSX.Element => {
+import convert from '../../utils/convert';
+import validate from '../../utils/validate';
+
+const NumberOutput = ({ input, inputSystem, outputSystem, handleOutputSystemChange }: NumberOutputProps): JSX.Element => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [error, setError] = useState<boolean>(false);
+  const [message, setMessage] = useState<string>('');
+
+  const valid = validate(input, inputSystem);
+  const number = convert(input, inputSystem, outputSystem);
+
+  useEffect(() => {
+    setMessage(outputSystem);
+    setError(false);
+  }, [outputSystem]);
+
+  useEffect(() => {
+    if (input.length > 0) {
+      if (valid) {
+        setMessage(number);
+        setError(false);
+      } else {
+        setMessage(`Not a valid ${inputSystem.toLowerCase()} number!`);
+        setError(true);
+      }
+    } else {
+      setMessage(outputSystem);
+      setError(false);
+    }
+  }, [input]);
+
   const handleChange = (event: SelectChangeEvent) => {
     handleOutputSystemChange(event.target.value);
   };
@@ -16,10 +48,10 @@ const NumberOutput = ({ input, outputSystem, handleOutputSystemChange }: NumberO
     <Box>
       <TextField
         label='Output'
-        sx={{width: '70%'}}
-        value={input}
+        sx={{ width: '70%' }}
+        value={message}
       />
-      <FormControl sx={{width: '30%'}}>
+      <FormControl sx={{ width: '30%' }}>
         <InputLabel>To</InputLabel>
         <Select
           label='To'

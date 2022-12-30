@@ -18,20 +18,35 @@ const hexadecimalToBinary = (hexadecimal: string): string => {
   return binary;
 };
 
-const convert = (number: string, mode: string): string => {
-  switch(mode) {
-    case 'BinToDec':
-      return binaryToDecimal(number);
-    case 'BinToHex':
-      return binaryToHexadecimal(number);
-    case 'DecToBin':
-      return decimalToBinary(number);
-    case 'DecToHex':
-      return binaryToHexadecimal(decimalToBinary(number));
-    case 'HexToBin':
-      return hexadecimalToBinary(number);
-    case 'HexToDec':
-      return binaryToDecimal(hexadecimalToBinary(number));
+const convert = (number: string, inputSystem: string, outputSystem: string): string => {
+  switch(inputSystem) {
+    case 'Binary':
+      switch(outputSystem) {
+        case 'Decimal':
+          return binaryToDecimal(number);
+        case 'Hexadecimal':
+          return binaryToHexadecimal(number);
+        default:
+          return 'Error';
+      }
+    case 'Decimal':
+      switch(outputSystem) {
+        case 'Binary':
+          return decimalToBinary(number);
+        case 'Hexadecimal':
+          return binaryToHexadecimal(decimalToBinary(number));
+        default:
+          return 'Error';
+      }
+    case 'Hexadecimal':
+      switch(outputSystem) {
+        case 'Binary':
+          return hexadecimalToBinary(number);
+        case 'Decimal':
+          return binaryToDecimal(hexadecimalToBinary(number));
+        default:
+          return 'Error';
+      }
     default:
       return 'Error';
   }
