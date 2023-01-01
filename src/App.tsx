@@ -17,8 +17,8 @@ import { NumeralSystem } from './types/types';
 const App = (): JSX.Element => {
   const [darkMode, setDarkMode] = useState<boolean>(true);
   const [input, setInput] = useState<string>('');
-  const [inputSystem, setInputSystem] = useState<NumeralSystem>('Binary');
-  const [outputSystem, setOutputSystem] = useState<NumeralSystem>('Decimal');
+  const [inputSystem, setInputSystem] = useState<NumeralSystem>(NumeralSystem.Binary);
+  const [outputSystem, setOutputSystem] = useState<NumeralSystem>(NumeralSystem.Decimal);
 
   const handleInputChange = (input: string): void => {
     setInput(input);

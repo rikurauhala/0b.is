@@ -1,5 +1,7 @@
 import '@testing-library/jest-dom/extend-expect';
 
+import { NumeralSystem } from '../types/types';
+
 import validate from './validate';
 
 describe('validate', () => {
@@ -19,7 +21,7 @@ describe('validate', () => {
     };
 
     for (const [input, expectedOutput] of Object.entries(inputs)) {
-      const valid = validate(input, 'Binary');
+      const valid = validate(input, NumeralSystem.Binary);
       expect(valid).toBe(expectedOutput);
     }
   });
@@ -46,7 +48,7 @@ describe('validate', () => {
     };
 
     for (const [input, expectedOutput] of Object.entries(inputs)) {
-      const valid = validate(input, 'Decimal');
+      const valid = validate(input, NumeralSystem.Decimal);
       expect(valid).toBe(expectedOutput);
     }
   });

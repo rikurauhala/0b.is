@@ -1,5 +1,7 @@
 import '@testing-library/jest-dom/extend-expect';
 
+import { NumeralSystem } from '../types/types';
+
 import convert from './convert';
 
 describe('convert', () => {
@@ -16,7 +18,7 @@ describe('convert', () => {
     };
 
     for (const [input, expectedOutput] of Object.entries(inputs)) {
-      const valid = convert(input, 'Binary', 'Decimal');
+      const valid = convert(input, NumeralSystem.Binary, NumeralSystem.Decimal);
       expect(valid).toBe(expectedOutput);
     }
   });
@@ -37,7 +39,7 @@ describe('convert', () => {
     };
 
     for (const [input, expectedOutput] of Object.entries(inputs)) {
-      const valid = convert(input, 'Decimal', 'Binary');
+      const valid = convert(input, NumeralSystem.Decimal, NumeralSystem.Binary);
       expect(valid).toBe(expectedOutput);
     }
   });

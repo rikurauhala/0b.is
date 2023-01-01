@@ -1,3 +1,5 @@
+import { NumeralSystem } from '../types/types';
+
 const validateBinary = (binary: string): boolean => {
   const regex = new RegExp('^-?[01]+$');
   return regex.test(binary);
@@ -13,13 +15,13 @@ const validateHexadecimal = (hexadecimal: string): boolean => {
   return regex.test(hexadecimal);
 };
 
-const validate = (number: string, inputSystem: string): boolean => {
+const validate = (number: string, inputSystem: NumeralSystem): boolean => {
   switch(inputSystem) {
-    case 'Binary':
+    case NumeralSystem.Binary:
       return validateBinary(number);
-    case 'Decimal':
+    case NumeralSystem.Decimal:
       return validateDecimal(number);
-    case 'Hexadecimal':
+    case NumeralSystem.Hexadecimal:
       return validateHexadecimal(number);
     default:
       return false;

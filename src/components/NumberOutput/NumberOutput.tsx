@@ -25,7 +25,7 @@ const NumberOutput = (props: NumberOutputProps): JSX.Element => {
   const number = convert(input, inputSystem, outputSystem);
 
   useEffect(() => {
-    setMessage(outputSystem);
+    return setMessage('');
   }, [outputSystem]);
 
   useEffect(() => {
@@ -33,15 +33,15 @@ const NumberOutput = (props: NumberOutputProps): JSX.Element => {
       if (valid) {
         setMessage(number);
       } else {
-        setMessage(`Not a valid ${inputSystem.toLowerCase()} number!`);
+        setMessage(`Not a valid ${inputSystem.toString()} number!`);
       }
     } else {
-      setMessage(outputSystem);
+      setMessage('');
     }
   }, [input]);
 
   const handleChange = (event: SelectChangeEvent) => {
-    handleOutputSystemChange(event.target.value as NumeralSystem);
+    handleOutputSystemChange(event.target.value as unknown as NumeralSystem);
   };
 
   return (
@@ -65,7 +65,7 @@ const NumberOutput = (props: NumberOutputProps): JSX.Element => {
         <Select
           label='To'
           onChange={handleChange}
-          value={outputSystem}
+          value={outputSystem.toString()}
         >
           {
             numeralSystems.map(system => (

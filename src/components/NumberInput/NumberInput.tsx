@@ -25,7 +25,7 @@ const NumberInput = (props: NumberInputProps): JSX.Element => {
   const numberInput = useRef<Ref>({ value: '' });
 
   const handleChange = (event: SelectChangeEvent) => {
-    handleInputSystemChange(event.target.value as NumeralSystem);
+    handleInputSystemChange(event.target.value as unknown as NumeralSystem);
   };
 
   const valid = validate(input, inputSystem);
@@ -69,7 +69,7 @@ const NumberInput = (props: NumberInputProps): JSX.Element => {
         <Select
           label='From'
           onChange={handleChange}
-          value={inputSystem}
+          value={inputSystem.toString()}
         >
           {
             numeralSystems.map(system => (
