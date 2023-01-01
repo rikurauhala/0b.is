@@ -43,4 +43,39 @@ describe('convert', () => {
       expect(valid).toBe(expectedOutput);
     }
   });
+
+  test('decimal to hexadecimal', () => {
+    const inputs = {
+      '1': '1',
+      '2': '2',
+      '3': '3',
+      '9': '9',
+      '10': 'A',
+      '11': 'B',
+      '12': 'C',
+      '13': 'D',
+      '14': 'E',
+      '15': 'F',
+      '16': '10',
+      '17': '11',
+      '31': '1F',
+      '32': '20',
+      '123456789': '75BCD15',
+    };
+
+    for (const [input, output] of Object.entries(inputs)) {
+      const positive = convert(
+        input,
+        NumeralSystem.Decimal,
+        NumeralSystem.Hexadecimal
+      );
+      expect(positive).toBe(output);
+      const negative = convert(
+        '-'.concat(input),
+        NumeralSystem.Decimal,
+        NumeralSystem.Hexadecimal
+      );
+      expect(negative).toBe('-'.concat(output));
+    }
+  });
 });
