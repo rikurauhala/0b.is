@@ -7,19 +7,32 @@ import convert from './convert';
 describe('convert', () => {
   test('binary to decimal', () => {
     const inputs = {
-      '0': '0',
       '1': '1',
       '01': '1',
       '10': '2',
-      '-0': '0',
-      '-1': '-1',
+      '11': '3',
+      '100': '4',
+      '101': '5',
+      '110': '6',
+      '111': '7',
+      '1000': '8',
       '0000010100100010011000': '84120',
       '10000000000000000000000000000000': '2147483648',
     };
 
-    for (const [input, expectedOutput] of Object.entries(inputs)) {
-      const valid = convert(input, NumeralSystem.Binary, NumeralSystem.Decimal);
-      expect(valid).toBe(expectedOutput);
+    for (const [input, output] of Object.entries(inputs)) {
+      const positive = convert(
+        input,
+        NumeralSystem.Binary,
+        NumeralSystem.Decimal
+      );
+      expect(positive).toBe(output);
+      const negative = convert(
+        '-'.concat(input),
+        NumeralSystem.Binary,
+        NumeralSystem.Decimal
+      );
+      expect(negative).toBe('-'.concat(output));
     }
   });
 
