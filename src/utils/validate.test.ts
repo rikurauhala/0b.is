@@ -12,7 +12,7 @@ describe('validate', () => {
     }
   };
 
-  test('binary numbers', () => {
+  test('binary', () => {
     const inputs = {
       '0': true,
       '1': true,
@@ -26,11 +26,13 @@ describe('validate', () => {
       'string': false,
       '123': false,
       ' ': false,
+      '1.0': false,
+      '0.1': false,
     };
     testGeneral(inputs, NumeralSystem.Binary);
   });
 
-  test('decimal numbers', () => {
+  test('decimal', () => {
     const inputs = {
       '0': true,
       '1': true,
@@ -51,5 +53,36 @@ describe('validate', () => {
       ' ': false,
     };
     testGeneral(inputs, NumeralSystem.Decimal);
+  });
+
+  test('hexadecimal', () => {
+    const inputs = {
+      '0': true,
+      '1': true,
+      '2': true,
+      '3': true,
+      '9': true,
+      'A': true,
+      'a': true,
+      'B': true,
+      'b': true,
+      'C': true,
+      'c': true,
+      'D': true,
+      'd': true,
+      'E': true,
+      'e': true,
+      'F': true,
+      'f': true,
+      '10': true,
+      '11': true,
+      'ABCDEF': true,
+      'abcdef': true,
+      'ABCDEFG': false,
+      'G': false,
+      'g': false,
+      ' ': false,
+    };
+    testGeneral(inputs, NumeralSystem.Hexadecimal);
   });
 });
