@@ -5,6 +5,13 @@ import { NumeralSystem } from '../types/types';
 import validate from './validate';
 
 describe('validate', () => {
+  const testGeneral = (inputs: {[key: string]: boolean}, system: NumeralSystem) => {
+    for (const [input, expectedValidity] of Object.entries(inputs)) {
+      const validity = validate(input, system);
+      expect(validity).toBe(expectedValidity);
+    }
+  };
+
   test('binary numbers', () => {
     const inputs = {
       '0': true,
@@ -18,12 +25,9 @@ describe('validate', () => {
       '2': false,
       'string': false,
       '123': false,
+      ' ': false,
     };
-
-    for (const [input, expectedOutput] of Object.entries(inputs)) {
-      const valid = validate(input, NumeralSystem.Binary);
-      expect(valid).toBe(expectedOutput);
-    }
+    testGeneral(inputs, NumeralSystem.Binary);
   });
 
   test('decimal numbers', () => {
@@ -46,10 +50,6 @@ describe('validate', () => {
       '-1a': false,
       ' ': false,
     };
-
-    for (const [input, expectedOutput] of Object.entries(inputs)) {
-      const valid = validate(input, NumeralSystem.Decimal);
-      expect(valid).toBe(expectedOutput);
-    }
+    testGeneral(inputs, NumeralSystem.Decimal);
   });
 });
