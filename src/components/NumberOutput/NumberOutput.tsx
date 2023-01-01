@@ -8,7 +8,7 @@ import MenuItem from '@mui/material/MenuItem';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import TextField from '@mui/material/TextField';
 
-import { numeralSystems } from '../../utils/systems';
+import { getKeyByValue, numeralSystems } from '../../utils/systems';
 
 import { NumberOutputProps, NumeralSystem } from '../../types/types';
 
@@ -33,7 +33,7 @@ const NumberOutput = (props: NumberOutputProps): JSX.Element => {
       if (valid) {
         setMessage(number);
       } else {
-        setMessage(`Not a valid ${inputSystem.toString()} number!`);
+        setMessage(`Not a valid ${getKeyByValue(inputSystem).toLowerCase()} number!`);
       }
     } else {
       setMessage('');
@@ -74,7 +74,7 @@ const NumberOutput = (props: NumberOutputProps): JSX.Element => {
                 key={system}
                 value={system}
               >
-                {system}
+                {getKeyByValue(system)}
               </MenuItem>
             ))
           }

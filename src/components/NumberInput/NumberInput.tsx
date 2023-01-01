@@ -11,7 +11,7 @@ import TextField from '@mui/material/TextField';
 
 import ClearIcon from '@mui/icons-material/Clear';
 
-import { numeralSystems } from '../../utils/systems';
+import { getKeyByValue, numeralSystems } from '../../utils/systems';
 
 import { NumberInputProps, NumeralSystem, Ref } from '../../types/types';
 
@@ -73,7 +73,9 @@ const NumberInput = (props: NumberInputProps): JSX.Element => {
         >
           {
             numeralSystems.map(system => (
-              <MenuItem key={system} value={system}>{system}</MenuItem>
+              <MenuItem key={system} value={system}>
+                {getKeyByValue(system)}
+              </MenuItem>
             ))
           }
         </Select>
