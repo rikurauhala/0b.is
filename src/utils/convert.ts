@@ -1,27 +1,8 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable indent */
 
-const binaryToDecimal = (binary: string): string => {
-  const decimal: string = parseInt(binary, 2).toString();
-  return decimal;
-};
-
-const decimalToBinary = (decimal: string): string => {
-  const binary: string = parseInt(decimal).toString(2);
-  return binary;
-};
-
-const binaryToHexadecimal = (binary: string): string => {
-  const hexadecimal: string = parseInt(binary, 2).toString(16).toUpperCase();
-  return hexadecimal;
-};
-
-const hexadecimalToBinary = (hexadecimal: string): string => {
-  const binary: string = hexadecimal.split('')
-    .map(i => parseInt(i, 16)
-    .toString(2)
-    .padStart(4, '0'))
-    .join('');
-  return binary;
+const convertBaseXToBaseY = (number: string, baseX: number, baseY: number): string => {
+  return parseInt(number, baseX).toString(baseY);
 };
 
 const convert = (number: string, inputSystem: string, outputSystem: string): string => {
@@ -29,27 +10,27 @@ const convert = (number: string, inputSystem: string, outputSystem: string): str
     case 'Binary':
       switch(outputSystem) {
         case 'Decimal':
-          return binaryToDecimal(number);
+          return convertBaseXToBaseY(number, 2, 10);
         case 'Hexadecimal':
-          return binaryToHexadecimal(number);
+          return convertBaseXToBaseY(number, 2, 16);
         default:
           return number;
       }
     case 'Decimal':
       switch(outputSystem) {
         case 'Binary':
-          return decimalToBinary(number);
+          return convertBaseXToBaseY(number, 10, 2);
         case 'Hexadecimal':
-          return binaryToHexadecimal(decimalToBinary(number));
+          return convertBaseXToBaseY(number, 10, 16);
         default:
           return number;
       }
     case 'Hexadecimal':
       switch(outputSystem) {
         case 'Binary':
-          return hexadecimalToBinary(number);
+          return convertBaseXToBaseY(number, 16, 2);
         case 'Decimal':
-          return binaryToDecimal(hexadecimalToBinary(number));
+          return convertBaseXToBaseY(number, 16, 10);
         default:
           return number;
       }
