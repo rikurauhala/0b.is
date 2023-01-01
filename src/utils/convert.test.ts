@@ -5,6 +5,15 @@ import { NumeralSystem } from '../types/types';
 import convert from './convert';
 
 describe('convert', () => {
+  const general = (inputs: {[key: string]: string}, from: NumeralSystem, to: NumeralSystem) => {
+    for (const [input, output] of Object.entries(inputs)) {
+      const positive = convert(input, from, to);
+      expect(positive).toBe(output);
+      const negative = convert('-'.concat(input), from, to);
+      expect(negative).toBe('-'.concat(output));
+    }
+  };
+
   test('binary to decimal', () => {
     const inputs = {
       '1': '1',
@@ -20,20 +29,7 @@ describe('convert', () => {
       '10000000000000000000000000000000': '2147483648',
     };
 
-    for (const [input, output] of Object.entries(inputs)) {
-      const positive = convert(
-        input,
-        NumeralSystem.Binary,
-        NumeralSystem.Decimal
-      );
-      expect(positive).toBe(output);
-      const negative = convert(
-        '-'.concat(input),
-        NumeralSystem.Binary,
-        NumeralSystem.Decimal
-      );
-      expect(negative).toBe('-'.concat(output));
-    }
+    general(inputs, NumeralSystem.Binary, NumeralSystem.Decimal);
   });
 
   test('decimal to binary', () => {
@@ -49,21 +45,7 @@ describe('convert', () => {
       '99': '1100011',
       '123456789': '111010110111100110100010101',
     };
-
-    for (const [input, output] of Object.entries(inputs)) {
-      const positive = convert(
-        input,
-        NumeralSystem.Decimal,
-        NumeralSystem.Binary
-      );
-      expect(positive).toBe(output);
-      const negative = convert(
-        '-'.concat(input),
-        NumeralSystem.Decimal,
-        NumeralSystem.Binary
-      );
-      expect(negative).toBe('-'.concat(output));
-    }
+    general(inputs, NumeralSystem.Decimal, NumeralSystem.Binary);
   });
 
   test('decimal to hexadecimal', () => {
@@ -84,20 +66,6 @@ describe('convert', () => {
       '32': '20',
       '123456789': '75BCD15',
     };
-
-    for (const [input, output] of Object.entries(inputs)) {
-      const positive = convert(
-        input,
-        NumeralSystem.Decimal,
-        NumeralSystem.Hexadecimal
-      );
-      expect(positive).toBe(output);
-      const negative = convert(
-        '-'.concat(input),
-        NumeralSystem.Decimal,
-        NumeralSystem.Hexadecimal
-      );
-      expect(negative).toBe('-'.concat(output));
-    }
+    general(inputs, NumeralSystem.Decimal, NumeralSystem.Hexadecimal);
   });
 });
