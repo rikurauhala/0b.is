@@ -6,6 +6,7 @@ import Stack from '@mui/material/Stack';
 
 import { ThemeProvider } from '@mui/material/styles';
 
+import InfoBox from './components/InfoBox';
 import MenuBar from './components/MenuBar';
 import NumberInput from './components/NumberInput';
 import NumberOutput from './components/NumberOutput';
@@ -40,8 +41,8 @@ const App = (): JSX.Element => {
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <CssBaseline />
       <MenuBar darkMode={darkMode} handleThemeChange={handleThemeChange} />
-      <Container maxWidth='md'>
-        <Stack justifyContent='center' marginTop='50px' spacing={3}>
+      <Container maxWidth='lg'>
+        <Stack margin='50px 0px' spacing={4}>
           <NumberInput
             input={input}
             inputSystem={inputSystem}
@@ -55,6 +56,14 @@ const App = (): JSX.Element => {
             handleOutputSystemChange={handleOutputSystemChange}
           />
         </Stack>
+      </Container>
+      <Container disableGutters maxWidth={false}>
+        <Container maxWidth='lg'>
+          <Stack direction={{xs: 'column', md: 'row'}} margin='50px 0px' spacing={4}>
+            <InfoBox system={inputSystem} />
+            <InfoBox system={outputSystem} />
+          </Stack>
+        </Container>
       </Container>
     </ThemeProvider>
   );
