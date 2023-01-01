@@ -23,8 +23,6 @@ const validate = (number: string, inputSystem: NumeralSystem): boolean => {
       return validateDecimal(number);
     case NumeralSystem.Hexadecimal:
       return validateHexadecimal(number);
-    default:
-      return false;
   }
 };
 
