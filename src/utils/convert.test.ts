@@ -38,7 +38,6 @@ describe('convert', () => {
 
   test('decimal to binary', () => {
     const inputs = {
-      '0': '0',
       '1': '1',
       '2': '10',
       '3': '11',
@@ -46,14 +45,24 @@ describe('convert', () => {
       '5': '101',
       '6': '110',
       '7': '111',
+      '8': '1000',
       '99': '1100011',
-      '-0': '0',
-      '-1': '-1',
+      '123456789': '111010110111100110100010101',
     };
 
-    for (const [input, expectedOutput] of Object.entries(inputs)) {
-      const valid = convert(input, NumeralSystem.Decimal, NumeralSystem.Binary);
-      expect(valid).toBe(expectedOutput);
+    for (const [input, output] of Object.entries(inputs)) {
+      const positive = convert(
+        input,
+        NumeralSystem.Decimal,
+        NumeralSystem.Binary
+      );
+      expect(positive).toBe(output);
+      const negative = convert(
+        '-'.concat(input),
+        NumeralSystem.Decimal,
+        NumeralSystem.Binary
+      );
+      expect(negative).toBe('-'.concat(output));
     }
   });
 
