@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 
-import Box from '@mui/material/Box';
 import FormControl from '@mui/material/FormControl';
 import InputAdornment from '@mui/material/InputAdornment';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
+import Stack from '@mui/material/Stack';
 import TextField from '@mui/material/TextField';
 
 import { getKeyByValue, numeralSystems } from '../../utils/systems';
@@ -45,7 +45,7 @@ const NumberOutput = (props: NumberOutputProps): JSX.Element => {
   };
 
   return (
-    <Box>
+    <Stack direction={{ xs: 'column', md: 'row' }} spacing={{ xs: 2, md: 1 }}>
       <TextField
         InputProps={{
           endAdornment:
@@ -57,10 +57,10 @@ const NumberOutput = (props: NumberOutputProps): JSX.Element => {
           readOnly: true,
         }}
         label='Output'
-        sx={{ width: '70%' }}
+        sx={{ width: { sm: '100%', md: '70%' } }}
         value={message}
       />
-      <FormControl sx={{ width: '30%' }}>
+      <FormControl sx={{ width: { sm: '100%', md: '30%' } }}>
         <InputLabel>To</InputLabel>
         <Select
           label='To'
@@ -80,7 +80,7 @@ const NumberOutput = (props: NumberOutputProps): JSX.Element => {
           }
         </Select>
       </FormControl>
-    </Box>
+    </Stack>
   );
 };
 

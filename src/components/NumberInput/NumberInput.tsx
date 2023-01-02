@@ -1,12 +1,12 @@
 import { useEffect, useRef, useState } from 'react';
 
-import Box from '@mui/material/Box';
 import FormControl from '@mui/material/FormControl';
 import IconButton from '@mui/material/IconButton';
 import InputAdornment from '@mui/material/InputAdornment';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
+import Stack from '@mui/material/Stack';
 import TextField from '@mui/material/TextField';
 
 import ClearIcon from '@mui/icons-material/Clear';
@@ -39,7 +39,7 @@ const NumberInput = (props: NumberInputProps): JSX.Element => {
   }, [input]);
 
   return (
-    <Box>
+    <Stack direction={{ xs: 'column', md: 'row' }} spacing={{ xs: 2, md: 1 }}>
       <TextField
         error={error}
         InputProps={{
@@ -62,9 +62,9 @@ const NumberInput = (props: NumberInputProps): JSX.Element => {
         label='Input'
         onChange={event => handleInputChange(event.target.value)}
         onKeyPress={event => event.key === 'Enter' && event.preventDefault()}
-        sx={{ width: '70%' }}
+        sx={{ width: { sm: '100%', md: '70%' } }}
       />
-      <FormControl sx={{ width: '30%' }}>
+      <FormControl sx={{ width: { sm: '100%', md: '30%' } }}>
         <InputLabel>From</InputLabel>
         <Select
           label='From'
@@ -80,7 +80,7 @@ const NumberInput = (props: NumberInputProps): JSX.Element => {
           }
         </Select>
       </FormControl>
-    </Box>
+    </Stack>
   );
 };
 

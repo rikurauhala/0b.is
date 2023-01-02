@@ -19,21 +19,14 @@ const InfoBox = ({ system }: InfoBoxProps) => {
       10: ContentDecimal,
       16: ContentHexadecimal,
     };
-    const file = options[system];
-    fetch(file)
+    fetch(options[system])
       .then(content => content.text())
       .then(text => setContent(text))
       .catch(error => console.error(error));
-  }, []);
-
-  const style = {
-    'margin': 'auto',
-    'padding': '0px 15px',
-    'width': '1',
-  };
+  }, [system]);
 
   return (
-    <Paper variant='outlined' sx={style}>
+    <Paper variant='outlined' sx={{ 'padding': '0px 15px', 'width': '1', }}>
       <ReactMarkdown>
         {content}
       </ReactMarkdown>

@@ -57,13 +57,16 @@ const App = (): JSX.Element => {
           />
         </Stack>
       </Container>
-      <Container disableGutters maxWidth={false}>
-        <Container maxWidth='lg'>
-          <Stack direction={{xs: 'column', md: 'row'}} margin='50px 0px' spacing={4}>
-            <InfoBox system={inputSystem} />
-            <InfoBox system={outputSystem} />
-          </Stack>
-        </Container>
+      <Container maxWidth='lg'>
+        <Stack
+          alignItems='stretch'
+          direction={{xs: 'column', md: 'row'}}
+          margin='50px 0px'
+          spacing={2}
+        >
+          <InfoBox system={inputSystem} />
+          <InfoBox system={outputSystem} />
+        </Stack>
       </Container>
     </ThemeProvider>
   );
