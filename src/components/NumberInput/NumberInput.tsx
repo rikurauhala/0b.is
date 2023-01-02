@@ -39,10 +39,10 @@ const NumberInput = (props: NumberInputProps): JSX.Element => {
   }, [input]);
 
   return (
-    <Stack direction={{ xs: 'column', md: 'row' }} spacing={{ xs: 2, md: 1 }}>
+    <Stack direction={{ xs: 'column', md: 'row' }} spacing={1}>
       <TextField
         error={error}
-        helperText={error ? `Not a valid ${getKeyByValue(inputSystem).toLowerCase()} number!` : ''}
+        helperText={error ? `Not a valid ${getKeyByValue(inputSystem).toLowerCase()} number!` : ' '}
         InputProps={{
           endAdornment:
             <InputAdornment position='end'>
