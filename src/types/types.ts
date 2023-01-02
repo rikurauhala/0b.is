@@ -1,3 +1,8 @@
+export interface FooterLinkProps {
+  url: string
+  text: string
+}
+
 export interface InfoBoxProps {
   system: NumeralSystem
 }

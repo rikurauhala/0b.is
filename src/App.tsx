@@ -6,6 +6,7 @@ import Stack from '@mui/material/Stack';
 
 import { ThemeProvider } from '@mui/material/styles';
 
+import Footer from './components/Footer';
 import InfoBox from './components/InfoBox';
 import MenuBar from './components/MenuBar';
 import NumberInput from './components/NumberInput';
@@ -41,33 +42,36 @@ const App = (): JSX.Element => {
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <CssBaseline />
       <MenuBar darkMode={darkMode} handleThemeChange={handleThemeChange} />
-      <Container maxWidth='lg'>
-        <Stack margin='50px 0px' spacing={4}>
-          <NumberInput
-            input={input}
-            inputSystem={inputSystem}
-            handleInputChange={handleInputChange}
-            handleInputSystemChange={handleInputSystemChange}
-          />
-          <NumberOutput
-            input={input}
-            inputSystem={inputSystem}
-            outputSystem={outputSystem}
-            handleOutputSystemChange={handleOutputSystemChange}
-          />
-        </Stack>
+      <Container disableGutters sx={{ 'min-height': 'calc(100vh - 170px)' }}>
+        <Container>
+          <Stack margin='50px 0px' spacing={4}>
+            <NumberInput
+              input={input}
+              inputSystem={inputSystem}
+              handleInputChange={handleInputChange}
+              handleInputSystemChange={handleInputSystemChange}
+            />
+            <NumberOutput
+              input={input}
+              inputSystem={inputSystem}
+              outputSystem={outputSystem}
+              handleOutputSystemChange={handleOutputSystemChange}
+            />
+          </Stack>
+        </Container>
+        <Container>
+          <Stack
+            alignItems='stretch'
+            direction={{ xs: 'column', md: 'row' }}
+            margin='50px 0px'
+            spacing={2}
+          >
+            <InfoBox system={inputSystem} />
+            <InfoBox system={outputSystem} />
+          </Stack>
+        </Container>
       </Container>
-      <Container maxWidth='lg'>
-        <Stack
-          alignItems='stretch'
-          direction={{xs: 'column', md: 'row'}}
-          margin='50px 0px'
-          spacing={2}
-        >
-          <InfoBox system={inputSystem} />
-          <InfoBox system={outputSystem} />
-        </Stack>
-      </Container>
+      <Footer />
     </ThemeProvider>
   );
 };
