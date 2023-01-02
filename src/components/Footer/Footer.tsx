@@ -31,6 +31,7 @@ const Footer = () => {
         position: 'relative',
       }}
     >
+      <Divider sx={{ marginBottom: '20px' }} />
       <Stack
         alignItems='center'
         divider={<Divider orientation='vertical' flexItem />}

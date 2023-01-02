@@ -42,7 +42,7 @@ const App = (): JSX.Element => {
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <CssBaseline />
       <MenuBar darkMode={darkMode} handleThemeChange={handleThemeChange} />
-      <Container disableGutters sx={{ 'min-height': 'calc(100vh - 170px)' }}>
+      <Container disableGutters sx={{ 'min-height': 'calc(100vh - 190px)' }}>
         <Container>
           <Stack margin='50px 0px' spacing={4}>
             <NumberInput
@@ -63,7 +63,7 @@ const App = (): JSX.Element => {
           <Stack
             alignItems='stretch'
             direction={{ xs: 'column', md: 'row' }}
-            margin='50px 0px'
+            marginTop='50px'
             spacing={2}
           >
             <InfoBox system={inputSystem} />
