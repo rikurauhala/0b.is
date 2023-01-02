@@ -77,4 +77,70 @@ describe('convert', () => {
     testZero(NumeralSystem.Decimal, NumeralSystem.Hexadecimal);
     testGeneral(inputs, NumeralSystem.Decimal, NumeralSystem.Hexadecimal);
   });
+
+  test('hexadecimal to decimal', () => {
+    const inputs = {
+      '1': '1',
+      '2': '2',
+      '3': '3',
+      '9': '9',
+      'A': '10',
+      'B': '11',
+      'C': '12',
+      'D': '13',
+      'E': '14',
+      'F': '15',
+      '10': '16',
+      '11': '17',
+      '1F': '31',
+      '20': '32',
+      '75BCD15': '123456789',
+    };
+    testZero(NumeralSystem.Hexadecimal, NumeralSystem.Decimal);
+    testGeneral(inputs, NumeralSystem.Hexadecimal, NumeralSystem.Decimal);
+  });
+
+  test('hexadecimal to binary', () => {
+    const inputs = {
+      '1': '1',
+      '2': '10',
+      '3': '11',
+      '9': '1001',
+      'A': '1010',
+      'B': '1011',
+      'C': '1100',
+      'D': '1101',
+      'E': '1110',
+      'F': '1111',
+      '10': '10000',
+      '11': '10001',
+      '1F': '11111',
+      '20': '100000',
+      '75BCD15': '111010110111100110100010101',
+    };
+    testZero(NumeralSystem.Hexadecimal, NumeralSystem.Binary);
+    testGeneral(inputs, NumeralSystem.Hexadecimal, NumeralSystem.Binary);
+  });
+
+  test('binary to hexadecimal', () => {
+    const inputs = {
+      '1': '1',
+      '10': '2',
+      '11': '3',
+      '1001': '9',
+      '1010': 'A',
+      '1011': 'B',
+      '1100': 'C',
+      '1101': 'D',
+      '1110': 'E',
+      '1111': 'F',
+      '10000': '10',
+      '10001': '11',
+      '11111': '1F',
+      '100000': '20',
+      '111010110111100110100010101': '75BCD15',
+    };
+    testZero(NumeralSystem.Binary, NumeralSystem.Hexadecimal);
+    testGeneral(inputs, NumeralSystem.Binary, NumeralSystem.Hexadecimal);
+  });
 });
