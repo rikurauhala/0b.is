@@ -7,6 +7,7 @@ import ReactMarkdown from 'react-markdown';
 import { InfoBoxProps } from '../../types/types';
 
 import ContentBinary from './content/binary.md';
+import ContentOctal from './content/octal.md';
 import ContentDecimal from './content/decimal.md';
 import ContentHexadecimal from './content/hexadecimal.md';
 
@@ -16,6 +17,7 @@ const InfoBox = ({ system }: InfoBoxProps) => {
   useEffect(() => {
     const options = {
       2: ContentBinary,
+      8: ContentOctal,
       10: ContentDecimal,
       16: ContentHexadecimal,
     };

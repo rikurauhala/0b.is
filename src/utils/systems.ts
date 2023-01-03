@@ -6,6 +6,7 @@ export const getKeyByValue = (value: NumeralSystem): string => {
 
 export const numeralSystems: NumeralSystem[] = [
   NumeralSystem.Binary,
+  NumeralSystem.Octal,
   NumeralSystem.Decimal,
   NumeralSystem.Hexadecimal,
 ];

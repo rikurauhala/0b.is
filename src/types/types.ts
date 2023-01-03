@@ -29,7 +29,8 @@ export interface NumberOutputProps {
 export enum NumeralSystem {
   Binary = 2,
   Decimal = 10,
-  Hexadecimal = 16
+  Octal = 8,
+  Hexadecimal = 16,
 }
 
 export interface Ref {

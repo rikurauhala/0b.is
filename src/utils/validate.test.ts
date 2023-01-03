@@ -32,6 +32,34 @@ describe('validate', () => {
     testGeneral(inputs, NumeralSystem.Binary);
   });
 
+  test('octal', () => {
+    const inputs = {
+      '0': true,
+      '1': true,
+      '2': true,
+      '3': true,
+      '4': true,
+      '5': true,
+      '6': true,
+      '7': true,
+      '8': false,
+      '9': false,
+      '10': true,
+      '11': true,
+      '17': true,
+      '18': false,
+      '19': false,
+      '20': true,
+      'abc': false,
+      '1a2': false,
+      '1.': false,
+      '-1.': false,
+      '-1a': false,
+      ' ': false,
+    };
+    testGeneral(inputs, NumeralSystem.Octal);
+  });
+
   test('decimal', () => {
     const inputs = {
       '0': true,
