@@ -1,5 +1,7 @@
 ## Binary
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed suscipit diam. Morbi quis augue convallis, cursus neque et, ultrices purus. Donec gravida viverra dui, ullamcorper tincidunt ligula volutpat vitae. Aenean tristique blandit ligula sed vehicula. Proin sit amet fringilla nulla.
+A *binary* or *base-2* number consists of only two symbols: **0** and **1**. Digits of a binary number are referred to as *bits*.
 
-Phasellus sit amet venenatis leo. Maecenas dictum lorem nec consequat tincidunt. Praesent ultrices libero id pretium efficitur. Phasellus fringilla laoreet gravida. Vivamus eleifend, lacus at venenatis mattis, nisl tortor aliquet enim, id condimentum magna enim at mauris. Phasellus lectus nisl, ullamcorper nec porta et, scelerisque a ante. In vel lorem lectus.
+Binary numbers are the language of computers and understanding the binary system is a necessary skill for anyone interested in computer science and programming.
+
+In some programming languages, binary numbers can be distinguished with the prefix 0b.
