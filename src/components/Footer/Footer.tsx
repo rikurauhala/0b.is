@@ -1,19 +1,32 @@
+import Chip from '@mui/material/Chip';
 import Container from '@mui/material/Container';
 import Divider from '@mui/material/Divider';
-import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
+
+import ArticleIcon from '@mui/icons-material/Article';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import InfoIcon from '@mui/icons-material/Info';
 
 import { FooterLinkProps } from '../../types/types';
 
-const FooterLink = ({ url, text }: FooterLinkProps) => {
+const FooterLink = ({ url, text, }: FooterLinkProps) => {
   return (
-    <Link
+    <Chip
+      clickable
+      color='primary'
+      component='a'
       href={url}
+      label={text}
+      icon={
+        text === 'Source code'
+          ? <GitHubIcon fontSize='small' />
+          : text === 'Contributing'
+            ? <InfoIcon fontSize='small' />
+            : <ArticleIcon fontSize='small' />
+      }
       target='_blank'
-      underline='hover'
-    >
-      {text}
-    </Link>
+      variant='outlined'
+    />
   );
 };
 
