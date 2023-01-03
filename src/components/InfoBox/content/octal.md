@@ -1,3 +1,3 @@
 ## Octal
 
-Lorem ipsum.
+An *octal* or *base-8* number consists of eight different symbols: digits **0** to **7**.
