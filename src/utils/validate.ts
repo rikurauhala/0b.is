@@ -6,7 +6,7 @@ const validateBinary = (binary: string): boolean => {
 };
 
 const validateOctal = (octal: string): boolean => {
-  const regex = new RegExp('^-?[0-7]*$');
+  const regex = new RegExp('^-?[0-7]+$');
   return regex.test(octal);
 };
 
@@ -16,8 +16,8 @@ const validateDecimal = (decimal: string): boolean => {
 };
 
 const validateHexadecimal = (hexadecimal: string): boolean => {
-  const regex = new RegExp('^-?[0-9A-Fa-f]+$');
-  return regex.test(hexadecimal);
+  const regex = new RegExp('^-?[0-9A-F]+$');
+  return regex.test(hexadecimal.toUpperCase());
 };
 
 const validate = (number: string, inputSystem: NumeralSystem): boolean => {
