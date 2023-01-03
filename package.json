@@ -61,7 +61,8 @@
     "collectCoverageFrom": [
       "src/**/*.{ts,tsx}",
       "!src/themes/*",
-      "!src/types/*"
+      "!src/types/*",
+      "!src/utils/testInputs.ts"
     ]
   }
 }
