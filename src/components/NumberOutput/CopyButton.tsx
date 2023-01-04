@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Alert from '@mui/material/Alert';
 import IconButton from '@mui/material/IconButton';
 import Snackbar from '@mui/material/Snackbar';
+import Tooltip from '@mui/material/Tooltip';
 
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 
@@ -16,9 +17,11 @@ const CopyButton = ({ output }: { output: string }): JSX.Element => {
 
   return (
     <>
-      <IconButton onClick={handleClick}>
-        <ContentCopyIcon />
-      </IconButton>
+      <Tooltip title='Copy'>
+        <IconButton onClick={handleClick}>
+          <ContentCopyIcon />
+        </IconButton>
+      </Tooltip>
       <Snackbar
         anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
         autoHideDuration={2000}

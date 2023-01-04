@@ -41,7 +41,7 @@ const Footer = () => {
 
   return (
     <Container
-      style={{
+      sx={{
         bottom: '0',
         left: '0',
         padding: '15px',
