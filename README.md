@@ -9,6 +9,7 @@ The simple number converter
 <div align="center">
 
 [![License](https://img.shields.io/github/license/rikurauhala/0b.is?color=blue&style=for-the-badge)](https://github.com/rikurauhala/0b.is/blob/main/LICENSE.md)
+[![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/rikurauhala/0b.is?color=darkgreen&style=for-the-badge)](https://github.com/rikurauhala/0b.is/wiki/Changelog#version-100)
 [![CI](https://img.shields.io/github/actions/workflow/status/rikurauhala/0b.is/main.yml?style=for-the-badge)](https://github.com/rikurauhala/0b.is/actions/workflows/main.yml)
 ![Codecov](https://img.shields.io/codecov/c/github/rikurauhala/0b.is?style=for-the-badge&token=DTBS2BLU8A)
 [![GitHub issues](https://img.shields.io/github/issues/rikurauhala/0b.is?style=for-the-badge)](https://github.com/rikurauhala/0b.is/issues)
