@@ -59,7 +59,7 @@ const Footer = () => {
         <FooterLink url={urlSourceCode} text='Source code' />
         <FooterLink url={urlDocumentation} text='Documentation' />
         <FooterLink url={urlContributing} text='Contributing' />
-        <FooterLink url={urlChangelog} text='Version 0.1.0' />
+        <FooterLink url={urlChangelog} text='Version 1.0.0' />
       </Stack>
     </Container>
   );
