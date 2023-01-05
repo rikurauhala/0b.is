@@ -8,6 +8,7 @@ import MenuItem from '@mui/material/MenuItem';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import Stack from '@mui/material/Stack';
 import TextField from '@mui/material/TextField';
+import Tooltip from '@mui/material/Tooltip';
 
 import ClearIcon from '@mui/icons-material/Clear';
 
@@ -48,14 +49,16 @@ const NumberInput = (props: NumberInputProps): JSX.Element => {
             <InputAdornment position='end'>
               {
                 input.length > 0 &&
-                <IconButton
-                  onClick={() => {
-                    numberInput.current.value = '';
-                    handleInputChange('');
-                  }}
-                >
-                  <ClearIcon />
-                </IconButton>
+                <Tooltip title='Clear'>
+                  <IconButton
+                    onClick={() => {
+                      numberInput.current.value = '';
+                      handleInputChange('');
+                    }}
+                  >
+                    <ClearIcon />
+                  </IconButton>
+                </Tooltip>
               }
             </InputAdornment>,
         }}

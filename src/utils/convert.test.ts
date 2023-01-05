@@ -39,6 +39,34 @@ describe('convert', () => {
     testGeneral(inputs, NumeralSystem.Binary, NumeralSystem.Decimal);
   });
 
+  test('binary to octal', () => {
+    const inputs = {
+      '1': '1',
+      '01': '1',
+      '10': '2',
+      '11': '3',
+      '100': '4',
+      '101': '5',
+      '110': '6',
+      '111': '7',
+      '1000': '10',
+      '1001': '11',
+      '1010': '12',
+      '1011': '13',
+      '1100': '14',
+      '1101': '15',
+      '1110': '16',
+      '1111': '17',
+      '10000': '20',
+      '100000': '40',
+      '1000000': '100',
+      '0000010100100010011000': '244230',
+      '10000000000000000000000000000000': '20000000000',
+    };
+    testZero(NumeralSystem.Binary, NumeralSystem.Octal);
+    testGeneral(inputs, NumeralSystem.Binary, NumeralSystem.Octal);
+  });
+
   test('binary to hexadecimal', () => {
     const inputs = {
       '1': '1',
@@ -76,6 +104,32 @@ describe('convert', () => {
     };
     testZero(NumeralSystem.Decimal, NumeralSystem.Binary);
     testGeneral(inputs, NumeralSystem.Decimal, NumeralSystem.Binary);
+  });
+
+  test('decimal to octal', () => {
+    const inputs = {
+      '1': '1',
+      '2': '2',
+      '3': '3',
+      '4': '4',
+      '5': '5',
+      '6': '6',
+      '7': '7',
+      '8': '10',
+      '9': '11',
+      '10': '12',
+      '11': '13',
+      '12': '14',
+      '13': '15',
+      '14': '16',
+      '15': '17',
+      '16': '20',
+      '17': '21',
+      '99': '143',
+      '123456789': '726746425',
+    };
+    testZero(NumeralSystem.Decimal, NumeralSystem.Octal);
+    testGeneral(inputs, NumeralSystem.Decimal, NumeralSystem.Octal);
   });
 
   test('decimal to hexadecimal', () => {
@@ -120,6 +174,30 @@ describe('convert', () => {
     };
     testZero(NumeralSystem.Hexadecimal, NumeralSystem.Binary);
     testGeneral(inputs, NumeralSystem.Hexadecimal, NumeralSystem.Binary);
+  });
+
+  test('hexadecimal to octal', () => {
+    const inputs = {
+      '1': '1',
+      '2': '2',
+      '3': '3',
+      '4': '4',
+      '5': '5',
+      '6': '6',
+      '7': '7',
+      '8': '10',
+      '9': '11',
+      'A': '12',
+      'B': '13',
+      'C': '14',
+      'D': '15',
+      'E': '16',
+      'F': '17',
+      '10': '20',
+      '11': '21',
+    };
+    testZero(NumeralSystem.Hexadecimal, NumeralSystem.Octal);
+    testGeneral(inputs, NumeralSystem.Hexadecimal, NumeralSystem.Octal);
   });
 
   test('hexadecimal to decimal', () => {

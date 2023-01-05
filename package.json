@@ -1,6 +1,6 @@
 {
   "name": "0b.is",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "homepage": ".",
   "private": true,
   "dependencies": {
@@ -61,7 +61,8 @@
     "collectCoverageFrom": [
       "src/**/*.{ts,tsx}",
       "!src/themes/*",
-      "!src/types/*"
+      "!src/types/*",
+      "!src/utils/testInputs.ts"
     ]
   }
 }

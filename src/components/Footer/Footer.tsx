@@ -1,19 +1,35 @@
+import Chip from '@mui/material/Chip';
 import Container from '@mui/material/Container';
 import Divider from '@mui/material/Divider';
-import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
+
+import ArticleIcon from '@mui/icons-material/Article';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import InfoIcon from '@mui/icons-material/Info';
+import LogoDevIcon from '@mui/icons-material/LogoDev';
 
 import { FooterLinkProps } from '../../types/types';
 
-const FooterLink = ({ url, text }: FooterLinkProps) => {
+const FooterLink = ({ url, text, }: FooterLinkProps) => {
   return (
-    <Link
+    <Chip
+      clickable
+      color='primary'
+      component='a'
       href={url}
+      label={text}
+      icon={
+        text === 'Source code'
+          ? <GitHubIcon fontSize='small' />
+          : text === 'Contributing'
+            ? <InfoIcon fontSize='small' />
+            : text === 'Documentation'
+              ? <ArticleIcon fontSize='small' />
+              : <LogoDevIcon fontSize='small' />
+      }
       target='_blank'
-      underline='hover'
-    >
-      {text}
-    </Link>
+      variant='outlined'
+    />
   );
 };
 
@@ -21,10 +37,11 @@ const Footer = () => {
   const urlSourceCode = 'https://github.com/rikurauhala/0b.is';
   const urlDocumentation = `${urlSourceCode}/wiki`;
   const urlContributing = `${urlSourceCode}/blob/main/CONTRIBUTING.md`;
+  const urlChangelog = `${urlSourceCode}/wiki/Changelog`;
 
   return (
     <Container
-      style={{
+      sx={{
         bottom: '0',
         left: '0',
         padding: '15px',
@@ -42,6 +59,7 @@ const Footer = () => {
         <FooterLink url={urlSourceCode} text='Source code' />
         <FooterLink url={urlDocumentation} text='Documentation' />
         <FooterLink url={urlContributing} text='Contributing' />
+        <FooterLink url={urlChangelog} text='Version 1.0.0' />
       </Stack>
     </Container>
   );
