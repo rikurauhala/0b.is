@@ -1,6 +1,9 @@
+import { ReactElement } from 'react';
+
 export interface FooterLinkProps {
   url: string
   text: string
+  icon: ReactElement
 }
 
 export interface InfoBoxProps {
