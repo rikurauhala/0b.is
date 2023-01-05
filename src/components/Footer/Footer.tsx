@@ -10,7 +10,7 @@ import LogoDevIcon from '@mui/icons-material/LogoDev';
 
 import { FooterLinkProps } from '../../types/types';
 
-const FooterLink = ({ url, text, }: FooterLinkProps) => {
+const FooterLink = ({ url, text, icon, }: FooterLinkProps) => {
   return (
     <Chip
       clickable
@@ -18,15 +18,7 @@ const FooterLink = ({ url, text, }: FooterLinkProps) => {
       component='a'
       href={url}
       label={text}
-      icon={
-        text === 'Source code'
-          ? <GitHubIcon fontSize='small' />
-          : text === 'Contributing'
-            ? <InfoIcon fontSize='small' />
-            : text === 'Documentation'
-              ? <ArticleIcon fontSize='small' />
-              : <LogoDevIcon fontSize='small' />
-      }
+      icon={icon}
       target='_blank'
       variant='outlined'
     />
@@ -56,10 +48,26 @@ const Footer = () => {
         direction={{ xs: 'column', sm: 'row' }}
         spacing={{ xs: 0.5, sm: 1, md: 2 }}
       >
-        <FooterLink url={urlSourceCode} text='Source code' />
-        <FooterLink url={urlDocumentation} text='Documentation' />
-        <FooterLink url={urlContributing} text='Contributing' />
-        <FooterLink url={urlChangelog} text='Version 1.0.0' />
+        <FooterLink
+          url={urlSourceCode}
+          text='Source code'
+          icon={<GitHubIcon fontSize='small' />}
+        />
+        <FooterLink
+          url={urlDocumentation}
+          text='Documentation'
+          icon={<ArticleIcon fontSize='small' />}
+        />
+        <FooterLink
+          url={urlContributing}
+          text='Contributing'
+          icon={<InfoIcon fontSize='small' />}
+        />
+        <FooterLink
+          url={urlChangelog}
+          text='Version 1.0.0'
+          icon={<LogoDevIcon fontSize='small' />}
+        />
       </Stack>
     </Container>
   );
