@@ -10,7 +10,7 @@ import LogoDevIcon from '@mui/icons-material/LogoDev';
 
 import { FooterLinkProps } from '../../types/types';
 
-const FooterLink = ({ url, text, icon, }: FooterLinkProps) => {
+const FooterLink = ({ url, text, icon }: FooterLinkProps) => {
   return (
     <Chip
       clickable
@@ -43,9 +43,9 @@ const Footer = () => {
       <Divider sx={{ marginBottom: '20px' }} />
       <Stack
         alignItems='center'
+        direction={{ xs: 'column', sm: 'row' }}
         divider={<Divider orientation='vertical' flexItem />}
         justifyContent='center'
-        direction={{ xs: 'column', sm: 'row' }}
         spacing={{ xs: 0.5, sm: 1, md: 2 }}
       >
         <FooterLink
