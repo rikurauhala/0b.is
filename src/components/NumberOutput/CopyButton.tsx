@@ -17,7 +17,7 @@ const CopyButton = ({ output }: { output: string }): JSX.Element => {
 
   return (
     <>
-      <Tooltip placement='left' title='Copy'>
+      <Tooltip placement="left" title="Copy">
         <IconButton onClick={handleClick}>
           <ContentCopyIcon />
         </IconButton>
@@ -28,7 +28,7 @@ const CopyButton = ({ output }: { output: string }): JSX.Element => {
         onClose={() => setOpen(false)}
         open={open}
       >
-        <Alert onClose={() => setOpen(false)} severity='success'>
+        <Alert onClose={() => setOpen(false)} severity="success">
           Number copied to clipboard!
         </Alert>
       </Snackbar>

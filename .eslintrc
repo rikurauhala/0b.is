@@ -23,6 +23,7 @@
     "linebreak-style": ["error", "unix"],
     "max-len": ["error", { "code": 100, "tabWidth": 2 }],
     "no-case-declarations": "off",
+    "no-multi-spaces": "error",
     "no-trailing-spaces": "error",
     "no-useless-escape": "off",
     "quotes": ["error", "single", { "allowTemplateLiterals": true }]
