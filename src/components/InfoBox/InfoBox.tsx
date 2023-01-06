@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import Link from '@mui/material/Link';
+import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
 
 import ReactMarkdown from 'react-markdown';
@@ -11,6 +11,7 @@ import ContentBinary from './content/binary.md';
 import ContentOctal from './content/octal.md';
 import ContentDecimal from './content/decimal.md';
 import ContentHexadecimal from './content/hexadecimal.md';
+import ReadMoreIcon from '@mui/icons-material/ReadMore';
 
 const InfoBox = ({ system }: InfoBoxProps): JSX.Element => {
   const [content, setContent] = useState('');
@@ -44,15 +45,14 @@ const Content = ({ content }: { content: string }): JSX.Element => (
 );
 
 const ReadMoreLink = ({ system }: { system: string }): JSX.Element => (
-  <Link
+  <Button
     color='primary'
     href={`https://en.wikipedia.org/wiki/${system}`}
+    startIcon={<ReadMoreIcon />}
     target='_blank'
-    underline='hover'
-    variant='subtitle1'
   >
     Read more
-  </Link>
+  </Button>
 );
 
 export default InfoBox;
