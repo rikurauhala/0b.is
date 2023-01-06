@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Container from '@mui/material/Container';
 import CssBaseline from '@mui/material/CssBaseline';
 import Stack from '@mui/material/Stack';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 import { ThemeProvider } from '@mui/material/styles';
 
@@ -17,7 +18,7 @@ import { lightTheme, darkTheme } from './themes/themes';
 import { NumeralSystem } from './types/types';
 
 const App = (): JSX.Element => {
-  const [darkMode, setDarkMode] = useState<boolean>(true);
+  const [darkMode, setDarkMode] = useState<boolean>(useMediaQuery('(prefers-color-scheme: dark)'));
   const [input, setInput] = useState<string>('');
   const [inputSystem, setInputSystem] = useState<NumeralSystem>(NumeralSystem.Binary);
   const [outputSystem, setOutputSystem] = useState<NumeralSystem>(NumeralSystem.Decimal);
