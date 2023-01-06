@@ -1,7 +1,7 @@
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import Divider from '@mui/material/Divider';
-import Stack from '@mui/material/Stack';
+import Grid from '@mui/material/Grid';
 
 import ArticleIcon from '@mui/icons-material/Article';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -10,8 +10,8 @@ import LogoDevIcon from '@mui/icons-material/LogoDev';
 
 import { FooterLinkProps } from '../../types/types';
 
-const FooterLink = ({ url, text, icon }: FooterLinkProps) => {
-  return (
+const FooterLink = ({ url, text, icon }: FooterLinkProps) => (
+  <Grid item xs={6} md={3} textAlign='center'>
     <Button
       color='secondary'
       href={url}
@@ -21,8 +21,8 @@ const FooterLink = ({ url, text, icon }: FooterLinkProps) => {
     >
       {text}
     </Button>
-  );
-};
+  </Grid>
+);
 
 const Footer = () => {
   const urlSourceCode = 'https://github.com/rikurauhala/0b.is';
@@ -40,12 +40,11 @@ const Footer = () => {
       }}
     >
       <Divider sx={{ marginBottom: '20px' }} />
-      <Stack
+      <Grid
         alignItems='center'
+        container
         direction={{ xs: 'column', sm: 'row' }}
-        divider={<Divider flexItem orientation='vertical' />}
-        justifyContent='center'
-        spacing={{ xs: 0.5, sm: 1, md: 2 }}
+        spacing={{ xs: 1, sm: 0.5, md: 0 }}
       >
         <FooterLink
           url={urlSourceCode}
@@ -67,7 +66,7 @@ const Footer = () => {
           text='Version 1.0.0'
           icon={<LogoDevIcon />}
         />
-      </Stack>
+      </Grid>
     </Container>
   );
 };
