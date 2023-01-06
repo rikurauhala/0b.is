@@ -17,7 +17,7 @@ const CopyButton = ({ output }: { output: string }): JSX.Element => {
 
   return (
     <>
-      <Tooltip title='Copy'>
+      <Tooltip placement='left' title='Copy'>
         <IconButton onClick={handleClick}>
           <ContentCopyIcon />
         </IconButton>
