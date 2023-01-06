@@ -1,5 +1,5 @@
 import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
+
 import IconButton from '@mui/material/IconButton';
 import Toolbar from '@mui/material/Toolbar';
 import Tooltip from '@mui/material/Tooltip';
@@ -12,20 +12,16 @@ import LightModeIcon from '@mui/icons-material/LightMode';
 
 import { MenuBarProps } from '../../types/types';
 
-const MenuBar = ({ darkMode, handleThemeChange }: MenuBarProps): JSX.Element => {
-  return (
-    <Box>
-      <AppBar position='static'>
-        <Toolbar>
-          <LogoPlaceholder />
-          <PageTitle />
-          <ModeToggleButton darkMode={darkMode} handleThemeChange={handleThemeChange} />
-          <UserManualButton />
-        </Toolbar>
-      </AppBar>
-    </Box>
-  );
-};
+const MenuBar = ({ darkMode, handleThemeChange }: MenuBarProps): JSX.Element => (
+  <AppBar enableColorOnDark color='primary' position='static'>
+    <Toolbar>
+      <LogoPlaceholder />
+      <PageTitle />
+      <ModeToggleButton darkMode={darkMode} handleThemeChange={handleThemeChange} />
+      <UserManualButton />
+    </Toolbar>
+  </AppBar>
+);
 
 const LogoPlaceholder = (): JSX.Element => (
   <CodeIcon sx={{ mr: 2 }}/>
