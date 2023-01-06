@@ -13,7 +13,7 @@ import LightModeIcon from '@mui/icons-material/LightMode';
 import { MenuBarProps } from '../../types/types';
 
 const MenuBar = ({ darkMode, handleThemeChange }: MenuBarProps): JSX.Element => (
-  <AppBar enableColorOnDark color='primary' position='static'>
+  <AppBar enableColorOnDark color="primary" position="static">
     <Toolbar>
       <LogoPlaceholder />
       <PageTitle />
@@ -28,17 +28,17 @@ const LogoPlaceholder = (): JSX.Element => (
 );
 
 const PageTitle = (): JSX.Element => (
-  <Typography variant='h6' component='div' sx={{ flexGrow: 1 }}>
+  <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
     0b.is
   </Typography>
 );
 
 const ModeToggleButton = ({ darkMode, handleThemeChange }: MenuBarProps): JSX.Element => (
   <IconButton
-    color='inherit'
-    edge='end'
+    color="inherit"
+    edge="end"
     onClick={handleThemeChange}
-    size='large'
+    size="large"
     sx={{ mr: 0 }}
   >
     <Tooltip title={darkMode ? 'Use light theme' : 'Use dark theme'}>
@@ -53,13 +53,13 @@ const ModeToggleButton = ({ darkMode, handleThemeChange }: MenuBarProps): JSX.El
 
 const UserManualButton = (): JSX.Element => (
   <IconButton
-    color='inherit'
-    edge='end'
-    href='https://github.com/rikurauhala/0b.is/wiki/User-Manual'
-    size='large'
-    target='_blank'
+    color="inherit"
+    edge="end"
+    href="https://github.com/rikurauhala/0b.is/wiki/User-Manual"
+    size="large"
+    target="_blank"
   >
-    <Tooltip title='User manual'>
+    <Tooltip title="User manual">
       <HelpIcon />
     </Tooltip>
   </IconButton>

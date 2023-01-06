@@ -11,13 +11,13 @@ import LogoDevIcon from '@mui/icons-material/LogoDev';
 import { FooterLinkProps } from '../../types/types';
 
 const FooterLink = ({ url, text, icon }: FooterLinkProps) => (
-  <Grid item xs={6} md={3} textAlign='center'>
+  <Grid item xs={6} md={3} textAlign="center">
     <Button
-      color='secondary'
+      color="secondary"
       href={url}
-      size='small'
+      size="small"
       startIcon={icon}
-      target='_blank'
+      target="_blank"
     >
       {text}
     </Button>
@@ -41,29 +41,29 @@ const Footer = () => {
     >
       <Divider sx={{ marginBottom: '20px' }} />
       <Grid
-        alignItems='center'
+        alignItems="center"
         container
         direction={{ xs: 'column', sm: 'row' }}
         spacing={{ xs: 1, sm: 0.5, md: 0 }}
       >
         <FooterLink
           url={urlSourceCode}
-          text='Source code'
+          text="Source code"
           icon={<GitHubIcon />}
         />
         <FooterLink
           url={urlDocumentation}
-          text='Documentation'
+          text="Documentation"
           icon={<ArticleIcon />}
         />
         <FooterLink
           url={urlContributing}
-          text='Contributing'
+          text="Contributing"
           icon={<InfoIcon />}
         />
         <FooterLink
           url={urlChangelog}
-          text='Version 1.0.0'
+          text="Version 1.0.0"
           icon={<LogoDevIcon />}
         />
       </Grid>

@@ -45,7 +45,7 @@ const App = (): JSX.Element => {
       <MenuBar darkMode={darkMode} handleThemeChange={handleThemeChange} />
       <Container disableGutters sx={{ 'minHeight': 'calc(100vh - 197px)' }}>
         <Container>
-          <Stack margin='50px 0px' spacing={4}>
+          <Stack margin="50px 0px" spacing={4}>
             <NumberInput
               input={input}
               inputSystem={inputSystem}
@@ -62,9 +62,9 @@ const App = (): JSX.Element => {
         </Container>
         <Container>
           <Stack
-            alignItems='stretch'
+            alignItems="stretch"
             direction={{ xs: 'column', md: 'row' }}
-            marginTop='50px'
+            marginTop="50px"
             spacing={2}
           >
             <InfoBox system={inputSystem} />

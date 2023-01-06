@@ -49,21 +49,19 @@ const NumberOutput = (props: NumberOutputProps): JSX.Element => {
       <TextField
         InputProps={{
           endAdornment:
-            <InputAdornment position='end'>
-              {
-                input.length > 0 && valid && <CopyButton output={number} />
-              }
+            <InputAdornment position="end">
+              {input.length > 0 && valid && <CopyButton output={number} />}
             </InputAdornment>,
           readOnly: true,
         }}
-        label='Output'
+        label="Output"
         sx={{ width: { sm: '100%', md: '70%' } }}
         value={message}
       />
       <FormControl sx={{ width: { sm: '100%', md: '30%' } }}>
         <InputLabel>To</InputLabel>
         <Select
-          label='To'
+          label="To"
           onChange={handleChange}
           value={outputSystem.toString()}
         >

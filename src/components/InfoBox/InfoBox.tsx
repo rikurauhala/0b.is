@@ -32,7 +32,7 @@ const InfoBox = ({ system }: InfoBoxProps): JSX.Element => {
   }, [system]);
 
   return (
-    <Paper variant='outlined' sx={{ 'padding': '0px 15px 15px 15px', 'width': '1', }}>
+    <Paper variant="outlined" sx={{ 'padding': '0px 15px 15px 15px', 'width': '1', }}>
       <Content content={content} />
       <ReadMoreLink system={options[system][1]} />
     </Paper>
@@ -47,10 +47,10 @@ const Content = ({ content }: { content: string }): JSX.Element => (
 
 const ReadMoreLink = ({ system }: { system: string }): JSX.Element => (
   <Button
-    color='primary'
+    color="primary"
     href={`https://en.wikipedia.org/wiki/${system}`}
     startIcon={<ReadMoreIcon />}
-    target='_blank'
+    target="_blank"
   >
     Read more
   </Button>

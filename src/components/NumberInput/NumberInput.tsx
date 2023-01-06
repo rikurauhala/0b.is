@@ -46,10 +46,10 @@ const NumberInput = (props: NumberInputProps): JSX.Element => {
         helperText={error ? `Not a valid ${getKeyByValue(inputSystem).toLowerCase()} number!` : ' '}
         InputProps={{
           endAdornment:
-            <InputAdornment position='end'>
+            <InputAdornment position="end">
               {
                 input.length > 0 &&
-                <Tooltip placement='left' title='Clear'>
+                <Tooltip placement="left" title="Clear">
                   <IconButton
                     onClick={() => {
                       numberInput.current.value = '';
@@ -63,7 +63,7 @@ const NumberInput = (props: NumberInputProps): JSX.Element => {
             </InputAdornment>,
         }}
         inputRef={numberInput}
-        label='Input'
+        label="Input"
         onChange={event => handleInputChange(event.target.value)}
         onKeyPress={event => event.key === 'Enter' && event.preventDefault()}
         sx={{ width: { sm: '100%', md: '70%' } }}
@@ -71,7 +71,7 @@ const NumberInput = (props: NumberInputProps): JSX.Element => {
       <FormControl sx={{ width: { sm: '100%', md: '30%' } }}>
         <InputLabel>From</InputLabel>
         <Select
-          label='From'
+          label="From"
           onChange={handleChange}
           value={inputSystem.toString()}
         >

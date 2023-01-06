@@ -19,6 +19,7 @@
     "arrow-spacing": ["error", { "before": true, "after": true }],
     "eqeqeq": "error",
     "indent": ["error", 2, { "SwitchCase": 1 }],
+    "jsx-quotes": ["error", "prefer-double"],
     "linebreak-style": ["error", "unix"],
     "max-len": ["error", { "code": 100, "tabWidth": 2 }],
     "no-case-declarations": "off",
