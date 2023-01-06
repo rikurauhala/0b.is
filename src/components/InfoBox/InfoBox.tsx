@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react';
 import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
 
+import ReadMoreIcon from '@mui/icons-material/ReadMore';
+
 import ReactMarkdown from 'react-markdown';
 
 import { InfoBoxProps } from '../../types/types';
@@ -11,7 +13,6 @@ import ContentBinary from './content/binary.md';
 import ContentOctal from './content/octal.md';
 import ContentDecimal from './content/decimal.md';
 import ContentHexadecimal from './content/hexadecimal.md';
-import ReadMoreIcon from '@mui/icons-material/ReadMore';
 
 const InfoBox = ({ system }: InfoBoxProps): JSX.Element => {
   const [content, setContent] = useState('');
