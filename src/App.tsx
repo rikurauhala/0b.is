@@ -64,7 +64,6 @@ const App = (): JSX.Element => {
           <Stack
             alignItems="stretch"
             direction={{ xs: 'column', md: 'row' }}
-            marginTop="50px"
             spacing={2}
           >
             <InfoBox system={inputSystem} />

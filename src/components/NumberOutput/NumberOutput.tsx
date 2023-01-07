@@ -45,8 +45,9 @@ const NumberOutput = (props: NumberOutputProps): JSX.Element => {
   };
 
   return (
-    <Stack direction={{ xs: 'column', md: 'row' }} spacing={{ xs: 2, md: 1 }}>
+    <Stack direction={{ xs: 'column', md: 'row' }} spacing={1}>
       <TextField
+        helperText=" "
         InputProps={{
           endAdornment:
             <InputAdornment position="end">
