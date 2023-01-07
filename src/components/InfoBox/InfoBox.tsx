@@ -34,7 +34,7 @@ const InfoBox = ({ system }: InfoBoxProps): JSX.Element => {
 
   return (
     <Paper
-      sx={{ 'position': 'relative', 'padding': '0px 15px 35px 15px', 'width': '1', }}
+      sx={{ padding: '0px 15px 35px 15px', position: 'relative', width: '1' }}
       variant="outlined"
     >
       <Content content={content} />

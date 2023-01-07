@@ -31,14 +31,7 @@ const Footer = () => {
   const urlChangelog = `${urlSourceCode}/wiki/Changelog`;
 
   return (
-    <Container
-      sx={{
-        bottom: '0',
-        left: '0',
-        padding: '15px',
-        position: 'relative',
-      }}
-    >
+    <Container sx={{ bottom: '0', left: '0', padding: '15px', position: 'relative' }}>
       <Divider sx={{ marginBottom: '20px' }} />
       <Grid
         alignItems="center"

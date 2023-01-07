@@ -43,7 +43,7 @@ const App = (): JSX.Element => {
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <CssBaseline />
       <MenuBar darkMode={darkMode} handleThemeChange={handleThemeChange} />
-      <Container disableGutters sx={{ 'minHeight': 'calc(100vh - 197px)' }}>
+      <Container disableGutters sx={{ minHeight: 'calc(100vh - 197px)' }}>
         <Container>
           <Stack margin="50px 0px" spacing={{ xs: 5, md: 2 }}>
             <NumberInput
