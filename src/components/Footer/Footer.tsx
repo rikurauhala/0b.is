@@ -56,7 +56,7 @@ const Footer = () => {
         />
         <FooterLink
           url={urlChangelog}
-          text="Version 1.0.0"
+          text="Version 1.1.0"
           icon={<LogoDevIcon />}
         />
       </Grid>
