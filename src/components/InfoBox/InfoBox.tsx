@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 
+import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
 
@@ -32,7 +33,10 @@ const InfoBox = ({ system }: InfoBoxProps): JSX.Element => {
   }, [system]);
 
   return (
-    <Paper variant="outlined" sx={{ 'padding': '0px 15px 15px 15px', 'width': '1', }}>
+    <Paper
+      sx={{ 'position': 'relative', 'padding': '0px 15px 35px 15px', 'width': '1', }}
+      variant="outlined"
+    >
       <Content content={content} />
       <ReadMoreLink system={options[system][1]} />
     </Paper>
@@ -46,14 +50,17 @@ const Content = ({ content }: { content: string }): JSX.Element => (
 );
 
 const ReadMoreLink = ({ system }: { system: string }): JSX.Element => (
-  <Button
-    color="primary"
-    href={`https://en.wikipedia.org/wiki/${system}`}
-    startIcon={<ReadMoreIcon />}
-    target="_blank"
-  >
-    Read more
-  </Button>
+  <Box sx={{ bottom: 0, position: 'absolute' }}>
+    <Button
+      color="primary"
+      href={`https://en.wikipedia.org/wiki/${system}`}
+      startIcon={<ReadMoreIcon />}
+      target="_blank"
+      sx={{ marginBottom: '10px' }}
+    >
+      Read more
+    </Button>
+  </Box>
 );
 
 export default InfoBox;
