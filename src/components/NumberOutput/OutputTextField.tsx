@@ -30,15 +30,15 @@ const OutputTextField = (props: OuputTextFieldProps): JSX.Element => {
   }, [outputSystem]);
 
   useEffect(() => {
-    if (input.length > 0) {
-      if (valid) {
-        setMessage(number);
-      } else {
-        setMessage(`Not a valid ${getKeyByValue(inputSystem).toLowerCase()} number!`);
-      }
-    } else {
+    if (input.length === 0) {
       setMessage('');
+      return;
     }
+    if (!valid) {
+      setMessage(`Not a valid ${getKeyByValue(inputSystem).toLowerCase()} number!`);
+      return;
+    }
+    setMessage(number);
   }, [input]);
 
   return (
