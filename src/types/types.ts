@@ -1,7 +1,3 @@
-export interface InfoBoxProps {
-  system: NumeralSystem
-}
-
 export interface MenuBarProps {
   darkMode: boolean
   handleThemeChange: () => void

@@ -1,19 +1,20 @@
 import { useEffect, useState } from 'react';
 
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
 
-import ReadMoreIcon from '@mui/icons-material/ReadMore';
-
-import ReactMarkdown from 'react-markdown';
-
-import { InfoBoxProps } from '../../types/types';
+import { NumeralSystem } from '../../types/types';
 
 import ContentBinary from './content/binary.md';
 import ContentOctal from './content/octal.md';
 import ContentDecimal from './content/decimal.md';
 import ContentHexadecimal from './content/hexadecimal.md';
+
+import InfoBoxContent from './InfoBoxContent';
+import ReadMoreButton from './ReadMoreButton';
+
+interface InfoBoxProps {
+  system: NumeralSystem
+}
 
 const InfoBox = ({ system }: InfoBoxProps): JSX.Element => {
   const [content, setContent] = useState('');
@@ -37,30 +38,10 @@ const InfoBox = ({ system }: InfoBoxProps): JSX.Element => {
       sx={{ padding: '0px 15px 35px 15px', position: 'relative', width: '1' }}
       variant="outlined"
     >
-      <Content content={content} />
-      <ReadMoreLink system={options[system][1]} />
+      <InfoBoxContent content={content} />
+      <ReadMoreButton system={options[system][1]} />
     </Paper>
   );
 };
-
-const Content = ({ content }: { content: string }): JSX.Element => (
-  <ReactMarkdown>
-    {content}
-  </ReactMarkdown>
-);
-
-const ReadMoreLink = ({ system }: { system: string }): JSX.Element => (
-  <Box sx={{ bottom: 0, position: 'absolute' }}>
-    <Button
-      color="primary"
-      href={`https://en.wikipedia.org/wiki/${system}`}
-      startIcon={<ReadMoreIcon />}
-      target="_blank"
-      sx={{ marginBottom: '10px' }}
-    >
-      Read more
-    </Button>
-  </Box>
-);
 
 export default InfoBox;
