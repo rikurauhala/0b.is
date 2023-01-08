@@ -23,7 +23,7 @@ const CopyButton = ({ output }: { output: string }): JSX.Element => {
         </IconButton>
       </Tooltip>
       <Snackbar
-        anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
+        anchorOrigin={{ horizontal: 'center', vertical: 'top' }}
         autoHideDuration={2000}
         onClose={() => setOpen(false)}
         open={open}

@@ -15,13 +15,6 @@ export interface MenuBarProps {
   handleThemeChange: () => void
 }
 
-export interface NumberInputProps {
-  input: string
-  inputSystem: NumeralSystem
-  handleInputChange: (arg0: string) => void
-  handleInputSystemChange: (arg0: NumeralSystem) => void
-}
-
 export interface NumberOutputProps {
   input: string
   inputSystem: NumeralSystem
