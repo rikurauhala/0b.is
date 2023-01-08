@@ -1,8 +1,3 @@
-export interface MenuBarProps {
-  darkMode: boolean
-  handleThemeChange: () => void
-}
-
 export enum NumeralSystem {
   Binary = 2,
   Decimal = 10,
