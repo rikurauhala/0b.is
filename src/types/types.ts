@@ -3,13 +3,6 @@ export interface MenuBarProps {
   handleThemeChange: () => void
 }
 
-export interface NumberOutputProps {
-  input: string
-  inputSystem: NumeralSystem
-  outputSystem: NumeralSystem
-  handleOutputSystemChange: (arg0: NumeralSystem) => void
-}
-
 export enum NumeralSystem {
   Binary = 2,
   Decimal = 10,
