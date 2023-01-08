@@ -1,4 +1,3 @@
-import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import Divider from '@mui/material/Divider';
 import Grid from '@mui/material/Grid';
@@ -8,21 +7,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import InfoIcon from '@mui/icons-material/Info';
 import LogoDevIcon from '@mui/icons-material/LogoDev';
 
-import { FooterLinkProps } from '../../types/types';
-
-const FooterLink = ({ url, text, icon }: FooterLinkProps): JSX.Element => (
-  <Grid item xs={6} md={3} textAlign="center">
-    <Button
-      color="secondary"
-      href={url}
-      size="small"
-      startIcon={icon}
-      target="_blank"
-    >
-      {text}
-    </Button>
-  </Grid>
-);
+import FooterLink from './FooterLink';
 
 const Footer = (): JSX.Element => {
   const urlSourceCode = 'https://github.com/rikurauhala/0b.is';
