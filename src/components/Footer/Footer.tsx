@@ -7,7 +7,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import InfoIcon from '@mui/icons-material/Info';
 import LogoDevIcon from '@mui/icons-material/LogoDev';
 
-import FooterLink from './FooterLink';
+import FooterButton from './FooterButton';
 
 const Footer = (): JSX.Element => {
   const urlSourceCode = 'https://github.com/rikurauhala/0b.is';
@@ -24,22 +24,22 @@ const Footer = (): JSX.Element => {
         direction={{ xs: 'column', sm: 'row' }}
         spacing={{ xs: 1, sm: 0.5, md: 0 }}
       >
-        <FooterLink
+        <FooterButton
           url={urlSourceCode}
           text="Source code"
           icon={<GitHubIcon />}
         />
-        <FooterLink
+        <FooterButton
           url={urlDocumentation}
           text="Documentation"
           icon={<ArticleIcon />}
         />
-        <FooterLink
+        <FooterButton
           url={urlContributing}
           text="Contributing"
           icon={<InfoIcon />}
         />
-        <FooterLink
+        <FooterButton
           url={urlChangelog}
           text="Version 1.1.0"
           icon={<LogoDevIcon />}
