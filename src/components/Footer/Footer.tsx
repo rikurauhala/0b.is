@@ -10,7 +10,7 @@ import LogoDevIcon from '@mui/icons-material/LogoDev';
 
 import { FooterLinkProps } from '../../types/types';
 
-const FooterLink = ({ url, text, icon }: FooterLinkProps) => (
+const FooterLink = ({ url, text, icon }: FooterLinkProps): JSX.Element => (
   <Grid item xs={6} md={3} textAlign="center">
     <Button
       color="secondary"
@@ -24,7 +24,7 @@ const FooterLink = ({ url, text, icon }: FooterLinkProps) => (
   </Grid>
 );
 
-const Footer = () => {
+const Footer = (): JSX.Element => {
   const urlSourceCode = 'https://github.com/rikurauhala/0b.is';
   const urlDocumentation = `${urlSourceCode}/wiki`;
   const urlContributing = `${urlSourceCode}/blob/main/CONTRIBUTING.md`;
