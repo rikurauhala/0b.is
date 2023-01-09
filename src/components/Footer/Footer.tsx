@@ -2,10 +2,10 @@ import Container from '@mui/material/Container';
 import Divider from '@mui/material/Divider';
 import Grid from '@mui/material/Grid';
 
-import ArticleIcon from '@mui/icons-material/Article';
+import DescriptionIcon from '@mui/icons-material/Description';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import InfoIcon from '@mui/icons-material/Info';
-import LogoDevIcon from '@mui/icons-material/LogoDev';
+import VolunteerActivismIcon from '@mui/icons-material/VolunteerActivism';
 
 import FooterButton from './FooterButton';
 
@@ -32,17 +32,17 @@ const Footer = (): JSX.Element => {
         <FooterButton
           url={urlDocumentation}
           text="Documentation"
-          icon={<ArticleIcon />}
+          icon={<DescriptionIcon />}
         />
         <FooterButton
           url={urlContributing}
           text="Contributing"
-          icon={<InfoIcon />}
+          icon={<VolunteerActivismIcon />}
         />
         <FooterButton
           url={urlChangelog}
           text="Version 1.1.0"
-          icon={<LogoDevIcon />}
+          icon={<InfoIcon />}
         />
       </Grid>
     </Container>
