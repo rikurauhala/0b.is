@@ -9,11 +9,12 @@ import { NumeralSystem } from '../../types/types';
 
 interface InputSystemSelectProps {
   inputSystem: NumeralSystem
+  outputSystem: NumeralSystem
   handleInputSystemChange: (arg0: NumeralSystem) => void
 }
 
 const InputSystemSelect = (props: InputSystemSelectProps): JSX.Element => {
-  const { inputSystem, handleInputSystemChange } = props;
+  const { inputSystem, outputSystem, handleInputSystemChange } = props;
 
   const handleChange = (event: SelectChangeEvent) => {
     handleInputSystemChange(event.target.value as unknown as NumeralSystem);
@@ -28,7 +29,11 @@ const InputSystemSelect = (props: InputSystemSelectProps): JSX.Element => {
         value={inputSystem.toString()}
       >
         {numeralSystems.map(system => (
-          <MenuItem key={system} value={system}>
+          <MenuItem
+            disabled={system === outputSystem ? true : false}
+            key={system}
+            value={system}
+          >
             {getKeyByValue(system)}
           </MenuItem>
         ))}

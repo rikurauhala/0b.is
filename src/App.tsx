@@ -49,6 +49,7 @@ const App = (): JSX.Element => {
             <NumberInput
               input={input}
               inputSystem={inputSystem}
+              outputSystem={outputSystem}
               handleInputChange={handleInputChange}
               handleInputSystemChange={handleInputSystemChange}
             />
