@@ -8,12 +8,13 @@ import InputTextField from './InputTextField';
 interface NumberInputProps {
   input: string
   inputSystem: NumeralSystem
+  outputSystem: NumeralSystem
   handleInputChange: (arg0: string) => void
   handleInputSystemChange: (arg0: NumeralSystem) => void
 }
 
 const NumberInput = (props: NumberInputProps): JSX.Element => {
-  const { input, inputSystem, handleInputChange, handleInputSystemChange } = props;
+  const { input, inputSystem, outputSystem, handleInputChange, handleInputSystemChange } = props;
 
   return (
     <Stack direction={{ xs: 'column', md: 'row' }} spacing={1}>
@@ -24,6 +25,7 @@ const NumberInput = (props: NumberInputProps): JSX.Element => {
       />
       <InputSystemSelect
         inputSystem={inputSystem}
+        outputSystem={outputSystem}
         handleInputSystemChange={handleInputSystemChange}
       />
     </Stack>

@@ -20,6 +20,7 @@ describe('Render NumberInput - validation tests', () => {
       <NumberInput
         input={'1234'}
         inputSystem={2}
+        outputSystem={10}
         handleInputChange={mockHandleInputChange}
         handleInputSystemChange={mockHandleInputSystemChange}
       />
@@ -33,6 +34,7 @@ describe('Render NumberInput - validation tests', () => {
       <NumberInput
         input={'1111'}
         inputSystem={2}
+        outputSystem={10}
         handleInputChange={mockHandleInputChange}
         handleInputSystemChange={mockHandleInputSystemChange}
       />
@@ -46,6 +48,7 @@ describe('Render NumberInput - validation tests', () => {
       <NumberInput
         input={'1F'}
         inputSystem={10}
+        outputSystem={16}
         handleInputChange={mockHandleInputChange}
         handleInputSystemChange={mockHandleInputSystemChange}
       />
@@ -59,6 +62,7 @@ describe('Render NumberInput - validation tests', () => {
       <NumberInput
         input={'10'}
         inputSystem={10}
+        outputSystem={16}
         handleInputChange={mockHandleInputChange}
         handleInputSystemChange={mockHandleInputSystemChange}
       />
@@ -72,6 +76,7 @@ describe('Render NumberInput - validation tests', () => {
       <NumberInput
         input={'1T'}
         inputSystem={16}
+        outputSystem={2}
         handleInputChange={mockHandleInputChange}
         handleInputSystemChange={mockHandleInputSystemChange}
       />
@@ -85,6 +90,7 @@ describe('Render NumberInput - validation tests', () => {
       <NumberInput
         input={'1'}
         inputSystem={16}
+        outputSystem={2}
         handleInputChange={mockHandleInputChange}
         handleInputSystemChange={mockHandleInputSystemChange}
       />
