@@ -41,7 +41,7 @@ const Footer = (): JSX.Element => {
         />
         <FooterButton
           url={urlChangelog}
-          text="Version 1.1.1"
+          text="Version 1.1.2"
           icon={<InfoIcon />}
         />
       </Grid>
