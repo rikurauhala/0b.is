@@ -3,11 +3,15 @@ import Button from '@mui/material/Button';
 
 import ReadMoreIcon from '@mui/icons-material/ReadMore';
 
+import { languages } from '../../languages';
+import { LanguageCode } from '../../types';
+
 interface ReadMoreButtonProps {
+  language: LanguageCode
   system: string
 }
 
-const ReadMoreButton = ({ system }: ReadMoreButtonProps): JSX.Element => (
+const ReadMoreButton = ({ language, system }: ReadMoreButtonProps): JSX.Element => (
   <Box sx={{ bottom: 0, position: 'absolute' }}>
     <Button
       color="primary"
@@ -16,7 +20,7 @@ const ReadMoreButton = ({ system }: ReadMoreButtonProps): JSX.Element => (
       target="_blank"
       sx={{ marginBottom: '10px' }}
     >
-      Read more
+      {languages['Read more'][language]}
     </Button>
   </Box>
 );

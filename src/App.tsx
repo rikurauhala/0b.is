@@ -77,8 +77,8 @@ const App = (): JSX.Element => {
             direction={{ xs: 'column', md: 'row' }}
             spacing={2}
           >
-            <InfoBox system={inputSystem} />
-            <InfoBox system={outputSystem} />
+            <InfoBox language={language} system={inputSystem} />
+            <InfoBox language={language} system={outputSystem} />
           </Stack>
         </Container>
       </Container>

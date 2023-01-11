@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 import Paper from '@mui/material/Paper';
 
-import { NumeralSystem } from '../../types';
+import { LanguageCode, NumeralSystem } from '../../types';
 
 import ContentBinary from './content/binary.md';
 import ContentOctal from './content/octal.md';
@@ -13,10 +13,11 @@ import InfoBoxContent from './InfoBoxContent';
 import ReadMoreButton from './ReadMoreButton';
 
 interface InfoBoxProps {
+  language: LanguageCode
   system: NumeralSystem
 }
 
-const InfoBox = ({ system }: InfoBoxProps): JSX.Element => {
+const InfoBox = ({ language, system }: InfoBoxProps): JSX.Element => {
   const [content, setContent] = useState('');
 
   const options = {
@@ -39,7 +40,7 @@ const InfoBox = ({ system }: InfoBoxProps): JSX.Element => {
       variant="outlined"
     >
       <InfoBoxContent content={content} />
-      <ReadMoreButton system={options[system][1]} />
+      <ReadMoreButton language={language} system={options[system][1]} />
     </Paper>
   );
 };

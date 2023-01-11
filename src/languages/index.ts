@@ -27,6 +27,10 @@ export const languages: LanguagesType = {
     'enUS': 'Finnish',
     'fiFI': 'suomi',
   },
+  'Read more': {
+    'enUS': 'Read more',
+    'fiFI': 'Lue lisää',
+  },
   'Source code': {
     'enUS': 'Source code',
     'fiFI': 'Lähdekoodi',
