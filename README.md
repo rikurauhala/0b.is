@@ -16,13 +16,13 @@ The simple number converter
 
 </div>
 
-## Overview
+## About
 
-**0b.is** is a web-based service for quickly converting numbers. It provides a quick and easy-to-use way to get the results you want. The application is live at [0b.is](https://0b.is/). This domain name was chosen as it is fast to type and easy to remember. The name refers to a [convention](https://en.wikipedia.org/wiki/Binary_number#Representation) of adding the prefix *0b* to distinguish binary numbers.
+**0b.is** is a web-based service for converting numbers. It provides a quick and easy-to-use way to get the results you want. 
+
+The application is live at [0b.is](https://0b.is/). This domain name was chosen as it is fast to type and easy to remember. The name refers to a [convention](https://en.wikipedia.org/wiki/Binary_number#Representation) of adding the prefix *0b* to distinguish binary numbers.
 
 ## Documentation
-
-Get a local copy of the documentation by running `$ git clone git@github.com:rikurauhala/0b.is.wiki.git`.
 
 - [Changelog](https://github.com/rikurauhala/0b.is/wiki/Changelog)
 - [Code of Conduct](https://github.com/rikurauhala/0b.is/blob/main/.github/CODE_OF_CONDUCT.md)
