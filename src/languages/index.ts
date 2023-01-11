@@ -9,6 +9,10 @@ export const languages: languagesType = {
     'enUS': 'Change language',
     'fiFI': 'Vaihda kieli',
   },
+  'Contributing': {
+    'enUS': 'Contributing',
+    'fiFI': 'Osallistuminen',
+  },
   'Documentation': {
     'enUS': 'Documentation',
     'fiFI': 'Dokumentaatio',
@@ -24,5 +28,9 @@ export const languages: languagesType = {
   'Source code': {
     'enUS': 'Source code',
     'fiFI': 'Lähdekoodi',
+  },
+  'Version': {
+    'enUS': 'Version',
+    'fiFI': 'Versio',
   },
 };

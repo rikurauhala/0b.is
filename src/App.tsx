@@ -82,7 +82,7 @@ const App = (): JSX.Element => {
           </Stack>
         </Container>
       </Container>
-      <Footer />
+      <Footer language={language} />
     </ThemeProvider>
   );
 };

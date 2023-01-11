@@ -7,9 +7,15 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import InfoIcon from '@mui/icons-material/Info';
 import VolunteerActivismIcon from '@mui/icons-material/VolunteerActivism';
 
+import { languages } from '../../languages';
+
 import FooterButton from './FooterButton';
 
-const Footer = (): JSX.Element => {
+interface FooterProps {
+  language: string
+}
+
+const Footer = ({ language }: FooterProps): JSX.Element => {
   const urlSourceCode = 'https://github.com/rikurauhala/0b.is';
   const urlDocumentation = `${urlSourceCode}/wiki`;
   const urlContributing = `${urlSourceCode}/blob/main/CONTRIBUTING.md`;
@@ -26,22 +32,22 @@ const Footer = (): JSX.Element => {
       >
         <FooterButton
           url={urlSourceCode}
-          text="Source code"
+          text={languages['Source code'][language]}
           icon={<GitHubIcon />}
         />
         <FooterButton
           url={urlDocumentation}
-          text="Documentation"
+          text={languages['Documentation'][language]}
           icon={<DescriptionIcon />}
         />
         <FooterButton
           url={urlContributing}
-          text="Contributing"
+          text={languages['Contributing'][language]}
           icon={<VolunteerActivismIcon />}
         />
         <FooterButton
           url={urlChangelog}
-          text="Version 1.1.2"
+          text={`${languages['Version'][language]} 1.1.2`}
           icon={<InfoIcon />}
         />
       </Grid>
