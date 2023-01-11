@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 import Paper from '@mui/material/Paper';
 
-import { NumeralSystem } from '../../types/types';
+import { NumeralSystem } from '../../types';
 
 import ContentBinary from './content/binary.md';
 import ContentOctal from './content/octal.md';

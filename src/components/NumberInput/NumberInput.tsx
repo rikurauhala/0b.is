@@ -1,6 +1,6 @@
 import Stack from '@mui/material/Stack';
 
-import { NumeralSystem } from '../../types/types';
+import { NumeralSystem } from '../../types';
 
 import InputSystemSelect from './InputSystemSelect';
 import InputTextField from './InputTextField';

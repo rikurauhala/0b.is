@@ -9,7 +9,7 @@ import VolunteerActivismIcon from '@mui/icons-material/VolunteerActivism';
 
 import { languages } from '../../languages';
 
-import { LanguageCode } from '../../types/types';
+import { LanguageCode } from '../../types';
 
 import FooterButton from './FooterButton';
 

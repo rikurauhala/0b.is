@@ -5,7 +5,7 @@ import Select, { SelectChangeEvent } from '@mui/material/Select';
 
 import { numeralSystems, getKeyByValue } from '../../utils/systems';
 
-import { NumeralSystem } from '../../types/types';
+import { NumeralSystem } from '../../types';
 
 interface InputSystemSelectProps {
   inputSystem: NumeralSystem

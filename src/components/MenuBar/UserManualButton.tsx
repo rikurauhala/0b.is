@@ -5,7 +5,7 @@ import HelpIcon from '@mui/icons-material/Help';
 
 import { languages } from '../../languages';
 
-import { LanguageCode } from '../../types/types';
+import { LanguageCode } from '../../types';
 
 interface UserManualButtonProps {
   language: LanguageCode

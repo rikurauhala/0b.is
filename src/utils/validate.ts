@@ -1,4 +1,4 @@
-import { NumeralSystem } from '../types/types';
+import { NumeralSystem } from '../types';
 
 /**
  * Validates a binary number.

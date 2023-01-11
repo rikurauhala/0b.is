@@ -7,7 +7,7 @@ import Tooltip from '@mui/material/Tooltip';
 
 import ClearIcon from '@mui/icons-material/Clear';
 
-import { NumeralSystem, Ref } from '../../types/types';
+import { NumeralSystem, Ref } from '../../types';
 import { getKeyByValue } from '../../utils/systems';
 
 import validate from '../../utils/validate';

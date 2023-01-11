@@ -1,4 +1,4 @@
-import { LanguageCode } from '../types/types';
+import { LanguageCode } from '../types';
 
 type LanguagesType = {
   [key: string]: {

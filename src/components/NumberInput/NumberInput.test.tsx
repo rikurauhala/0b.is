@@ -5,7 +5,7 @@ import { render, screen } from '@testing-library/react';
 
 import NumberInput from './NumberInput';
 
-import { NumeralSystem } from '../../types/types';
+import { NumeralSystem } from '../../types';
 
 const inputLabel = 'Input';
 const errorBinaryLabel = 'Not a valid binary number!';

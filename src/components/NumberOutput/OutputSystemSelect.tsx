@@ -3,7 +3,7 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 
-import { NumeralSystem } from '../../types/types';
+import { NumeralSystem } from '../../types';
 
 import { getKeyByValue, numeralSystems } from '../../utils/systems';
 

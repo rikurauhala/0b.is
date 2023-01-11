@@ -8,7 +8,7 @@ import LanguageIcon from '@mui/icons-material/Language';
 
 import { languages } from '../../languages';
 
-import { LanguageCode } from '../../types/types';
+import { LanguageCode } from '../../types';
 
 import LanguageOption from './LanguageOption';
 

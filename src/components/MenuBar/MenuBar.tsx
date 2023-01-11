@@ -7,7 +7,7 @@ import LogoPlaceholder from './LogoPlaceholder';
 import ModeToggleButton from './ModeToggleButton';
 import UserManualButton from './UserManualButton';
 
-import { LanguageCode } from '../../types/types';
+import { LanguageCode } from '../../types';
 
 interface MenuBarProps {
   darkMode: boolean

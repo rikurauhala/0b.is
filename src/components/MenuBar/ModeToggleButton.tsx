@@ -6,7 +6,7 @@ import LightModeIcon from '@mui/icons-material/LightMode';
 
 import { languages } from '../../languages';
 
-import { LanguageCode } from '../../types/types';
+import { LanguageCode } from '../../types';
 
 interface ModeToggleButtonProps {
   darkMode: boolean

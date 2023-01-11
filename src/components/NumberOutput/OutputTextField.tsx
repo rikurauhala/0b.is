@@ -5,7 +5,7 @@ import TextField from '@mui/material/TextField';
 
 import { getKeyByValue } from '../../utils/systems';
 
-import { NumeralSystem } from '../../types/types';
+import { NumeralSystem } from '../../types';
 
 import convert from '../../utils/convert';
 import validate from '../../utils/validate';

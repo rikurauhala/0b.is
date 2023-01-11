@@ -1,4 +1,4 @@
-import { NumeralSystem } from '../types/types';
+import { NumeralSystem } from '../types';
 
 /**
  * Converts a number from base X to base Y.

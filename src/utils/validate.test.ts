@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom/extend-expect';
 
-import { NumeralSystem } from '../types/types';
+import { NumeralSystem } from '../types';
 
 import validate from './validate';
 

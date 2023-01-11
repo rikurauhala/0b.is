@@ -13,9 +13,9 @@ import MenuBar from './components/MenuBar';
 import NumberInput from './components/NumberInput';
 import NumberOutput from './components/NumberOutput';
 
-import { lightTheme, darkTheme } from './themes/themes';
+import { lightTheme, darkTheme } from './themes';
 
-import { LanguageCode, NumeralSystem } from './types/types';
+import { LanguageCode, NumeralSystem } from './types';
 
 const App = (): JSX.Element => {
   const [language, setLanguage] = useState<LanguageCode>('enUS');

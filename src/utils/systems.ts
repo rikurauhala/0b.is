@@ -1,4 +1,4 @@
-import { NumeralSystem } from '../types/types';
+import { NumeralSystem } from '../types';
 
 export const getKeyByValue = (value: NumeralSystem): string => {
   return NumeralSystem[value];
