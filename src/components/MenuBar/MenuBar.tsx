@@ -21,9 +21,18 @@ const MenuBar = (props: MenuBarProps): JSX.Element => {
       <Toolbar>
         <LogoPlaceholder />
         <AppName />
-        <ModeToggleButton darkMode={darkMode} handleThemeChange={handleThemeChange} />
-        <LanguageButton handleLanguageChange={handleLanguageChange} language={language} />
-        <UserManualButton />
+        <ModeToggleButton
+          darkMode={darkMode}
+          handleThemeChange={handleThemeChange}
+          language={language}
+        />
+        <LanguageButton
+          handleLanguageChange={handleLanguageChange}
+          language={language}
+        />
+        <UserManualButton
+          language={language}
+        />
       </Toolbar>
     </AppBar>
   );

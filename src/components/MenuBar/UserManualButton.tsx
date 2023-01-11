@@ -3,7 +3,13 @@ import Tooltip from '@mui/material/Tooltip';
 
 import HelpIcon from '@mui/icons-material/Help';
 
-const UserManualButton = (): JSX.Element => (
+import { languages } from '../../languages';
+
+interface UserManualButtonProps {
+  language: string
+}
+
+const UserManualButton = ({ language }: UserManualButtonProps): JSX.Element => (
   <IconButton
     color="inherit"
     edge="end"
@@ -11,7 +17,7 @@ const UserManualButton = (): JSX.Element => (
     size="large"
     target="_blank"
   >
-    <Tooltip title="User manual">
+    <Tooltip title={languages['User manual'][language]}>
       <HelpIcon />
     </Tooltip>
   </IconButton>

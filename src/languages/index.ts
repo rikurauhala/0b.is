@@ -29,6 +29,18 @@ export const languages: languagesType = {
     'enUS': 'Source code',
     'fiFI': 'Lähdekoodi',
   },
+  'Use light theme': {
+    'enUS': 'Use light theme',
+    'fiFI': 'Käytä vaaleaa teemaa',
+  },
+  'Use dark theme': {
+    'enUS': 'Use dark theme',
+    'fiFI': 'Käytä tummaa teemaa',
+  },
+  'User manual': {
+    'enUS': 'User manual',
+    'fiFI': 'Käyttöohje',
+  },
   'Version': {
     'enUS': 'Version',
     'fiFI': 'Versio',
