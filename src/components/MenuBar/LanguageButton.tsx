@@ -25,7 +25,8 @@ const LanguageButton = ({ handleLanguageChange, language }: LanguageButtonProps)
     setAnchorEl(event.currentTarget);
   };
 
-  const handleClose = () => {
+  const handleClose = (languageCode: string) => {
+    handleLanguageChange(languageCode);
     setAnchorEl(null);
   };
 
