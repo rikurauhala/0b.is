@@ -9,10 +9,12 @@ import VolunteerActivismIcon from '@mui/icons-material/VolunteerActivism';
 
 import { languages } from '../../languages';
 
+import { LanguageCode } from '../../types/types';
+
 import FooterButton from './FooterButton';
 
 interface FooterProps {
-  language: string
+  language: LanguageCode
 }
 
 const Footer = ({ language }: FooterProps): JSX.Element => {

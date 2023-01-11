@@ -8,14 +8,15 @@ import LanguageIcon from '@mui/icons-material/Language';
 
 import { languages } from '../../languages';
 
+import { LanguageCode } from '../../types/types';
+
 import LanguageOption from './LanguageOption';
 
 interface LanguageButtonProps {
-  handleLanguageChange: (arg0: string) => void
-  language: string
+  handleLanguageChange: (arg0: LanguageCode) => void
+  language: LanguageCode
 }
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const LanguageButton = ({ handleLanguageChange, language }: LanguageButtonProps): JSX.Element => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
 
@@ -25,7 +26,7 @@ const LanguageButton = ({ handleLanguageChange, language }: LanguageButtonProps)
     setAnchorEl(event.currentTarget);
   };
 
-  const handleClose = (languageCode: string) => {
+  const handleClose = (languageCode: LanguageCode) => {
     handleLanguageChange(languageCode);
     setAnchorEl(null);
   };

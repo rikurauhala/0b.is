@@ -1,3 +1,5 @@
+export type LanguageCode = 'enUS' | 'fiFI';
+
 export enum NumeralSystem {
   Binary = 2,
   Decimal = 10,

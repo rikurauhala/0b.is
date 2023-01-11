@@ -1,10 +1,12 @@
-type languagesType = {
+import { LanguageCode } from '../types/types';
+
+type LanguagesType = {
   [key: string]: {
-    [key: string]: string
+    [key in LanguageCode]: string
   }
 };
 
-export const languages: languagesType = {
+export const languages: LanguagesType = {
   'Change language': {
     'enUS': 'Change language',
     'fiFI': 'Vaihda kieli',
