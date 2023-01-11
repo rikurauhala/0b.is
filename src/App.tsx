@@ -18,10 +18,15 @@ import { lightTheme, darkTheme } from './themes/themes';
 import { NumeralSystem } from './types/types';
 
 const App = (): JSX.Element => {
+  const [language, setLanguage] = useState<string>('enUS');
   const [darkMode, setDarkMode] = useState<boolean>(useMediaQuery('(prefers-color-scheme: dark)'));
   const [input, setInput] = useState<string>('');
   const [inputSystem, setInputSystem] = useState<NumeralSystem>(NumeralSystem.Binary);
   const [outputSystem, setOutputSystem] = useState<NumeralSystem>(NumeralSystem.Decimal);
+
+  const handleLanguageChange = (language: string): void => {
+    setLanguage(language);
+  };
 
   const handleInputChange = (input: string): void => {
     setInput(input);
@@ -42,7 +47,12 @@ const App = (): JSX.Element => {
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <CssBaseline />
-      <MenuBar darkMode={darkMode} handleThemeChange={handleThemeChange} />
+      <MenuBar
+        darkMode={darkMode}
+        handleLanguageChange={handleLanguageChange}
+        handleThemeChange={handleThemeChange}
+        language={language}
+      />
       <Container disableGutters sx={{ minHeight: 'calc(100vh - 197px)' }}>
         <Container>
           <Stack margin="50px 0px" spacing={{ xs: 5, md: 2 }}>
