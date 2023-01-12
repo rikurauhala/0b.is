@@ -16,12 +16,12 @@ describe('Render NumberInput - validation tests', () => {
   test('Validate binary number - invalid value', async () => {
     render(
       <NumberInput
-        input={'1234'}
-        inputSystem={2}
-        outputSystem={10}
-        language={Language.English}
         handleInputChange={mockHandleInputChange}
         handleInputSystemChange={mockHandleInputSystemChange}
+        input={'1234'}
+        inputSystem={2}
+        language={Language.English}
+        outputSystem={10}
       />
     );
     expect(screen.getByLabelText(inputLabel)).toBeInTheDocument();
@@ -31,12 +31,12 @@ describe('Render NumberInput - validation tests', () => {
   test('Validate binary number - valid value', async () => {
     render(
       <NumberInput
-        input={'1111'}
-        inputSystem={2}
-        outputSystem={10}
-        language={Language.English}
         handleInputChange={mockHandleInputChange}
         handleInputSystemChange={mockHandleInputSystemChange}
+        input={'1111'}
+        inputSystem={2}
+        language={Language.English}
+        outputSystem={10}
       />
     );
     expect(screen.getByLabelText(inputLabel)).toBeInTheDocument();
@@ -46,12 +46,12 @@ describe('Render NumberInput - validation tests', () => {
   test('Validate decimal number - invalid value', async () => {
     render(
       <NumberInput
-        input={'1F'}
-        inputSystem={10}
-        outputSystem={16}
-        language={Language.English}
         handleInputChange={mockHandleInputChange}
         handleInputSystemChange={mockHandleInputSystemChange}
+        input={'1F'}
+        inputSystem={10}
+        language={Language.English}
+        outputSystem={16}
       />
     );
     expect(screen.getByLabelText(inputLabel)).toBeInTheDocument();
@@ -61,12 +61,12 @@ describe('Render NumberInput - validation tests', () => {
   test('Validate decimal number - valid value', async () => {
     render(
       <NumberInput
-        input={'10'}
-        inputSystem={10}
-        outputSystem={16}
-        language={Language.English}
         handleInputChange={mockHandleInputChange}
         handleInputSystemChange={mockHandleInputSystemChange}
+        input={'10'}
+        inputSystem={10}
+        language={Language.English}
+        outputSystem={16}
       />
     );
     expect(screen.getByLabelText(inputLabel)).toBeInTheDocument();
@@ -76,12 +76,12 @@ describe('Render NumberInput - validation tests', () => {
   test('Validate hexadecimal number - invalid value', async () => {
     render(
       <NumberInput
-        input={'1T'}
-        inputSystem={16}
-        outputSystem={2}
-        language={Language.English}
         handleInputChange={mockHandleInputChange}
         handleInputSystemChange={mockHandleInputSystemChange}
+        input={'1T'}
+        inputSystem={16}
+        language={Language.English}
+        outputSystem={2}
       />
     );
     expect(screen.getByLabelText(inputLabel)).toBeInTheDocument();
@@ -91,12 +91,12 @@ describe('Render NumberInput - validation tests', () => {
   test('Validate hexadecimal number - valid value', async () => {
     render(
       <NumberInput
-        input={'1'}
-        inputSystem={16}
-        outputSystem={2}
-        language={Language.English}
         handleInputChange={mockHandleInputChange}
         handleInputSystemChange={mockHandleInputSystemChange}
+        input={'1'}
+        inputSystem={16}
+        language={Language.English}
+        outputSystem={2}
       />
     );
     expect(screen.getByLabelText(inputLabel)).toBeInTheDocument();

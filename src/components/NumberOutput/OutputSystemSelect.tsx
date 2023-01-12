@@ -10,14 +10,14 @@ import { Language, NumeralSystem } from '../../types';
 import { getNameByValue, numeralSystems } from '../../utils/systems';
 
 interface OutputSystemSelectProps {
-  inputSystem: NumeralSystem
-  outputSystem: NumeralSystem
-  language: Language
   handleOutputSystemChange: (arg0: NumeralSystem) => void
+  inputSystem: NumeralSystem
+  language: Language
+  outputSystem: NumeralSystem
 }
 
 const OutputSystemSelect = (props: OutputSystemSelectProps): JSX.Element => {
-  const { inputSystem, outputSystem, language, handleOutputSystemChange } = props;
+  const { handleOutputSystemChange, inputSystem, language, outputSystem } = props;
   const handleChange = (event: SelectChangeEvent) => {
     handleOutputSystemChange(event.target.value as unknown as NumeralSystem);
   };
@@ -26,7 +26,7 @@ const OutputSystemSelect = (props: OutputSystemSelectProps): JSX.Element => {
     <FormControl sx={{ width: { sm: '100%', md: '30%' } }}>
       <InputLabel>{languages['To'][language]}</InputLabel>
       <Select
-        label="To"
+        label={languages['To'][language]}
         onChange={handleChange}
         value={outputSystem.toString()}
       >

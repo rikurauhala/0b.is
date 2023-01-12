@@ -15,12 +15,12 @@ import CopyButton from './CopyButton';
 interface OuputTextFieldProps {
   input: string
   inputSystem: NumeralSystem
-  outputSystem: NumeralSystem
   language: Language
+  outputSystem: NumeralSystem
 }
 
 const OutputTextField = (props: OuputTextFieldProps): JSX.Element => {
-  const { input, inputSystem, outputSystem, language } = props;
+  const { input, inputSystem, language, outputSystem } = props;
   const [message, setMessage] = useState<string>('');
 
   const valid = validate(input, inputSystem);

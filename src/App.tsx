@@ -57,19 +57,19 @@ const App = (): JSX.Element => {
         <Container>
           <Stack margin="50px 0px" spacing={{ xs: 5, md: 2 }}>
             <NumberInput
-              input={input}
-              inputSystem={inputSystem}
-              outputSystem={outputSystem}
               handleInputChange={handleInputChange}
               handleInputSystemChange={handleInputSystemChange}
-              language={language}
-            />
-            <NumberOutput
               input={input}
               inputSystem={inputSystem}
-              outputSystem={outputSystem}
-              handleOutputSystemChange={handleOutputSystemChange}
               language={language}
+              outputSystem={outputSystem}
+            />
+            <NumberOutput
+              handleOutputSystemChange={handleOutputSystemChange}
+              input={input}
+              inputSystem={inputSystem}
+              language={language}
+              outputSystem={outputSystem}
             />
           </Stack>
         </Container>

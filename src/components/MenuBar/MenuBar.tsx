@@ -19,7 +19,7 @@ interface MenuBarProps {
 const MenuBar = (props: MenuBarProps): JSX.Element => {
   const { darkMode, handleLanguageChange, handleThemeChange, language } = props;
   return (
-    <AppBar enableColorOnDark color="primary" position="static">
+    <AppBar color="primary" enableColorOnDark position="static">
       <Toolbar>
         <LogoPlaceholder />
         <AppName />

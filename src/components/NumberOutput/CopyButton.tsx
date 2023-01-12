@@ -12,11 +12,11 @@ import { languages } from '../../languages';
 import { Language } from '../../types';
 
 interface CopyButtonProps {
-  output: string
   language: Language
+  output: string
 }
 
-const CopyButton = ({ output, language }: CopyButtonProps): JSX.Element => {
+const CopyButton = ({ language, output }: CopyButtonProps): JSX.Element => {
   const [open, setOpen] = useState(false);
 
   const handleClick = () => {

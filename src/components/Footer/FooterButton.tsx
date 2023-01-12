@@ -4,13 +4,13 @@ import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 
 export interface FooterButtonProps {
-  url: string
-  text: string
   icon: ReactElement
+  text: string
+  url: string
 }
 
-const FooterButton = ({ url, text, icon }: FooterButtonProps): JSX.Element => (
-  <Grid item xs={6} md={3} textAlign="center">
+const FooterButton = ({ icon, text, url }: FooterButtonProps): JSX.Element => (
+  <Grid item md={3} textAlign="center" xs={6}>
     <Button
       color="secondary"
       href={url}

@@ -17,8 +17,8 @@ const ReadMoreButton = ({ language, system }: ReadMoreButtonProps): JSX.Element 
       color="primary"
       href={`https://en.wikipedia.org/wiki/${system}`}
       startIcon={<ReadMoreIcon />}
-      target="_blank"
       sx={{ marginBottom: '10px' }}
+      target="_blank"
     >
       {languages['Read more'][language]}
     </Button>

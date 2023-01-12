@@ -6,37 +6,37 @@ import InputSystemSelect from './InputSystemSelect';
 import InputTextField from './InputTextField';
 
 interface NumberInputProps {
-  input: string
-  inputSystem: NumeralSystem
-  outputSystem: NumeralSystem
-  language: Language
   handleInputChange: (arg0: string) => void
   handleInputSystemChange: (arg0: NumeralSystem) => void
+  input: string
+  inputSystem: NumeralSystem
+  language: Language
+  outputSystem: NumeralSystem
 }
 
 const NumberInput = (props: NumberInputProps): JSX.Element => {
   const {
-    input,
-    inputSystem,
-    outputSystem,
-    language,
     handleInputChange,
     handleInputSystemChange,
+    input,
+    inputSystem,
+    language,
+    outputSystem,
   } = props;
 
   return (
     <Stack direction={{ xs: 'column', md: 'row' }} spacing={1}>
       <InputTextField
+        handleChange={handleInputChange}
         input={input}
         inputSystem={inputSystem}
         language={language}
-        handleChange={handleInputChange}
       />
       <InputSystemSelect
-        inputSystem={inputSystem}
-        outputSystem={outputSystem}
-        language={language}
         handleInputSystemChange={handleInputSystemChange}
+        inputSystem={inputSystem}
+        language={language}
+        outputSystem={outputSystem}
       />
     </Stack>
   );

@@ -25,10 +25,10 @@ const NumberOutput = (props: NumberOutputProps): JSX.Element => {
         outputSystem={outputSystem}
       />
       <OutputSystemSelect
-        inputSystem={inputSystem}
-        outputSystem={outputSystem}
-        language={language}
         handleOutputSystemChange={handleOutputSystemChange}
+        inputSystem={inputSystem}
+        language={language}
+        outputSystem={outputSystem}
       />
     </Stack>
   );

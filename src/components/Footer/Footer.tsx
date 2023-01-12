@@ -33,24 +33,24 @@ const Footer = ({ language }: FooterProps): JSX.Element => {
         spacing={{ xs: 1, sm: 0.5, md: 0 }}
       >
         <FooterButton
-          url={urlSourceCode}
-          text={languages['Source code'][language]}
           icon={<GitHubIcon />}
+          text={languages['Source code'][language]}
+          url={urlSourceCode}
         />
         <FooterButton
-          url={urlDocumentation}
-          text={languages['Documentation'][language]}
           icon={<DescriptionIcon />}
+          text={languages['Documentation'][language]}
+          url={urlDocumentation}
         />
         <FooterButton
-          url={urlContributing}
-          text={languages['Contributing'][language]}
           icon={<VolunteerActivismIcon />}
+          text={languages['Contributing'][language]}
+          url={urlContributing}
         />
         <FooterButton
-          url={urlChangelog}
-          text={`${languages['Version'][language]} 1.1.2`}
           icon={<InfoIcon />}
+          text={`${languages['Version'][language]} 1.1.2`}
+          url={urlChangelog}
         />
       </Grid>
     </Container>

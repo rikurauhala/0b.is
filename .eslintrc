@@ -2,7 +2,8 @@
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking"
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:react/recommended"
   ],
   "plugins": ["@typescript-eslint"],
   "env": {
@@ -26,7 +27,9 @@
     "no-multi-spaces": "error",
     "no-trailing-spaces": "error",
     "no-useless-escape": "off",
-    "quotes": ["error", "single", { "allowTemplateLiterals": true }]
+    "quotes": ["error", "single", { "allowTemplateLiterals": true }],
+    "react/jsx-sort-props": ["error", { "ignoreCase": true }],
+    "react/react-in-jsx-scope": "off"
   },
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
