@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 import Paper from '@mui/material/Paper';
 
-import { LanguageCode, NumeralSystem } from '../../types';
+import { Language, NumeralSystem } from '../../types';
 
 import ContentBinary from './content/binary.md';
 import ContentOctal from './content/octal.md';
@@ -13,7 +13,7 @@ import InfoBoxContent from './InfoBoxContent';
 import ReadMoreButton from './ReadMoreButton';
 
 interface InfoBoxProps {
-  language: LanguageCode
+  language: Language
   system: NumeralSystem
 }
 

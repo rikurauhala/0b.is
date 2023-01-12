@@ -8,13 +8,13 @@ import LanguageIcon from '@mui/icons-material/Language';
 
 import { languages } from '../../languages';
 
-import { LanguageCode } from '../../types';
+import { Language } from '../../types';
 
 import LanguageOption from './LanguageOption';
 
 interface LanguageButtonProps {
-  handleLanguageChange: (arg0: LanguageCode) => void
-  language: LanguageCode
+  handleLanguageChange: (arg0: Language) => void
+  language: Language
 }
 
 const LanguageButton = ({ handleLanguageChange, language }: LanguageButtonProps): JSX.Element => {
@@ -26,8 +26,10 @@ const LanguageButton = ({ handleLanguageChange, language }: LanguageButtonProps)
     setAnchorEl(event.currentTarget);
   };
 
-  const handleClose = (languageCode: LanguageCode) => {
-    handleLanguageChange(languageCode);
+  const handleClose = (languageCode: Language) => {
+    if (Object.values(Language).includes(languageCode)) {
+      handleLanguageChange(languageCode);
+    }
     setAnchorEl(null);
   };
 
@@ -52,13 +54,13 @@ const LanguageButton = ({ handleLanguageChange, language }: LanguageButtonProps)
         <LanguageOption
           handleClose={handleClose}
           language={language}
-          languageCode={'enUS'}
+          languageCode={Language.English}
           languageText={languages['English'][language]}
         />
         <LanguageOption
           handleClose={handleClose}
           language={language}
-          languageCode={'fiFI'}
+          languageCode={Language.Finnish}
           languageText={languages['Finnish'][language]}
         />
       </Menu>

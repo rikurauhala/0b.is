@@ -4,10 +4,10 @@ import Button from '@mui/material/Button';
 import ReadMoreIcon from '@mui/icons-material/ReadMore';
 
 import { languages } from '../../languages';
-import { LanguageCode } from '../../types';
+import { Language } from '../../types';
 
 interface ReadMoreButtonProps {
-  language: LanguageCode
+  language: Language
   system: string
 }
 

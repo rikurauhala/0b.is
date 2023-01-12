@@ -1,12 +1,12 @@
 import ListItemText from '@mui/material/ListItemText';
 import MenuItem from '@mui/material/MenuItem';
 
-import { LanguageCode } from '../../types';
+import { Language } from '../../types';
 
 interface LanguageOptionProps {
-  handleClose: (arg0: LanguageCode) => void
+  handleClose: (arg0: Language) => void
   language: string
-  languageCode: LanguageCode
+  languageCode: Language
   languageText: string
 }
 

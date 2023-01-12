@@ -1,4 +1,7 @@
-export type LanguageCode = 'enUS' | 'fiFI';
+export enum Language {
+  English = 'enUS',
+  Finnish = 'fiFI'
+}
 
 export enum NumeralSystem {
   Binary = 2,

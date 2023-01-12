@@ -6,12 +6,12 @@ import LightModeIcon from '@mui/icons-material/LightMode';
 
 import { languages } from '../../languages';
 
-import { LanguageCode } from '../../types';
+import { Language } from '../../types';
 
 interface ModeToggleButtonProps {
   darkMode: boolean
   handleThemeChange: () => void
-  language: LanguageCode
+  language: Language
 }
 
 const ModeToggleButton = (props: ModeToggleButtonProps): JSX.Element => {

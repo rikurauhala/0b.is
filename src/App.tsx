@@ -15,16 +15,16 @@ import NumberOutput from './components/NumberOutput';
 
 import { lightTheme, darkTheme } from './themes';
 
-import { LanguageCode, NumeralSystem } from './types';
+import { Language, NumeralSystem } from './types';
 
 const App = (): JSX.Element => {
-  const [language, setLanguage] = useState<LanguageCode>('enUS');
+  const [language, setLanguage] = useState<Language>(Language.English);
   const [darkMode, setDarkMode] = useState<boolean>(useMediaQuery('(prefers-color-scheme: dark)'));
   const [input, setInput] = useState<string>('');
   const [inputSystem, setInputSystem] = useState<NumeralSystem>(NumeralSystem.Binary);
   const [outputSystem, setOutputSystem] = useState<NumeralSystem>(NumeralSystem.Decimal);
 
-  const handleLanguageChange = (language: LanguageCode): void => {
+  const handleLanguageChange = (language: Language): void => {
     setLanguage(language);
   };
 

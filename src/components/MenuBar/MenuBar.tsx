@@ -7,13 +7,13 @@ import LogoPlaceholder from './LogoPlaceholder';
 import ModeToggleButton from './ModeToggleButton';
 import UserManualButton from './UserManualButton';
 
-import { LanguageCode } from '../../types';
+import { Language } from '../../types';
 
 interface MenuBarProps {
   darkMode: boolean
-  handleLanguageChange: (arg0: LanguageCode) => void
+  handleLanguageChange: (arg0: Language) => void
   handleThemeChange: () => void
-  language: LanguageCode
+  language: Language
 }
 
 const MenuBar = (props: MenuBarProps): JSX.Element => {

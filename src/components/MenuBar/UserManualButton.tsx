@@ -5,10 +5,10 @@ import HelpIcon from '@mui/icons-material/Help';
 
 import { languages } from '../../languages';
 
-import { LanguageCode } from '../../types';
+import { Language } from '../../types';
 
 interface UserManualButtonProps {
-  language: LanguageCode
+  language: Language
 }
 
 const UserManualButton = ({ language }: UserManualButtonProps): JSX.Element => (
