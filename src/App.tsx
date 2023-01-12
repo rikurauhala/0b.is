@@ -13,6 +13,8 @@ import MenuBar from './components/MenuBar';
 import NumberInput from './components/NumberInput';
 import NumberOutput from './components/NumberOutput';
 
+import Meta from './meta';
+
 import { lightTheme, darkTheme } from './themes';
 
 import { Language, NumeralSystem } from './types';
@@ -47,6 +49,7 @@ const App = (): JSX.Element => {
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <CssBaseline />
+      <Meta language={language} />
       <MenuBar
         darkMode={darkMode}
         handleLanguageChange={handleLanguageChange}

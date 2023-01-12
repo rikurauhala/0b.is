@@ -71,6 +71,10 @@ export const languages: LanguagesType = {
     'enUS': 'Output',
     'fiFI': 'Tuloste',
   },
+  'Page title': {
+    'enUS': 'The simple number converter',
+    'fiFI': 'Yksinkertainen lukujärjestelmämuunnin',
+  },
   'Read more': {
     'enUS': 'Read more',
     'fiFI': 'Lue lisää',
