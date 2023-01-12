@@ -8,9 +8,7 @@ import NumberInput from './NumberInput';
 import { Language, NumeralSystem } from '../../types';
 
 const inputLabel = 'Input';
-const errorBinaryLabel = 'Not a valid binary number!';
-const errorDecimalLabel = 'Not a valid decimal number!';
-const errorHexadecimalLabel = 'Not a valid hexadecimal number!';
+const errorLabel = 'Not a valid number!';
 const mockHandleInputChange = (_arg0: string) => {};
 const mockHandleInputSystemChange = (_arg0: NumeralSystem) => {};
 
@@ -27,7 +25,7 @@ describe('Render NumberInput - validation tests', () => {
       />
     );
     expect(screen.getByLabelText(inputLabel)).toBeInTheDocument();
-    expect(screen.getByText(errorBinaryLabel)).toBeInTheDocument();
+    expect(screen.getByText(errorLabel)).toBeInTheDocument();
   });
 
   test('Validate binary number - valid value', async () => {
@@ -42,7 +40,7 @@ describe('Render NumberInput - validation tests', () => {
       />
     );
     expect(screen.getByLabelText(inputLabel)).toBeInTheDocument();
-    expect(screen.queryByText(errorBinaryLabel)).not.toBeInTheDocument();
+    expect(screen.queryByText(errorLabel)).not.toBeInTheDocument();
   });
 
   test('Validate decimal number - invalid value', async () => {
@@ -57,7 +55,7 @@ describe('Render NumberInput - validation tests', () => {
       />
     );
     expect(screen.getByLabelText(inputLabel)).toBeInTheDocument();
-    expect(screen.getByText(errorDecimalLabel)).toBeInTheDocument();
+    expect(screen.getByText(errorLabel)).toBeInTheDocument();
   });
 
   test('Validate decimal number - valid value', async () => {
@@ -72,7 +70,7 @@ describe('Render NumberInput - validation tests', () => {
       />
     );
     expect(screen.getByLabelText(inputLabel)).toBeInTheDocument();
-    expect(screen.queryByText(errorDecimalLabel)).not.toBeInTheDocument();
+    expect(screen.queryByText(errorLabel)).not.toBeInTheDocument();
   });
 
   test('Validate hexadecimal number - invalid value', async () => {
@@ -87,7 +85,7 @@ describe('Render NumberInput - validation tests', () => {
       />
     );
     expect(screen.getByLabelText(inputLabel)).toBeInTheDocument();
-    expect(screen.getByText(errorHexadecimalLabel)).toBeInTheDocument();
+    expect(screen.getByText(errorLabel)).toBeInTheDocument();
   });
 
   test('Validate hexadecimal number - valid value', async () => {
@@ -102,6 +100,6 @@ describe('Render NumberInput - validation tests', () => {
       />
     );
     expect(screen.getByLabelText(inputLabel)).toBeInTheDocument();
-    expect(screen.queryByText(errorHexadecimalLabel)).not.toBeInTheDocument();
+    expect(screen.queryByText(errorLabel)).not.toBeInTheDocument();
   });
 });
