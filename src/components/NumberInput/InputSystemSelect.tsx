@@ -25,9 +25,9 @@ const InputSystemSelect = (props: InputSystemSelectProps): JSX.Element => {
 
   return (
     <FormControl sx={{ width: { sm: '100%', md: '30%' } }}>
-      <InputLabel>{languages['From'][language]}</InputLabel>
+      <InputLabel>{languages['From base'][language]}</InputLabel>
       <Select
-        label="From"
+        label={languages['From base'][language]}
         onChange={handleChange}
         value={inputSystem.toString()}
       >

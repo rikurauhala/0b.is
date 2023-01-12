@@ -8,8 +8,8 @@ type LanguagesType = {
 
 export const languages: LanguagesType = {
   'Binary': {
-    'enUS': 'Binary',
-    'fiFI': 'Binääri',
+    'enUS': '2 (binary)',
+    'fiFI': '2 (binääri)',
   },
   'Change language': {
     'enUS': 'Change language',
@@ -28,8 +28,8 @@ export const languages: LanguagesType = {
     'fiFI': 'Kopioi',
   },
   'Decimal': {
-    'enUS': 'Decimal',
-    'fiFI': 'Desimaali',
+    'enUS': '10 (decimal)',
+    'fiFI': '10 (desimaali)',
   },
   'Documentation': {
     'enUS': 'Documentation',
@@ -43,13 +43,13 @@ export const languages: LanguagesType = {
     'enUS': 'Finnish',
     'fiFI': 'suomi',
   },
-  'From': {
-    'enUS': 'From',
-    'fiFI': 'Mistä',
+  'From base': {
+    'enUS': 'From base',
+    'fiFI': 'Kantaluvusta',
   },
   'Hexadecimal': {
-    'enUS': 'Hexadecimal',
-    'fiFI': 'Heksadesimaali',
+    'enUS': '16 (hexadecimal)',
+    'fiFI': '16 (heksadesimaali)',
   },
   'Input': {
     'enUS': 'Input',
@@ -64,8 +64,8 @@ export const languages: LanguagesType = {
     'fiFI': 'Numero ei ole kelvollinen!'
   },
   'Octal': {
-    'enUS': 'Octal',
-    'fiFI': 'Oktaali',
+    'enUS': '8 (octal)',
+    'fiFI': '8 (oktaali)',
   },
   'Output': {
     'enUS': 'Output',
@@ -79,9 +79,9 @@ export const languages: LanguagesType = {
     'enUS': 'Source code',
     'fiFI': 'Lähdekoodi',
   },
-  'To': {
-    'enUS': 'To',
-    'fiFI': 'Mihin',
+  'To base': {
+    'enUS': 'To base',
+    'fiFI': 'Kantalukuun',
   },
   'Use light theme': {
     'enUS': 'Use light theme',
