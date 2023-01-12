@@ -35,6 +35,7 @@ const NumberInput = (props: NumberInputProps): JSX.Element => {
       <InputSystemSelect
         inputSystem={inputSystem}
         outputSystem={outputSystem}
+        language={language}
         handleInputSystemChange={handleInputSystemChange}
       />
     </Stack>

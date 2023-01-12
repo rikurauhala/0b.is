@@ -7,9 +7,17 @@ type LanguagesType = {
 };
 
 export const languages: LanguagesType = {
+  'Binary': {
+    'enUS': 'Binary',
+    'fiFI': 'Binääri',
+  },
   'Change language': {
     'enUS': 'Change language',
     'fiFI': 'Vaihda kieli',
+  },
+  'Clear': {
+    'enUS': 'Clear',
+    'fiFI': 'Tyhjennä',
   },
   'Contributing': {
     'enUS': 'Contributing',
@@ -26,6 +34,10 @@ export const languages: LanguagesType = {
   'Finnish': {
     'enUS': 'Finnish',
     'fiFI': 'suomi',
+  },
+  'From': {
+    'enUS': 'From',
+    'fiFI': 'Mistä',
   },
   'Input': {
     'enUS': 'Input',

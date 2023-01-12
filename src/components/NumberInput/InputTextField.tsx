@@ -49,7 +49,7 @@ const InputTextField = (props: InputTextFieldProps): JSX.Element => {
           <InputAdornment position="end">
             {
               input.length > 0 &&
-              <Tooltip placement="left" title="Clear">
+              <Tooltip placement="left" title={languages['Clear'][language]}>
                 <IconButton
                   onClick={() => {
                     numberInput.current.value = '';
