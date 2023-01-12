@@ -5,7 +5,7 @@ import { render, screen } from '@testing-library/react';
 
 import NumberInput from './NumberInput';
 
-import { NumeralSystem } from '../../types';
+import { Language, NumeralSystem } from '../../types';
 
 const inputLabel = 'Input';
 const errorBinaryLabel = 'Not a valid binary number!';
@@ -21,6 +21,7 @@ describe('Render NumberInput - validation tests', () => {
         input={'1234'}
         inputSystem={2}
         outputSystem={10}
+        language={Language.English}
         handleInputChange={mockHandleInputChange}
         handleInputSystemChange={mockHandleInputSystemChange}
       />
@@ -35,6 +36,7 @@ describe('Render NumberInput - validation tests', () => {
         input={'1111'}
         inputSystem={2}
         outputSystem={10}
+        language={Language.English}
         handleInputChange={mockHandleInputChange}
         handleInputSystemChange={mockHandleInputSystemChange}
       />
@@ -49,6 +51,7 @@ describe('Render NumberInput - validation tests', () => {
         input={'1F'}
         inputSystem={10}
         outputSystem={16}
+        language={Language.English}
         handleInputChange={mockHandleInputChange}
         handleInputSystemChange={mockHandleInputSystemChange}
       />
@@ -63,6 +66,7 @@ describe('Render NumberInput - validation tests', () => {
         input={'10'}
         inputSystem={10}
         outputSystem={16}
+        language={Language.English}
         handleInputChange={mockHandleInputChange}
         handleInputSystemChange={mockHandleInputSystemChange}
       />
@@ -77,6 +81,7 @@ describe('Render NumberInput - validation tests', () => {
         input={'1T'}
         inputSystem={16}
         outputSystem={2}
+        language={Language.English}
         handleInputChange={mockHandleInputChange}
         handleInputSystemChange={mockHandleInputSystemChange}
       />
@@ -91,6 +96,7 @@ describe('Render NumberInput - validation tests', () => {
         input={'1'}
         inputSystem={16}
         outputSystem={2}
+        language={Language.English}
         handleInputChange={mockHandleInputChange}
         handleInputSystemChange={mockHandleInputSystemChange}
       />

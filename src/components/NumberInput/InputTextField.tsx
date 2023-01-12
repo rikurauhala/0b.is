@@ -7,18 +7,25 @@ import Tooltip from '@mui/material/Tooltip';
 
 import ClearIcon from '@mui/icons-material/Clear';
 
-import { NumeralSystem, Ref } from '../../types';
-import { getKeyByValue } from '../../utils/systems';
+import { languages } from '../../languages';
+
+import { Language, NumeralSystem } from '../../types';
 
 import validate from '../../utils/validate';
 
 interface InputTextFieldProps {
   input: string
   inputSystem: NumeralSystem
+  language: Language
   handleChange: (arg0: string) => void
 }
 
-const InputTextField = ({ input, inputSystem, handleChange }: InputTextFieldProps): JSX.Element => {
+interface Ref {
+  value: string
+}
+
+const InputTextField = (props: InputTextFieldProps): JSX.Element => {
+  const { input, inputSystem, language, handleChange } = props;
   const [error, setError] = useState<boolean>(false);
 
   const numberInput = useRef<Ref>({ value: '' });
@@ -36,7 +43,7 @@ const InputTextField = ({ input, inputSystem, handleChange }: InputTextFieldProp
   return (
     <TextField
       error={error}
-      helperText={error ? `Not a valid ${getKeyByValue(inputSystem).toLowerCase()} number!` : ' '}
+      helperText={error ? languages['Not a valid number!'][language] : ' '}
       InputProps={{
         endAdornment:
           <InputAdornment position="end">
@@ -56,7 +63,7 @@ const InputTextField = ({ input, inputSystem, handleChange }: InputTextFieldProp
           </InputAdornment>,
       }}
       inputRef={numberInput}
-      label="Input"
+      label={languages['Input'][language]}
       onChange={event => handleChange(event.target.value)}
       onKeyPress={event => event.key === 'Enter' && event.preventDefault()}
       sx={{ width: { sm: '100%', md: '70%' } }}

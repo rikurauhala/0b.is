@@ -62,6 +62,7 @@ const App = (): JSX.Element => {
               outputSystem={outputSystem}
               handleInputChange={handleInputChange}
               handleInputSystemChange={handleInputSystemChange}
+              language={language}
             />
             <NumberOutput
               input={input}

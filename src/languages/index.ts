@@ -27,6 +27,14 @@ export const languages: LanguagesType = {
     'enUS': 'Finnish',
     'fiFI': 'suomi',
   },
+  'Input': {
+    'enUS': 'Input',
+    'fiFI': 'Syöte',
+  },
+  'Not a valid number!': {
+    'enUS': 'Not a valid number!',
+    'fiFI': 'Numero ei ole kelvollinen!'
+  },
   'Read more': {
     'enUS': 'Read more',
     'fiFI': 'Lue lisää',

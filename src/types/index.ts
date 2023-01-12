@@ -9,7 +9,3 @@ export enum NumeralSystem {
   Octal = 8,
   Hexadecimal = 16,
 }
-
-export interface Ref {
-  value: string
-}
