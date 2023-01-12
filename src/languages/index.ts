@@ -27,6 +27,10 @@ export const languages: LanguagesType = {
     'enUS': 'Copy',
     'fiFI': 'Kopioi',
   },
+  'Decimal': {
+    'enUS': 'Decimal',
+    'fiFI': 'Desimaali',
+  },
   'Documentation': {
     'enUS': 'Documentation',
     'fiFI': 'Dokumentaatio',
@@ -43,6 +47,10 @@ export const languages: LanguagesType = {
     'enUS': 'From',
     'fiFI': 'Mistä',
   },
+  'Hexadecimal': {
+    'enUS': 'Hexadecimal',
+    'fiFI': 'Heksadesimaali',
+  },
   'Input': {
     'enUS': 'Input',
     'fiFI': 'Syöte',
@@ -54,6 +62,10 @@ export const languages: LanguagesType = {
   'Not a valid number!': {
     'enUS': 'Not a valid number!',
     'fiFI': 'Numero ei ole kelvollinen!'
+  },
+  'Octal': {
+    'enUS': 'Octal',
+    'fiFI': 'Oktaali',
   },
   'Output': {
     'enUS': 'Output',

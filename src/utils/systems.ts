@@ -1,7 +1,9 @@
-import { NumeralSystem } from '../types';
+import { languages } from '../languages';
 
-export const getKeyByValue = (value: NumeralSystem): string => {
-  return NumeralSystem[value];
+import { Language, NumeralSystem } from '../types';
+
+export const getNameByValue = (value: NumeralSystem, language: Language): string => {
+  return languages[NumeralSystem[value]][language];
 };
 
 export const numeralSystems: NumeralSystem[] = [

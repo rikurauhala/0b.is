@@ -7,7 +7,7 @@ import { languages } from '../../languages';
 
 import { Language, NumeralSystem } from '../../types';
 
-import { getKeyByValue, numeralSystems } from '../../utils/systems';
+import { getNameByValue, numeralSystems } from '../../utils/systems';
 
 interface OutputSystemSelectProps {
   inputSystem: NumeralSystem
@@ -37,7 +37,7 @@ const OutputSystemSelect = (props: OutputSystemSelectProps): JSX.Element => {
               key={system}
               value={system}
             >
-              {getKeyByValue(system)}
+              {getNameByValue(system, language)}
             </MenuItem>
           ))
         }

@@ -5,7 +5,7 @@ import Select, { SelectChangeEvent } from '@mui/material/Select';
 
 import { languages } from '../../languages';
 
-import { numeralSystems, getKeyByValue } from '../../utils/systems';
+import { numeralSystems, getNameByValue } from '../../utils/systems';
 
 import { Language, NumeralSystem } from '../../types';
 
@@ -37,7 +37,7 @@ const InputSystemSelect = (props: InputSystemSelectProps): JSX.Element => {
             key={system}
             value={system}
           >
-            {getKeyByValue(system)}
+            {getNameByValue(system, language)}
           </MenuItem>
         ))}
       </Select>
