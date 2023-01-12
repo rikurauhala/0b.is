@@ -23,6 +23,10 @@ export const languages: LanguagesType = {
     'enUS': 'Contributing',
     'fiFI': 'Osallistuminen',
   },
+  'Copy': {
+    'enUS': 'Copy',
+    'fiFI': 'Kopioi',
+  },
   'Documentation': {
     'enUS': 'Documentation',
     'fiFI': 'Dokumentaatio',
@@ -43,9 +47,17 @@ export const languages: LanguagesType = {
     'enUS': 'Input',
     'fiFI': 'Syöte',
   },
+  'Number copied to clipboard!': {
+    'enUS': 'Number copied to clipboard!',
+    'fiFI': 'Numero kopioitu leikepöydälle!'
+  },
   'Not a valid number!': {
     'enUS': 'Not a valid number!',
     'fiFI': 'Numero ei ole kelvollinen!'
+  },
+  'Output': {
+    'enUS': 'Output',
+    'fiFI': 'Tuloste',
   },
   'Read more': {
     'enUS': 'Read more',
@@ -54,6 +66,10 @@ export const languages: LanguagesType = {
   'Source code': {
     'enUS': 'Source code',
     'fiFI': 'Lähdekoodi',
+  },
+  'To': {
+    'enUS': 'To',
+    'fiFI': 'Mihin',
   },
   'Use light theme': {
     'enUS': 'Use light theme',

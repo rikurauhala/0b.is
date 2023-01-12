@@ -3,9 +3,9 @@ import { useEffect, useState } from 'react';
 import InputAdornment from '@mui/material/InputAdornment';
 import TextField from '@mui/material/TextField';
 
-import { getKeyByValue } from '../../utils/systems';
+import { languages } from '../../languages';
 
-import { NumeralSystem } from '../../types';
+import { Language, NumeralSystem } from '../../types';
 
 import convert from '../../utils/convert';
 import validate from '../../utils/validate';
@@ -16,10 +16,11 @@ interface OuputTextFieldProps {
   input: string
   inputSystem: NumeralSystem
   outputSystem: NumeralSystem
+  language: Language
 }
 
 const OutputTextField = (props: OuputTextFieldProps): JSX.Element => {
-  const { input, inputSystem, outputSystem } = props;
+  const { input, inputSystem, outputSystem, language } = props;
   const [message, setMessage] = useState<string>('');
 
   const valid = validate(input, inputSystem);
@@ -35,7 +36,7 @@ const OutputTextField = (props: OuputTextFieldProps): JSX.Element => {
       return;
     }
     if (!valid) {
-      setMessage(`Not a valid ${getKeyByValue(inputSystem).toLowerCase()} number!`);
+      setMessage(languages['Not a valid number!'][language]);
       return;
     }
     setMessage(number);
@@ -47,11 +48,11 @@ const OutputTextField = (props: OuputTextFieldProps): JSX.Element => {
       InputProps={{
         endAdornment:
           <InputAdornment position="end">
-            {input.length > 0 && valid && <CopyButton output={number} />}
+            {input.length > 0 && valid && <CopyButton language={language} output={number} />}
           </InputAdornment>,
         readOnly: true,
       }}
-      label="Output"
+      label={languages['Output'][language]}
       sx={{ width: { sm: '100%', md: '70%' } }}
       value={message}
     />

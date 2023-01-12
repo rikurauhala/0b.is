@@ -69,6 +69,7 @@ const App = (): JSX.Element => {
               inputSystem={inputSystem}
               outputSystem={outputSystem}
               handleOutputSystemChange={handleOutputSystemChange}
+              language={language}
             />
           </Stack>
         </Container>
