@@ -6,9 +6,9 @@ import Tooltip from '@mui/material/Tooltip';
 
 import LanguageIcon from '@mui/icons-material/Language';
 
-import { languages } from '../../languages';
+import { languages } from '../../../languages';
 
-import { Language } from '../../types';
+import { Language } from '../../../types';
 
 import LanguageOption from './LanguageOption';
 

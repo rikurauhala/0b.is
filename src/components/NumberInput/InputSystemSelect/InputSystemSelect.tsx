@@ -3,11 +3,11 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 
-import { languages } from '../../languages';
+import { languages } from '../../../languages';
 
-import { numeralSystems, getNameByValue } from '../../utils/systems';
+import { numeralSystems, getNameByValue } from '../../../utils/systems';
 
-import { Language, NumeralSystem } from '../../types';
+import { Language, NumeralSystem } from '../../../types';
 
 interface InputSystemSelectProps {
   inputSystem: NumeralSystem

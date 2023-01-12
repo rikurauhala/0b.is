@@ -3,8 +3,8 @@ import Button from '@mui/material/Button';
 
 import ReadMoreIcon from '@mui/icons-material/ReadMore';
 
-import { languages } from '../../languages';
-import { Language } from '../../types';
+import { languages } from '../../../languages';
+import { Language } from '../../../types';
 
 interface ReadMoreButtonProps {
   language: Language

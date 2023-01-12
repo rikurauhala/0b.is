@@ -7,11 +7,11 @@ import Tooltip from '@mui/material/Tooltip';
 
 import ClearIcon from '@mui/icons-material/Clear';
 
-import { languages } from '../../languages';
+import { languages } from '../../../languages';
 
-import { Language, NumeralSystem } from '../../types';
+import { Language, NumeralSystem } from '../../../types';
 
-import validate from '../../utils/validate';
+import validate from '../../../utils/validate';
 
 interface InputTextFieldProps {
   input: string

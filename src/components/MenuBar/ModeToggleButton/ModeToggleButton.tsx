@@ -4,9 +4,9 @@ import Tooltip from '@mui/material/Tooltip';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
 
-import { languages } from '../../languages';
+import { languages } from '../../../languages';
 
-import { Language } from '../../types';
+import { Language } from '../../../types';
 
 interface ModeToggleButtonProps {
   darkMode: boolean

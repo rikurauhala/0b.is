@@ -3,9 +3,9 @@ import Tooltip from '@mui/material/Tooltip';
 
 import HelpIcon from '@mui/icons-material/Help';
 
-import { languages } from '../../languages';
+import { languages } from '../../../languages';
 
-import { Language } from '../../types';
+import { Language } from '../../../types';
 
 interface UserManualButtonProps {
   language: Language

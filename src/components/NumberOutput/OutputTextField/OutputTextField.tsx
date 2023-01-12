@@ -3,14 +3,14 @@ import { useEffect, useState } from 'react';
 import InputAdornment from '@mui/material/InputAdornment';
 import TextField from '@mui/material/TextField';
 
-import { languages } from '../../languages';
+import { languages } from '../../../languages';
 
-import { Language, NumeralSystem } from '../../types';
+import { Language, NumeralSystem } from '../../../types';
 
-import convert from '../../utils/convert';
-import validate from '../../utils/validate';
+import convert from '../../../utils/convert';
+import validate from '../../../utils/validate';
 
-import CopyButton from './CopyButton';
+import CopyButton from './CopyButton/CopyButton';
 
 interface OuputTextFieldProps {
   input: string
