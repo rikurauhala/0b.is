@@ -1,0 +1,3 @@
+## Binääri
+
+Käännös puuttuu.

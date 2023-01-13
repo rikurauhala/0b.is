@@ -1,0 +1,3 @@
+## Heksadesimaali
+
+Käännös puuttuu.
