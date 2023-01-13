@@ -82,6 +82,8 @@ Another thing to update for translations is the list of Wikipedia links to provi
 
 One last thing to update when translating is the InfoBox [content files](https://github.com/rikurauhala/0b.is/tree/main/src/components/InfoBox/content). They are implemented bit differently so here you must create new files. For example, consider you want to translate the base-2 (binary) info box content into Swedish. You would create a new file in the [directory "2"](https://github.com/rikurauhala/0b.is/tree/main/src/components/InfoBox/content/2) and call it `sv.md`. The translation should match what is written in the original [English file](https://github.com/rikurauhala/0b.is/blob/main/src/components/InfoBox/content/2/en.md).
 
+In addition to writing the files, they must also be imported into use by updating [InfoBox.tsx](https://github.com/rikurauhala/0b.is/blob/main/src/components/InfoBox/InfoBox.tsx).
+
 ### Documentation
 
 Documentation does not need to be translated as the development is done in English.
