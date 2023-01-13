@@ -56,14 +56,14 @@ const LanguageButton = ({ handleLanguageChange, language }: LanguageButtonProps)
           handleClose={handleClose}
           language={language}
           languageCode={Language.English}
-          languageText={languages['English'][language]}
+          languageText={languages['English'][Language.English]}
         />
         <LanguageOption
           flag="FI"
           handleClose={handleClose}
           language={language}
           languageCode={Language.Finnish}
-          languageText={languages['Finnish'][language]}
+          languageText={languages['Finnish'][Language.Finnish]}
         />
       </Menu>
     </>
