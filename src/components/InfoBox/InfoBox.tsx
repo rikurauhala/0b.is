@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-argument */
 import { useEffect, useState } from 'react';
 
 import Paper from '@mui/material/Paper';
@@ -7,10 +6,13 @@ import { Language, NumeralSystem } from '../../types';
 
 import enUS2 from './content/2/enUS.md';
 import fiFI2 from './content/2/fiFI.md';
+
 import enUS8 from './content/8/enUS.md';
 import fiFI8 from './content/8/fiFI.md';
+
 import enUS10 from './content/10/enUS.md';
 import fiFI10 from './content/10/fiFI.md';
+
 import enUS16 from './content/16/enUS.md';
 import fiFI16 from './content/16/fiFI.md';
 
