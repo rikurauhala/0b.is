@@ -8,118 +8,118 @@ type LanguagesType = {
 
 export const languages: LanguagesType = {
   'Binary': {
-    'enUS': '2 (binary)',
-    'fiFI': '2 (binääri)',
+    'en': '2 (binary)',
+    'fi': '2 (binääri)',
   },
   'Change language': {
-    'enUS': 'Change language',
-    'fiFI': 'Vaihda kieli',
+    'en': 'Change language',
+    'fi': 'Vaihda kieli',
   },
   'Clear': {
-    'enUS': 'Clear',
-    'fiFI': 'Tyhjennä',
+    'en': 'Clear',
+    'fi': 'Tyhjennä',
   },
   'Contributing': {
-    'enUS': 'Contributing',
-    'fiFI': 'Osallistuminen',
+    'en': 'Contributing',
+    'fi': 'Osallistuminen',
   },
   'Copy': {
-    'enUS': 'Copy',
-    'fiFI': 'Kopioi',
+    'en': 'Copy',
+    'fi': 'Kopioi',
   },
   'Decimal': {
-    'enUS': '10 (decimal)',
-    'fiFI': '10 (desimaali)',
+    'en': '10 (decimal)',
+    'fi': '10 (desimaali)',
   },
   'Documentation': {
-    'enUS': 'Documentation',
-    'fiFI': 'Dokumentaatio',
+    'en': 'Documentation',
+    'fi': 'Dokumentaatio',
   },
   'English': {
-    'enUS': 'English',
-    'fiFI': 'englanti',
+    'en': 'English',
+    'fi': 'englanti',
   },
   'Finnish': {
-    'enUS': 'Finnish',
-    'fiFI': 'suomi',
+    'en': 'Finnish',
+    'fi': 'suomi',
   },
   'From base': {
-    'enUS': 'From base',
-    'fiFI': 'Kantaluvusta',
+    'en': 'From base',
+    'fi': 'Kantaluvusta',
   },
   'Hexadecimal': {
-    'enUS': '16 (hexadecimal)',
-    'fiFI': '16 (heksadesimaali)',
+    'en': '16 (hexadecimal)',
+    'fi': '16 (heksadesimaali)',
   },
   'Input': {
-    'enUS': 'Input',
-    'fiFI': 'Syöte',
+    'en': 'Input',
+    'fi': 'Syöte',
   },
   'Number copied to clipboard!': {
-    'enUS': 'Number copied to clipboard!',
-    'fiFI': 'Numero kopioitu leikepöydälle!'
+    'en': 'Number copied to clipboard!',
+    'fi': 'Numero kopioitu leikepöydälle!'
   },
   'Not a valid number!': {
-    'enUS': 'Not a valid number!',
-    'fiFI': 'Numero ei ole kelvollinen!'
+    'en': 'Not a valid number!',
+    'fi': 'Numero ei ole kelvollinen!'
   },
   'Octal': {
-    'enUS': '8 (octal)',
-    'fiFI': '8 (oktaali)',
+    'en': '8 (octal)',
+    'fi': '8 (oktaali)',
   },
   'Output': {
-    'enUS': 'Output',
-    'fiFI': 'Tuloste',
+    'en': 'Output',
+    'fi': 'Tuloste',
   },
   'Page title': {
-    'enUS': 'The simple number converter',
-    'fiFI': 'Yksinkertainen lukujärjestelmämuunnin',
+    'en': 'The simple number converter',
+    'fi': 'Yksinkertainen lukujärjestelmämuunnin',
   },
   'Read more': {
-    'enUS': 'Read more',
-    'fiFI': 'Lue lisää',
+    'en': 'Read more',
+    'fi': 'Lue lisää',
   },
   'Source code': {
-    'enUS': 'Source code',
-    'fiFI': 'Lähdekoodi',
+    'en': 'Source code',
+    'fi': 'Lähdekoodi',
   },
   'To base': {
-    'enUS': 'To base',
-    'fiFI': 'Kantalukuun',
+    'en': 'To base',
+    'fi': 'Kantalukuun',
   },
   'Use light theme': {
-    'enUS': 'Use light theme',
-    'fiFI': 'Käytä vaaleaa teemaa',
+    'en': 'Use light theme',
+    'fi': 'Käytä vaaleaa teemaa',
   },
   'Use dark theme': {
-    'enUS': 'Use dark theme',
-    'fiFI': 'Käytä tummaa teemaa',
+    'en': 'Use dark theme',
+    'fi': 'Käytä tummaa teemaa',
   },
   'User manual': {
-    'enUS': 'User manual',
-    'fiFI': 'Käyttöohje',
+    'en': 'User manual',
+    'fi': 'Käyttöohje',
   },
   'Version': {
-    'enUS': 'Version',
-    'fiFI': 'Versio',
+    'en': 'Version',
+    'fi': 'Versio',
   },
 };
 
 export const wikiLink: LanguagesType = {
   '2': {
-    'enUS': 'https://en.wikipedia.org/wiki/Binary_number',
-    'fiFI': 'https://fi.wikipedia.org/wiki/Binäärijärjestelmä',
+    'en': 'https://en.wikipedia.org/wiki/Binary_number',
+    'fi': 'https://fi.wikipedia.org/wiki/Binäärijärjestelmä',
   },
   '8': {
-    'enUS': 'https://en.wikipedia.org/wiki/Octal',
-    'fiFI': 'https://fi.wikipedia.org/wiki/Oktaalijärjestelmä',
+    'en': 'https://en.wikipedia.org/wiki/Octal',
+    'fi': 'https://fi.wikipedia.org/wiki/Oktaalijärjestelmä',
   },
   '10': {
-    'enUS': 'https://en.wikipedia.org/wiki/Decimal',
-    'fiFI': 'https://fi.wikipedia.org/wiki/Kymmenjärjestelmä',
+    'en': 'https://en.wikipedia.org/wiki/Decimal',
+    'fi': 'https://fi.wikipedia.org/wiki/Kymmenjärjestelmä',
   },
   '16': {
-    'enUS': 'https://en.wikipedia.org/wiki/Hexadecimal',
-    'fiFI': 'https://fi.wikipedia.org/wiki/Heksadesimaalijärjestelmä',
+    'en': 'https://en.wikipedia.org/wiki/Hexadecimal',
+    'fi': 'https://fi.wikipedia.org/wiki/Heksadesimaalijärjestelmä',
   },
 };

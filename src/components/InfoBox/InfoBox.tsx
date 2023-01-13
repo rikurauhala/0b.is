@@ -4,17 +4,17 @@ import Paper from '@mui/material/Paper';
 
 import { Language, NumeralSystem } from '../../types';
 
-import enUS2 from './content/2/enUS.md';
-import fiFI2 from './content/2/fiFI.md';
+import en2 from './content/2/en.md';
+import fi2 from './content/2/fi.md';
 
-import enUS8 from './content/8/enUS.md';
-import fiFI8 from './content/8/fiFI.md';
+import en8 from './content/8/en.md';
+import fi8 from './content/8/fi.md';
 
-import enUS10 from './content/10/enUS.md';
-import fiFI10 from './content/10/fiFI.md';
+import en10 from './content/10/en.md';
+import fi10 from './content/10/fi.md';
 
-import enUS16 from './content/16/enUS.md';
-import fiFI16 from './content/16/fiFI.md';
+import en16 from './content/16/en.md';
+import fi16 from './content/16/fi.md';
 
 import InfoBoxContent from './InfoBoxContent';
 import ReadMoreButton from './ReadMoreButton';
@@ -35,20 +35,20 @@ const InfoBox = ({ language, system }: InfoBoxProps): JSX.Element => {
 
   const file: FileDictionary = {
     2: {
-      'enUS': enUS2,
-      'fiFI': fiFI2,
+      'en': en2,
+      'fi': fi2,
     },
     8: {
-      'enUS': enUS8,
-      'fiFI': fiFI8,
+      'en': en8,
+      'fi': fi8,
     },
     10: {
-      'enUS': enUS10,
-      'fiFI': fiFI10,
+      'en': en10,
+      'fi': fi10,
     },
     16: {
-      'enUS': enUS16,
-      'fiFI': fiFI16,
+      'en': en16,
+      'fi': fi16,
     },
   };
 

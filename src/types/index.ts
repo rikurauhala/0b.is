@@ -1,6 +1,6 @@
 export enum Language {
-  English = 'enUS',
-  Finnish = 'fiFI'
+  English = 'en',
+  Finnish = 'fi'
 }
 
 export enum NumeralSystem {
