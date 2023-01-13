@@ -8,14 +8,14 @@ import { Language } from '../../../types';
 
 interface ReadMoreButtonProps {
   language: Language
-  system: string
+  wikiLink: string
 }
 
-const ReadMoreButton = ({ language, system }: ReadMoreButtonProps): JSX.Element => (
+const ReadMoreButton = ({ language, wikiLink }: ReadMoreButtonProps): JSX.Element => (
   <Box sx={{ bottom: 0, position: 'absolute' }}>
     <Button
       color="primary"
-      href={`https://en.wikipedia.org/wiki/${system}`}
+      href={wikiLink}
       startIcon={<ReadMoreIcon />}
       sx={{ marginBottom: '10px' }}
       target="_blank"

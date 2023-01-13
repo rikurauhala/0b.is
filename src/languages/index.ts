@@ -104,3 +104,22 @@ export const languages: LanguagesType = {
     'fiFI': 'Versio',
   },
 };
+
+export const wikiLink: LanguagesType = {
+  'Binary': {
+    'enUS': 'https://en.wikipedia.org/wiki/Binary_number',
+    'fiFI': 'https://fi.wikipedia.org/wiki/Binäärijärjestelmä',
+  },
+  'Decimal': {
+    'enUS': 'https://en.wikipedia.org/wiki/Decimal',
+    'fiFI': 'https://fi.wikipedia.org/wiki/Kymmenjärjestelmä',
+  },
+  'Hexadecimal': {
+    'enUS': 'https://en.wikipedia.org/wiki/Hexadecimal',
+    'fiFI': 'https://fi.wikipedia.org/wiki/Heksadesimaalijärjestelmä',
+  },
+  'Octal': {
+    'enUS': 'https://en.wikipedia.org/wiki/Octal',
+    'fiFI': 'https://fi.wikipedia.org/wiki/Oktaalijärjestelmä',
+  },
+};

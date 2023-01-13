@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 
 import Paper from '@mui/material/Paper';
 
+import { wikiLink } from '../../languages';
+
 import { Language, NumeralSystem } from '../../types';
 
 import ContentBinary from './content/binary.md';
@@ -21,10 +23,10 @@ const InfoBox = ({ language, system }: InfoBoxProps): JSX.Element => {
   const [content, setContent] = useState('');
 
   const options = {
-    2: [ContentBinary, 'Binary_number'],
-    8: [ContentOctal, 'Octal'],
-    10: [ContentDecimal, 'Decimal'],
-    16: [ContentHexadecimal, 'Hexadecimal'],
+    2: [ContentBinary, wikiLink['Binary'][language]],
+    8: [ContentOctal, wikiLink['Octal'][language]],
+    10: [ContentDecimal, wikiLink['Decimal'][language]],
+    16: [ContentHexadecimal, wikiLink['Hexadecimal'][language]],
   };
 
   useEffect(() => {
@@ -40,7 +42,7 @@ const InfoBox = ({ language, system }: InfoBoxProps): JSX.Element => {
       variant="outlined"
     >
       <InfoBoxContent content={content} />
-      <ReadMoreButton language={language} system={options[system][1]} />
+      <ReadMoreButton language={language} wikiLink={options[system][1]} />
     </Paper>
   );
 };
