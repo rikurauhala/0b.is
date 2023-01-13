@@ -52,12 +52,14 @@ const LanguageButton = ({ handleLanguageChange, language }: LanguageButtonProps)
         open={open}
       >
         <LanguageOption
+          flag="US"
           handleClose={handleClose}
           language={language}
           languageCode={Language.English}
           languageText={languages['English'][language]}
         />
         <LanguageOption
+          flag="FI"
           handleClose={handleClose}
           language={language}
           languageCode={Language.Finnish}
