@@ -18,6 +18,74 @@ Make as many pull requests as you want. I would recommend keeping the requests s
 
 Refactoring and optimizing existing code is also highly encouraged.
 
+## Translating
+
+Starting with version 1.2, the application supports different languages! To contribute to the translation effort, follow these instructions. You may add missing translations, suggest an improvement to an existing translation or translate the whole application into a new language! See [here](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) which language code you should use.
+
+Currently supported languages:
+- :us: `[en]` English
+- 🇫🇮 `[fi]` Finnish (suomi)
+
+### User interface
+
+Most translations are stored in the [languages file](https://github.com/rikurauhala/0b.is/blob/main/src/languages/index.ts). User interface strings are stored in the const `languages`. To add a new translation, append the dictionary by adding a new translation to each item. Please keep the list sorted alphabetically for consistency.
+
+Here is an example when translating into say, Swedish.
+
+```typescript
+// Before
+
+// ...
+'Read more': {
+  'en': 'Read more',
+  'fi': 'Lue lisää',
+},
+// ...
+
+// After
+
+// ...
+'Read more': {
+  'en': 'Read more',
+  'fi': 'Lue lisää',
+  'sv': 'Läs mer', // newly added translation
+},
+// ...
+```
+
+### Wiki links
+
+Another thing to update for translations is the list of Wikipedia links to provide more information about various numeral systems. The links are stored in the variable `wikiLink` in the same file. In this dictionary, the *key* is the base of the system and the link should point to a corresponding article on Wikipedia.
+
+```typescript
+// Before
+
+// ...
+'2': {
+  'en': 'https://en.wikipedia.org/wiki/Binary_number',
+  'fi': 'https://fi.wikipedia.org/wiki/Binäärijärjestelmä',
+},
+// ...
+
+// After
+
+// ...
+'2': {
+  'en': 'https://en.wikipedia.org/wiki/Binary_number',
+  'fi': 'https://fi.wikipedia.org/wiki/Binäärijärjestelmä',
+  'sv': 'https://sv.wikipedia.org/wiki/Binära_talsystemet', // Newly added link
+},
+// ...
+```
+
+### InfoBox content
+
+One last thing to update when translating is the InfoBox [content files](https://github.com/rikurauhala/0b.is/tree/main/src/components/InfoBox/content). They are implemented bit differently so here you must create new files. For example, consider you want to translate the base-2 (binary) info box content into Swedish. You would create a new file in the [directory "2"](https://github.com/rikurauhala/0b.is/tree/main/src/components/InfoBox/content/2) and call it `sv.md`. The translation should match what is written in the original [English file](https://github.com/rikurauhala/0b.is/blob/main/src/components/InfoBox/content/2/en.md).
+
+### Documentation
+
+Documentation does not need to be translated as the development is done in English.
+
 ## Style
 
 ### ESLint
