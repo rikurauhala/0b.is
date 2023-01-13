@@ -106,20 +106,20 @@ export const languages: LanguagesType = {
 };
 
 export const wikiLink: LanguagesType = {
-  'Binary': {
+  '2': {
     'enUS': 'https://en.wikipedia.org/wiki/Binary_number',
     'fiFI': 'https://fi.wikipedia.org/wiki/Binäärijärjestelmä',
   },
-  'Decimal': {
+  '8': {
+    'enUS': 'https://en.wikipedia.org/wiki/Octal',
+    'fiFI': 'https://fi.wikipedia.org/wiki/Oktaalijärjestelmä',
+  },
+  '10': {
     'enUS': 'https://en.wikipedia.org/wiki/Decimal',
     'fiFI': 'https://fi.wikipedia.org/wiki/Kymmenjärjestelmä',
   },
-  'Hexadecimal': {
+  '16': {
     'enUS': 'https://en.wikipedia.org/wiki/Hexadecimal',
     'fiFI': 'https://fi.wikipedia.org/wiki/Heksadesimaalijärjestelmä',
-  },
-  'Octal': {
-    'enUS': 'https://en.wikipedia.org/wiki/Octal',
-    'fiFI': 'https://fi.wikipedia.org/wiki/Oktaalijärjestelmä',
   },
 };

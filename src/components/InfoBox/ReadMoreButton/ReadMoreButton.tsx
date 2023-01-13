@@ -3,19 +3,19 @@ import Button from '@mui/material/Button';
 
 import ReadMoreIcon from '@mui/icons-material/ReadMore';
 
-import { languages } from '../../../languages';
-import { Language } from '../../../types';
+import { languages, wikiLink } from '../../../languages';
+import { Language, NumeralSystem } from '../../../types';
 
 interface ReadMoreButtonProps {
   language: Language
-  wikiLink: string
+  system: NumeralSystem
 }
 
-const ReadMoreButton = ({ language, wikiLink }: ReadMoreButtonProps): JSX.Element => (
+const ReadMoreButton = ({ language, system }: ReadMoreButtonProps): JSX.Element => (
   <Box sx={{ bottom: 0, position: 'absolute' }}>
     <Button
       color="primary"
-      href={wikiLink}
+      href={wikiLink[system][language]}
       startIcon={<ReadMoreIcon />}
       sx={{ marginBottom: '10px' }}
       target="_blank"
