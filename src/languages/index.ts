@@ -1,12 +1,12 @@
 import { Language } from '../types';
 
-type LanguagesType = {
+type Languages = {
   [key: string]: {
     [key in Language]: string
   }
 };
 
-export const languages: LanguagesType = {
+export const languages: Languages = {
   'Binary': {
     'en': '2 (binary)',
     'fi': '2 (binääri)',
@@ -105,7 +105,7 @@ export const languages: LanguagesType = {
   },
 };
 
-export const wikiLink: LanguagesType = {
+export const wikiLink: Languages = {
   '2': {
     'en': 'https://en.wikipedia.org/wiki/Binary_number',
     'fi': 'https://fi.wikipedia.org/wiki/Binäärijärjestelmä',
