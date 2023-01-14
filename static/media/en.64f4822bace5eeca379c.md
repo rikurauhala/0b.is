@@ -4,4 +4,4 @@ A *hexadecimal* or *base-16* number consists of 16 different symbols: digits fro
 
 Hexadecimal numbers are widely used in computing and binary numbers are sometimes converted into hexadecimal to make them more readable.
 
-In some programming languages, binary numbers can be distinguished with the prefix 0x.
+In some programming languages, hexadecimal numbers can be distinguished with the prefix 0x.

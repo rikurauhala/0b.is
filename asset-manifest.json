@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.4d28a720.css",
-    "main.js": "./static/js/main.c970c263.js",
+    "main.js": "./static/js/main.d49671da.js",
     "static/media/roboto-all-500-normal.woff": "./static/media/roboto-all-500-normal.0ab669b7a0d19b178f57.woff",
     "static/media/roboto-all-700-normal.woff": "./static/media/roboto-all-700-normal.a457fde362a540fcadff.woff",
     "static/media/roboto-all-400-normal.woff": "./static/media/roboto-all-400-normal.c5d001fa922fa66a147f.woff",
@@ -35,15 +35,13 @@
     "static/media/roboto-greek-ext-300-normal.woff2": "./static/media/roboto-greek-ext-300-normal.35b9d6be04b95f0f0530.woff2",
     "static/media/roboto-greek-ext-700-normal.woff2": "./static/media/roboto-greek-ext-700-normal.bd9854c751441ccc1a70.woff2",
     "index.html": "./index.html",
-    "static/media/binary.md": "./static/media/binary.badcc452275f4699018f.md",
-    "static/media/hexadecimal.md": "./static/media/hexadecimal.bc230a7d4e9437524531.md",
-    "static/media/decimal.md": "./static/media/decimal.588489a19938ac022aee.md",
-    "static/media/octal.md": "./static/media/octal.81ad0fdf26c13c4067f4.md",
+    "static/media/fi.md": "./static/media/fi.8c0f7355df00c4cac961.md",
+    "static/media/en.md": "./static/media/en.81ad0fdf26c13c4067f4.md",
     "main.4d28a720.css.map": "./static/css/main.4d28a720.css.map",
-    "main.c970c263.js.map": "./static/js/main.c970c263.js.map"
+    "main.d49671da.js.map": "./static/js/main.d49671da.js.map"
   },
   "entrypoints": [
     "static/css/main.4d28a720.css",
-    "static/js/main.c970c263.js"
+    "static/js/main.d49671da.js"
   ]
 }
