@@ -34,6 +34,6 @@ The application is live at [0b.is](https://0b.is/). This domain name was chosen 
 
 ## Contributing
 
-To contribute, open a new issue or create a pull request. Please refer to the [contribution guidelines](https://github.com/rikurauhala/0b.is/blob/main/CONTRIBUTING.md) first!
+To contribute, open a new issue or create a pull request. Please refer to the [contribution guidelines](https://github.com/rikurauhala/0b.is/blob/main/.github/CONTRIBUTING.md) first!
 
 Feel free to email the [maintainer](https://github.com/rikurauhala) if you have any questions.
