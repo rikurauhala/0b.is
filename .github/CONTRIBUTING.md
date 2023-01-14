@@ -88,6 +88,10 @@ In addition to writing the files, they must also be imported into use by updatin
 
 The new language must also be added to the Language [type](https://github.com/rikurauhala/0b.is/blob/main/src/types/index.ts).
 
+### Language button
+
+To test the new translation, it must be added to the [language button](https://github.com/rikurauhala/0b.is/blob/main/src/components/MenuBar/LanguageButton/LanguageButton.tsx) menu as an option.
+
 ### Documentation
 
 Documentation does not need to be translated as the development is done in English.
