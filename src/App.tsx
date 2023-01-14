@@ -58,7 +58,11 @@ const App = (): JSX.Element => {
       />
       <Container disableGutters sx={{ minHeight: 'calc(100vh - 197px)' }}>
         <Container>
-          <Stack margin="50px 0px" spacing={{ xs: 5, md: 2 }}>
+          <Stack
+            marginBottom={{ xs: '50px', md: '30px' }}
+            marginTop="50px"
+            spacing={{ xs: 5, md: 2 }}
+          >
             <NumberInput
               handleInputChange={handleInputChange}
               handleInputSystemChange={handleInputSystemChange}
