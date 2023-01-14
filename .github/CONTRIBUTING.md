@@ -84,6 +84,10 @@ One last thing to update when translating is the InfoBox [content files](https:/
 
 In addition to writing the files, they must also be imported into use by updating [InfoBox.tsx](https://github.com/rikurauhala/0b.is/blob/main/src/components/InfoBox/InfoBox.tsx).
 
+### Types
+
+The new language must also be added to the Language [type](https://github.com/rikurauhala/0b.is/blob/main/src/types/index.ts).
+
 ### Documentation
 
 Documentation does not need to be translated as the development is done in English.
