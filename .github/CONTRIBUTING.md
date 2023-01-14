@@ -176,6 +176,10 @@ As React is very much powering the application, referring to the React documenta
 
 TypeScript documentation could be useful when encountering issues with types or interfaces.
 
+- [GitHub Markdown syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+
+Useful when updating documentation or info box contents that are written in Markdown.
+
 - [Full Stack Open](https://fullstackopen.com/en)
 
 I cannot recommend this course enough. It will teach you everything you need to know about modern web development. Taking the course is completely free for everyone!
