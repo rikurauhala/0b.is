@@ -28,8 +28,9 @@ Conversions are supported in the following numeral systems:
 - Base-16 (hexadecimal)
 
 The application is available in these languages:
-- :us: English (US)
-- :finland: Finnish (translation by [Riku Rauhala](https://github.com/rikurauhala))
+- [ :us: ] English
+- [ :finland: ] Finnish | translation by [Riku Rauhala](https://github.com/rikurauhala)
+- [ :kr: ] Korean | translation by [Solana Kim](https://github.com/Solanakim)
 
 ## Documentation
 
