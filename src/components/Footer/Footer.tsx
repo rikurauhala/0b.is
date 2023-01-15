@@ -49,7 +49,7 @@ const Footer = ({ language }: FooterProps): JSX.Element => {
         />
         <FooterButton
           icon={<InfoIcon />}
-          text={`${languages['Version'][language]} 1.2.1`}
+          text={`${languages['Version'][language]} 1.2.2`}
           url={urlChangelog}
         />
       </Grid>
