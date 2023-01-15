@@ -67,6 +67,11 @@ export const languages: Languages = {
     'fi': 'Syöte',
     'ko': '입력값',
   },
+  'Korean': {
+    'en': 'Korean',
+    'fi': 'korea',
+    'ko': '한국어',
+  },
   'Number copied to clipboard!': {
     'en': 'Number copied to clipboard!',
     'fi': 'Numero kopioitu leikepöydälle!',

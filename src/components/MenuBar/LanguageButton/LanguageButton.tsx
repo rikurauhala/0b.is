@@ -65,6 +65,13 @@ const LanguageButton = ({ handleLanguageChange, language }: LanguageButtonProps)
           languageCode={Language.Finnish}
           languageText={languages['Finnish'][Language.Finnish]}
         />
+        <LanguageOption
+          flag="KR"
+          handleClose={handleClose}
+          language={language}
+          languageCode={Language.Korean}
+          languageText={languages['Korean'][Language.Korean]}
+        />
       </Menu>
     </>
   );
