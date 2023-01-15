@@ -1,5 +1,5 @@
 body {
-  background-color: #05121c;
+  background-color: #101010;
   color: #fff;
   font-family: Roboto;
 }
@@ -9,12 +9,12 @@ a {
 }
 
 a:link, a:visited {
-  color: #8bb4f7;
+  color: #00BFA5;
   text-decoration: none;
 }
 
 a:hover {
-  color: #8bb4f7;
+  color: #00BFA5;
   text-decoration: underline;
 }
 
@@ -27,6 +27,6 @@ a:hover {
 }
 
 .huge {
+  color: #1de9b6;
   font-size: 500%;
 }
-  
