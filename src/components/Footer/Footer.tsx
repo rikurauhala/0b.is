@@ -20,7 +20,7 @@ interface FooterProps {
 const Footer = ({ language }: FooterProps): JSX.Element => {
   const urlSourceCode = 'https://github.com/rikurauhala/0b.is';
   const urlDocumentation = `${urlSourceCode}/wiki`;
-  const urlContributing = `${urlSourceCode}/blob/main/CONTRIBUTING.md`;
+  const urlContributing = `${urlSourceCode}/blob/main/.github/CONTRIBUTING.md`;
   const urlChangelog = `${urlSourceCode}/wiki/Changelog`;
 
   return (
