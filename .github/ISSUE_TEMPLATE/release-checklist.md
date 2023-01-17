@@ -1,5 +1,5 @@
 ---
-name: Release checklist
+name: Release checklist (for the maintainer)
 about: Things to do when preparing for a new release
 title: ''
 labels: documentation, release
