@@ -66,6 +66,13 @@ const LanguageButton = ({ handleLanguageChange, language }: LanguageButtonProps)
           languageText={languages['Finnish'][Language.Finnish]}
         />
         <LanguageOption
+          flag="IT"
+          handleClose={handleClose}
+          language={language}
+          languageCode={Language.Italian}
+          languageText={languages['Italian'][Language.Italian]}
+        />
+        <LanguageOption
           flag="KR"
           handleClose={handleClose}
           language={language}

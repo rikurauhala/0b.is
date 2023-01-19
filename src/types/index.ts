@@ -1,6 +1,7 @@
 export enum Language {
   English = 'en',
   Finnish = 'fi',
+  Italian = 'it',
   Korean = 'ko',
 }
 

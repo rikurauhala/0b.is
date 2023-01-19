@@ -30,6 +30,7 @@ Conversions are supported in the following numeral systems:
 The application is available in these languages:
 - [ :us: ] English
 - [ :finland: ] Finnish | translation by [Riku Rauhala](https://github.com/rikurauhala)
+- [ :it: ] Italiano | translation by [Alberto Bollettin](https://github.com/main95)
 - [ :kr: ] Korean | translation by [Solana Kim](https://github.com/Solanakim)
 
 ## Documentation
