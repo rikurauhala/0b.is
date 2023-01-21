@@ -25,6 +25,7 @@ Starting with version 1.2, the application supports different languages! To cont
 Currently supported languages:
 - :us: `[en]` English
 - 🇫🇮 `[fi]` Finnish (suomi)
+- 🇮🇹 `[it]` Italian (italiano)
 - 🇰🇷 `[ko]` Korean (한국어)
 
 ### User interface
