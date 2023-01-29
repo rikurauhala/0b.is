@@ -3,7 +3,7 @@ import { ReactElement } from 'react';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 
-export interface FooterButtonProps {
+interface FooterButtonProps {
   icon: ReactElement
   text: string
   url: string
