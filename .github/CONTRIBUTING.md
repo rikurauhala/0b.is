@@ -30,7 +30,7 @@ Currently supported languages:
 
 ### User interface
 
-Most translations are stored in the [languages file](https://github.com/rikurauhala/0b.is/blob/main/src/languages/index.ts). User interface strings are stored in the const `languages`. To add a new translation, append the dictionary by adding a new translation to each item. Please keep the list sorted alphabetically for consistency.
+Most translations are stored in the [languages files](https://github.com/rikurauhala/0b.is/blob/main/src/languages). User interface strings are stored in `translations.json`. To add a new translation, append the dictionary by adding a new translation to each item. Please keep the list sorted alphabetically for consistency.
 
 Here is an example when translating into say, Swedish.
 
@@ -57,7 +57,7 @@ Here is an example when translating into say, Swedish.
 
 ### Wiki links
 
-Another thing to update for translations is the list of Wikipedia links to provide more information about various numeral systems. The links are stored in the variable `wikiLink` in the same file. In this dictionary, the *key* is the base of the system and the link should point to a corresponding article on Wikipedia.
+Another thing to update for translations is the list of Wikipedia links to provide more information about various numeral systems. The links are stored in `links.json`. In this dictionary, the *key* is the base of the system and the link should point to a corresponding article on Wikipedia.
 
 ```typescript
 // Before
