@@ -1,0 +1,31 @@
+{
+  "2": {
+    "en": "https://en.wikipedia.org/wiki/Binary_number",
+    "fi": "https://fi.wikipedia.org/wiki/Binäärijärjestelmä",
+    "it": "https://it.wikipedia.org/wiki/Sistema_numerico_binario",
+    "ko": "https://ko.wikipedia.org/wiki/%EC%9D%B4%EC%A7%84%EB%B2%95",
+    "sv": "https://sv.wikipedia.org/wiki/Bin%C3%A4ra_talsystemet"
+  },
+  "8": {
+    "en": "https://en.wikipedia.org/wiki/Octal",
+    "fi": "https://fi.wikipedia.org/wiki/Oktaalijärjestelmä",
+    "it": "https://it.wikipedia.org/wiki/Sistema_numerico_ottale",
+    "ko": "https://ko.wikipedia.org/wiki/%ED%8C%94%EC%A7%84%EB%B2%95",
+    "sv": "https://sv.wikipedia.org/wiki/Oktala_talsystemet"
+  },
+  "10": {
+    "en": "https://en.wikipedia.org/wiki/Decimal",
+    "fi": "https://fi.wikipedia.org/wiki/Kymmenjärjestelmä",
+    "it": "https://it.wikipedia.org/wiki/Sistema_numerico_decimale",
+    "ko": "https://ko.wikipedia.org/wiki/%EC%8B%AD%EC%A7%84%EB%B2%95",
+    "sv": "https://sv.wikipedia.org/wiki/Decimala_talsystemet"
+  },
+  "16": {
+    "en": "https://en.wikipedia.org/wiki/Hexadecimal",
+    "fi": "https://fi.wikipedia.org/wiki/Heksadesimaalijärjestelmä",
+    "it": "https://it.wikipedia.org/wiki/Sistema_numerico_esadecimale",
+    "ko": "https://ko.wikipedia.org/wiki/%EC%8B%AD%EC%9C%A1%EC%A7%84%EB%B2%95",
+    "sv": "https://sv.wikipedia.org/wiki/Hexadecimala_talsystemet"
+  }
+}
+  
