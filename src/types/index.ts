@@ -3,6 +3,7 @@ export enum Language {
   Finnish = 'fi',
   Italian = 'it',
   Korean = 'ko',
+  Swedish = 'sv',
 }
 
 export enum NumeralSystem {

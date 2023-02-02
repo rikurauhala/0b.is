@@ -8,21 +8,25 @@ import en2 from './content/2/en.md';
 import fi2 from './content/2/fi.md';
 import it2 from './content/2/it.md';
 import ko2 from './content/2/ko.md';
+import sv2 from './content/2/sv.md';
 
 import en8 from './content/8/en.md';
 import fi8 from './content/8/fi.md';
 import it8 from './content/8/it.md';
 import ko8 from './content/8/ko.md';
+import sv8 from './content/8/sv.md';
 
 import en10 from './content/10/en.md';
 import fi10 from './content/10/fi.md';
 import it10 from './content/10/it.md';
 import ko10 from './content/10/ko.md';
+import sv10 from './content/10/sv.md';
 
 import en16 from './content/16/en.md';
 import fi16 from './content/16/fi.md';
 import it16 from './content/16/it.md';
 import ko16 from './content/16/ko.md';
+import sv16 from './content/16/sv.md';
 
 import InfoBoxContent from './InfoBoxContent';
 import ReadMoreButton from './ReadMoreButton';
@@ -47,24 +51,28 @@ const InfoBox = ({ language, system }: InfoBoxProps): JSX.Element => {
       'fi': fi2,
       'it': it2,
       'ko': ko2,
+      'sv': sv2,
     },
     8: {
       'en': en8,
       'fi': fi8,
       'it': it8,
       'ko': ko8,
+      'sv': sv8,
     },
     10: {
       'en': en10,
       'fi': fi10,
       'it': it10,
       'ko': ko10,
+      'sv': sv10,
     },
     16: {
       'en': en16,
       'fi': fi16,
       'it': it16,
       'ko': ko16,
+      'sv': sv16,
     },
   };
 

@@ -56,20 +56,6 @@ export const languages: Languages = {
     'ko': '문서',
     'sv': 'Dokumentation',
   },
-  'English': {
-    'en': 'English',
-    'fi': 'englanti',
-    'it': 'Inglese',
-    'ko': '영어',
-    'sv': 'Engelska',
-  },
-  'Finnish': {
-    'en': 'Finnish',
-    'fi': 'suomi',
-    'it': 'Finnico',
-    'ko': '핀란드어',
-    'sv': 'Finska',
-  },
   'From base': {
     'en': 'From base',
     'fi': 'Kantaluvusta',
@@ -90,20 +76,6 @@ export const languages: Languages = {
     'it': 'Input',
     'ko': '입력값',
     'sv': 'Indata',
-  },
-  'Italian': {
-    'en': 'Inglese',
-    'fi': 'Finnico',
-    'it': 'Italiano',
-    'ko': 'Coreano',
-    'sv': 'Italienska',
-  },
-  'Korean': {
-    'en': 'Korean',
-    'fi': 'korea',
-    'it': 'Coreano',
-    'ko': '한국어',
-    'sv': 'Koreanska',
   },
   'Number copied to clipboard!': {
     'en': 'Number copied to clipboard!',
