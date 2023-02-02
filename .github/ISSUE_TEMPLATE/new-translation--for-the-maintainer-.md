@@ -2,7 +2,7 @@
 name: New translation (for the maintainer)
 about: Things to do when preparing to add support for a new language
 title: ''
-labels: documentation, refactoring, translation, user interface
+labels: documentation, refactoring, release, translation, user interface
 assignees: rikurauhala
 
 ---
