@@ -28,6 +28,7 @@
     "@types/react-helmet": "^6.1.6",
     "@typescript-eslint/eslint-plugin": "^5.54.0",
     "@typescript-eslint/parser": "^5.54.0",
+    "cypress": "^12.7.0",
     "eslint": "^8.35.0",
     "eslint-config-react": "^1.1.7",
     "eslint-plugin-react": "^7.32.2",
@@ -39,6 +40,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:e2e": "cypress run",
+    "cypress:open": "cypress open",
     "lint": "eslint './src/**/*.{ts,tsx}'",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
