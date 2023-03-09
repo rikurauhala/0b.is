@@ -20,4 +20,10 @@ jobs:
       - name: Run ESLint
         run: npm run lint
       - name: Run unit tests
-        run: npm test 
+        run: npm test
+      - name: Run end-to-end tests
+        uses: cypress-io/github-action@v2
+        with:
+          command: npm run test:e2e
+          start: npm run start
+          wait-on: http://localhost:3000
