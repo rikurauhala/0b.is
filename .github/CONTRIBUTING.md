@@ -154,6 +154,9 @@ Please make sure to always run the unit tests and the linter before creating a p
 # Run the unit tests
 $ CI=true npm test
 
+# Run the end-to-end tests
+$ npm run test:e2e
+
 # Check the code style quality
 $ npm run lint
 ```
