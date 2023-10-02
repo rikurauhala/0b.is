@@ -36,7 +36,7 @@
     "fork-ts-checker-webpack-plugin": "^6.5.3",
     "gh-pages": "^5.0.0",
     "react-markdown": "^8.0.5",
-    "typescript": "^5.0.4"
+    "typescript": "^5.2.2"
   },
   "scripts": {
     "start": "react-scripts start",
