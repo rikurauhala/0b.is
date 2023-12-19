@@ -19,7 +19,8 @@ The simple number converter
 
 **0b.is** is a web-based service for converting numbers. It provides a quick and easy-to-use way to get the results you want. 
 
-The latest version is live at [0b.is](https://0b.is/). This domain name was chosen as it is fast to type and easy to remember. The name refers to a [convention](https://en.wikipedia.org/wiki/Binary_number#Representation) of adding the prefix *0b* to distinguish binary numbers.
+> [!WARNING]  
+> This project is no longer maintained.
 
 Conversions are supported in the following numeral systems:
 - Base-2 (binary)
